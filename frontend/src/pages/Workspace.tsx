@@ -74,7 +74,7 @@ export default function Workspace() {
                     >
                       <td className="px-4 py-3 align-top">
                         <div className={`text-[13px] font-bold ${isSelected ? 'text-blue-700' : 'text-gray-900'}`}>{c.title}</div>
-                        <div className="text-[11px] text-gray-400 mt-0.5 font-medium">Action: Tomorrow · 09:00</div>
+                        <div className="text-[11px] text-gray-400 mt-0.5 font-medium">Action: Tomorrow 09:00</div>
                       </td>
                       <td className="px-3 py-3 align-top text-right">
                         <div className={`text-[13px] font-bold ${isSelected ? 'text-blue-700' : 'text-gray-900'}`}>₹{c.amount.toLocaleString(undefined, {minimumFractionDigits: 0})}</div>

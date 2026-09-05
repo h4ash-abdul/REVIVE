@@ -123,7 +123,7 @@ export default function Overview() {
                 </div>
                 <div className="flex justify-between items-center text-[13px]">
                   <span className="text-gray-500 font-medium">Action</span>
-                  <span className="text-gray-900 font-medium flex items-center gap-1"><Clock className="w-3.5 h-3.5 text-gray-400"/> Tomorrow · 09:00</span>
+                  <span className="text-gray-900 font-medium flex items-center gap-1"><Clock className="w-3.5 h-3.5 text-gray-400"/> Tomorrow 09:00</span>
                 </div>
               </div>
               

@@ -257,7 +257,7 @@ export default function CaseDetail() {
                   <div className="text-[11px] font-bold text-gray-400 uppercase tracking-wider mb-2">Recommended Action</div>
                   <div className="text-[18px] font-bold text-gray-900 flex items-center gap-2 mb-6">
                     <Zap className="w-5 h-5 text-yellow-500" />
-                    Retry {trace.strategy_result?.selected_action ? format(new Date(trace.strategy_result.selected_action.timestamp), "MMM d · HH:mm") : "Tomorrow · 09:00"}
+                    Retry {trace.strategy_result?.selected_action ? format(new Date(trace.strategy_result.selected_action.timestamp), "MMM d HH:mm") : "Tomorrow 09:00"}
                   </div>
                   
                   <div className="text-[11px] font-bold text-gray-400 uppercase tracking-wider mb-2">Policy Status</div>
@@ -298,7 +298,7 @@ export default function CaseDetail() {
                 </thead>
                 <tbody className="divide-y divide-gray-100 text-[13px] font-medium text-gray-700">
                   <tr className="hover:bg-gray-50">
-                    <td className="px-4 py-3 text-gray-900 font-bold">{trace.strategy_result?.selected_action ? format(new Date(trace.strategy_result.selected_action.timestamp), "MMM d · HH:mm") : "Tomorrow · 09:00"}</td>
+                    <td className="px-4 py-3 text-gray-900 font-bold">{trace.strategy_result?.selected_action ? format(new Date(trace.strategy_result.selected_action.timestamp), "MMM d HH:mm") : "Tomorrow 09:00"}</td>
                     <td className="px-4 py-3 text-blue-600 font-bold">{trace.initial_probability ? (trace.initial_probability * 100).toFixed(0) : 72}%</td>
                     <td className="px-4 py-3"><span className="flex items-center gap-1 text-green-600"><CheckCircle2 className="w-3.5 h-3.5"/> Valid</span></td>
                     <td className="px-4 py-3 text-right"><Badge variant="low" className="bg-blue-100 text-blue-700 border-blue-200 text-[10px] font-bold">SELECTED</Badge></td>
