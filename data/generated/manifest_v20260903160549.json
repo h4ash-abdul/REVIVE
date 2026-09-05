@@ -1,0 +1,20 @@
+{
+  "dataset_version": "v20260903160549",
+  "simulator_version": "v2.1",
+  "seed": 42,
+  "generation_timestamp": "2026-09-03T16:05:49.252468+00:00",
+  "customer_count": 1000,
+  "merchant_count": 20,
+  "mandate_count": 2000,
+  "event_count": 17903,
+  "archetype_distribution": {
+    "salary_cycle_regular": 0.4,
+    "irregular_gig": 0.2,
+    "chronic_low_balance": 0.15,
+    "thin_history": 0.15,
+    "technical_decline_prone": 0.1
+  },
+  "noise_configuration": "medium",
+  "drift_configuration": 0.05,
+  "scenario_configuration": "strong_temporal_signal"
+}

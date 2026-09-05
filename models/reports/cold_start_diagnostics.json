@@ -1,0 +1,50 @@
+{
+  "imputed_values": {
+    "hist_payment_count": 5.0,
+    "hist_success_count": 1.0,
+    "hist_failure_count": 3.0,
+    "hist_success_rate": 0.11764705882352941,
+    "hist_amount_mean": 203.55,
+    "hist_amount_std": 0.0,
+    "history_depth_days": 62.0,
+    "time_since_prev_success_hours": 744.0,
+    "time_since_prev_failure_hours": 72.0,
+    "hist_success_rate_hour_bucket": 0.2,
+    "hist_success_rate_day_bucket": 0.0,
+    "current_attempt_number": 6.0
+  },
+  "results_1_2_events": {
+    "Masked (Current)": {
+      "count": 102,
+      "success_rate": 0.4803921568627451,
+      "mean_prob": 0.32581153048480277,
+      "brier": 0.28862538060882503,
+      "log_loss": 0.7791343826039625,
+      "roc_auc": 0.33808240277242974
+    },
+    "Unmasked (Full)": {
+      "count": 102,
+      "success_rate": 0.4803921568627451,
+      "mean_prob": 0.46325790176541914,
+      "brier": 0.22829450557103612,
+      "log_loss": 0.6480211779646525,
+      "roc_auc": 0.6634578359645745
+    },
+    "Global Baseline": {
+      "count": 102,
+      "success_rate": 0.4803921568627451,
+      "mean_prob": 0.3642553191489363,
+      "brier": 0.2631032975616684,
+      "log_loss": 0.7205088050532854,
+      "roc_auc": 0.5
+    },
+    "Merchant Baseline": {
+      "count": 102,
+      "success_rate": 0.4803921568627451,
+      "mean_prob": 0.5281321380899386,
+      "brier": 0.2578079012946967,
+      "log_loss": 0.7089538246572534,
+      "roc_auc": 0.43800539083557954
+    }
+  }
+}

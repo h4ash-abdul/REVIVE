@@ -1,0 +1,261 @@
+mandate_id,strategy,initial_amount,recovered_amount,recovered_boolean,attempt_count,retry_budget_exhausted,stop_reason,policy_violation_count,execution_error_count,amount_at_risk
+d6cd3155-08a8-ac7f-8621-38ad0f09105c,P_Prioritization,110.25,110.25,True,1,False,Recovered,369,0,110.25
+e9aa144b-9dd4-3675-ef14-5064aab07015,P_Prioritization,726.8,0.0,False,0,False,No Recovery Baseline,369,0,726.8
+0406ff44-7ce4-0679-a8c6-dbc07bb3447b,P_Prioritization,369.72,0.0,False,0,False,No Recovery Baseline,369,0,369.72
+cb80f288-446f-64dd-5abc-a6e5d0b1e3eb,P_Prioritization,44.15,44.15,True,1,False,Recovered,369,0,44.15
+d867888b-7ff6-b824-152a-eaec2bdfcb41,P_Prioritization,418.93,418.93,True,1,False,Recovered,369,0,418.93
+a879d8f8-9042-2eb7-8b04-0f53e63949d4,P_Prioritization,588.66,0.0,False,3,True,Budget Exhausted,1479,0,588.66
+16591c89-21eb-faa9-1a2b-d69c450f69ee,P_Prioritization,174.81,174.81,True,2,False,Recovered,738,0,174.81
+8e969227-72e7-6b51-6e54-ac6d2ff8e87e,P_Prioritization,130.89,0.0,False,3,True,Budget Exhausted,1479,0,130.89
+c777a07f-6346-d4ef-69ef-74e34ab6821c,P_Prioritization,153.84,0.0,False,3,True,Budget Exhausted,1479,0,153.84
+75366b9f-320f-72c0-9dde-01889803b22e,P_Prioritization,314.88,314.88,True,1,False,Recovered,369,0,314.88
+d773f98d-550c-2fe9-654c-11d9f2e61828,P_Prioritization,569.69,569.69,True,1,False,Recovered,369,0,569.69
+2d79a2d1-506e-50c7-7aa0-61e9336b00cb,P_Prioritization,70.12,0.0,False,0,False,No Recovery Baseline,369,0,70.12
+33261887-9058-81df-ee9b-f3e11d27c09a,P_Prioritization,582.2,582.2,True,1,False,Recovered,369,0,582.2
+768b4f7e-6421-5e66-5fc6-4cd0721e8b1f,P_Prioritization,431.98,431.98,True,1,False,Recovered,369,0,431.98
+0840405a-ffd2-f491-dff3-89aa4c36a70c,P_Prioritization,252.9,252.9,True,2,False,Recovered,738,0,252.9
+f3d04ffb-4470-9848-929e-cc924a11be44,P_Prioritization,359.15,0.0,False,0,False,No Recovery Baseline,369,0,359.15
+7ea5a387-363b-e5cb-d329-37246dfd171a,P_Prioritization,31.22,0.0,False,0,False,No Recovery Baseline,369,0,31.22
+216e9fe5-93f3-7596-8c1c-8b0556771f36,P_Prioritization,34.2,0.0,False,0,False,No Recovery Baseline,369,0,34.2
+fee5ce69-33cb-202e-6d84-414df54191ea,P_Prioritization,885.04,885.04,True,1,False,Recovered,369,0,885.04
+9c3de1b0-022b-6683-9033-da6587cf63fd,P_Prioritization,281.24,281.24,True,3,True,Recovered,1108,0,281.24
+d8d994b8-d90f-74e9-06dd-f6cab0c30a59,P_Prioritization,689.82,0.0,False,0,False,No Recovery Baseline,369,0,689.82
+27c6cbb1-cedd-069d-f96c-9a0a3404c02a,P_Prioritization,61.38,0.0,False,0,False,No Recovery Baseline,369,0,61.38
+55c34853-0783-e43c-e65f-ad87c57c7498,P_Prioritization,405.74,405.74,True,1,False,Recovered,369,0,405.74
+7f0386fa-13ba-dc91-a0a5-fde6939f71a2,P_Prioritization,483.36,0.0,False,0,False,No Recovery Baseline,369,0,483.36
+061efb95-68f8-2063-eeb1-9ad201a1fb0f,P_Prioritization,420.15,0.0,False,0,False,No Recovery Baseline,369,0,420.15
+69be173a-850e-f0ad-d872-f72ee5b4a1ae,P_Prioritization,141.36,0.0,False,0,False,No Recovery Baseline,369,0,141.36
+b46788bd-d38e-13e4-4de1-087bafa14a55,P_Prioritization,187.19,0.0,False,3,True,Budget Exhausted,1479,0,187.19
+1f5df912-54e0-7431-cf13-3b65d450afa2,P_Prioritization,403.74,403.74,True,1,False,Recovered,369,0,403.74
+1674eb65-0f9c-5300-7aa1-c5678cf9eea9,P_Prioritization,30.3,30.3,True,3,True,Recovered,1108,0,30.3
+fe7c80e9-a179-1e93-3fc8-25ac869bc00f,P_Prioritization,580.69,0.0,False,0,False,No Recovery Baseline,369,0,580.69
+04ffeab2-cb7b-0b3a-8b2d-158acd5ae324,P_Prioritization,229.51,229.51,True,3,True,Recovered,1108,0,229.51
+9d37efb6-eafb-3e90-54ec-84ce002ccb25,P_Prioritization,475.17,475.17,True,1,False,Recovered,369,0,475.17
+13eb22c9-bece-d21a-54c7-743b2401342a,P_Prioritization,749.36,749.36,True,1,False,Recovered,369,0,749.36
+702f31e5-62cc-c604-0c53-644b0053f649,P_Prioritization,505.83,0.0,False,3,True,Budget Exhausted,1479,0,505.83
+2a9527f6-f817-0ebf-6b6e-64c5bb8aa843,P_Prioritization,378.11,0.0,False,3,True,Budget Exhausted,1479,0,378.11
+1d91fe39-d801-4004-793b-ed1b14f9c394,P_Prioritization,141.76,141.76,True,1,False,Recovered,369,0,141.76
+907276ea-44c0-7a9a-d64a-cb1f39eb038a,P_Prioritization,475.23,475.23,True,2,False,Recovered,738,0,475.23
+3a3e46b0-96f8-4ff7-c1a7-2883f8802878,P_Prioritization,502.7,0.0,False,3,True,Budget Exhausted,1479,0,502.7
+efb56207-ddec-c40b-afe3-af13891778e8,P_Prioritization,31.81,31.81,True,1,False,Recovered,369,0,31.81
+844e250b-e684-390c-923b-78208089b8c5,P_Prioritization,222.91,0.0,False,0,False,No Recovery Baseline,369,0,222.91
+1cce08e9-6b6a-8061-c81c-8d3185c69fbf,P_Prioritization,50.79,50.79,True,1,False,Recovered,369,0,50.79
+0cb5ee5c-62f5-f7c2-0706-fec248fa4e98,P_Prioritization,96.41,96.41,True,2,False,Recovered,738,0,96.41
+30385dd7-4c7d-9313-a6c6-81b0e4729be5,P_Prioritization,6.11,0.0,False,3,True,Budget Exhausted,1479,0,6.11
+6772fe9f-999b-c859-cf5e-0f0bcd67b5df,P_Prioritization,459.91,459.91,True,1,False,Recovered,369,0,459.91
+1e26ed31-d9e9-2758-76b9-04364b46ef33,P_Prioritization,87.86,87.86,True,1,False,Recovered,369,0,87.86
+69c165ae-4c61-0ae8-87a3-7f1061b512ed,P_Prioritization,110.24,110.24,True,1,False,Recovered,369,0,110.24
+3610901c-2196-b3b5-fc21-109bba27bc64,P_Prioritization,141.4,0.0,False,0,False,No Recovery Baseline,369,0,141.4
+349b5089-2733-5670-b3ad-a2ba797209c0,P_Prioritization,368.73,368.73,True,1,False,Recovered,369,0,368.73
+19d9d0b5-a962-d996-6bbe-3b5a4d15f7d8,P_Prioritization,282.96,0.0,False,3,True,Budget Exhausted,1479,0,282.96
+ad409244-cd35-66ef-5c37-07394a629c5e,P_Prioritization,773.18,0.0,False,3,True,Budget Exhausted,1479,0,773.18
+1dabb10a-bd10-f87c-6d0e-0597500d92a7,P_Prioritization,128.08,0.0,False,3,True,Budget Exhausted,1479,0,128.08
+bbaa574f-e0e3-c5ce-44af-ecb79f2ebefc,P_Prioritization,623.96,0.0,False,3,True,Budget Exhausted,1479,0,623.96
+c7774fae-6137-58c3-9c7f-aca62e671784,P_Prioritization,194.99,0.0,False,3,True,Budget Exhausted,1479,0,194.99
+a9e8f0d8-5883-09de-7b5f-be413fa2bde0,P_Prioritization,322.3,322.3,True,2,False,Recovered,738,0,322.3
+a2379e6f-d473-4534-5aea-635257632e1e,P_Prioritization,178.49,0.0,False,0,False,No Recovery Baseline,369,0,178.49
+4458b006-332c-ce0a-0e7d-a698ab95c72f,P_Prioritization,143.39,143.39,True,1,False,Recovered,369,0,143.39
+c948384b-1174-0357-8546-74262f120b9e,P_Prioritization,184.24,0.0,False,0,False,No Recovery Baseline,369,0,184.24
+9e47a339-c0ae-0b1a-f347-673637ec07a6,P_Prioritization,757.49,0.0,False,3,True,Budget Exhausted,1479,0,757.49
+2d90e4ee-0de4-833e-12c0-620c1667c518,P_Prioritization,328.7,0.0,False,3,True,Budget Exhausted,1479,0,328.7
+80b9ec30-ed94-898b-5b92-3c67129538df,P_Prioritization,403.18,0.0,False,3,True,Budget Exhausted,1479,0,403.18
+12b99a50-8cb6-d1f0-a509-6396761579e7,P_Prioritization,5.96,5.96,True,2,False,Recovered,738,0,5.96
+a8cfe589-9dc8-9e1a-540e-7d01735d88f3,P_Prioritization,15.21,15.21,True,1,False,Recovered,369,0,15.21
+bbc99473-4363-589c-3249-5cff89e2df24,P_Prioritization,795.95,795.95,True,1,False,Recovered,369,0,795.95
+c4ea4ece-67b6-e467-9432-d79794f6c67a,P_Prioritization,154.35,0.0,False,0,False,No Recovery Baseline,369,0,154.35
+0a58f43c-5bda-0655-f06d-ca247bc6e121,P_Prioritization,55.16,55.16,True,3,True,Recovered,1108,0,55.16
+7aa1219a-7a93-98bb-acdb-d5f27b44acd0,P_Prioritization,603.08,603.08,True,1,False,Recovered,369,0,603.08
+c3a6b204-fc01-4a22-2ed0-b0b27da56b6e,P_Prioritization,81.84,81.84,True,1,False,Recovered,369,0,81.84
+b8875caf-1991-103f-d06e-ccbc3a8359b6,P_Prioritization,384.26,384.26,True,3,True,Recovered,1108,0,384.26
+a1726883-d971-9e00-e4ad-5e9bfedd22d9,P_Prioritization,56.99,56.99,True,1,False,Recovered,369,0,56.99
+0c36ad4e-915d-9a63-dbc6-c9288fe84e20,P_Prioritization,243.82,243.82,True,2,False,Recovered,738,0,243.82
+fab8328f-2cae-93a2-89d7-16efa62d7221,P_Prioritization,634.74,0.0,False,3,True,Budget Exhausted,1479,0,634.74
+2bacf712-d6a9-19e8-86d8-95e5219b606d,P_Prioritization,730.93,730.93,True,1,False,Recovered,369,0,730.93
+5b59f28e-a9de-5b26-08ff-eab0075072d6,P_Prioritization,112.45,0.0,False,3,True,Budget Exhausted,1479,0,112.45
+b0d515ab-c891-d55d-94c1-76b90ac013d5,P_Prioritization,154.88,0.0,False,3,True,Budget Exhausted,1479,0,154.88
+0a1bebd3-e60e-c813-402d-a0fa227dcecc,P_Prioritization,197.02,197.02,True,1,False,Recovered,369,0,197.02
+7d76ab58-b271-115b-8af0-9ec34b726a7c,P_Prioritization,80.16,0.0,False,0,False,No Recovery Baseline,369,0,80.16
+01ae7eb1-4d45-7ea5-e3ec-4f6afe503fdc,P_Prioritization,87.42,87.42,True,3,True,Recovered,1108,0,87.42
+c7b611cd-1417-182a-61ad-018a93875413,P_Prioritization,120.19,120.19,True,2,False,Recovered,738,0,120.19
+5d822e3a-6c6d-282b-69e0-8370abf7a5d0,P_Prioritization,170.76,170.76,True,2,False,Recovered,738,0,170.76
+49a5baeb-d1f4-4c8d-d51b-1974de668dd0,P_Prioritization,282.56,282.56,True,1,False,Recovered,369,0,282.56
+fe07832a-badc-4599-9f7f-ae0c7ba79d05,P_Prioritization,349.29,0.0,False,0,False,No Recovery Baseline,369,0,349.29
+115c42cd-5147-6e86-2875-d40aeac7dc2e,P_Prioritization,217.65,0.0,False,0,False,No Recovery Baseline,369,0,217.65
+f4672866-ed56-a2a0-2d54-ff2b10ee4f77,P_Prioritization,338.33,0.0,False,0,False,No Recovery Baseline,369,0,338.33
+3ee79d31-feef-21f8-e0b6-2f900adbc4ff,P_Prioritization,607.68,607.68,True,1,False,Recovered,369,0,607.68
+a6091ad0-b114-64aa-52f6-9081400564b8,P_Prioritization,189.98,189.98,True,1,False,Recovered,369,0,189.98
+55cf37ba-e989-65f2-2bbf-1e35c4acb57d,P_Prioritization,261.71,261.71,True,1,False,Recovered,369,0,261.71
+5c3552b3-9437-2280-bfd4-67e77491050c,P_Prioritization,355.77,0.0,False,0,False,No Recovery Baseline,369,0,355.77
+c4bd338e-17d7-1fc0-092c-d030ee757637,P_Prioritization,210.78,210.78,True,1,False,Recovered,369,0,210.78
+cbf6aa23-a01e-31f5-7702-beba0623ffbf,P_Prioritization,290.98,0.0,False,3,True,Budget Exhausted,1479,0,290.98
+ec1a86d3-5683-0783-d575-9337549c9eb9,P_Prioritization,342.07,0.0,False,3,True,Budget Exhausted,1479,0,342.07
+10f35676-5a85-3cd8-cbb8-6be0e355e636,P_Prioritization,11.37,11.37,True,2,False,Recovered,738,0,11.37
+db9a0eb7-b48c-531b-4eeb-87ffc064f074,P_Prioritization,70.52,0.0,False,3,True,Budget Exhausted,1479,0,70.52
+6338fb29-7599-2b0a-095b-81d6b97d7617,P_Prioritization,19.51,19.51,True,1,False,Recovered,369,0,19.51
+e3a1af97-7785-2ddb-5552-7a3c164a9b18,P_Prioritization,812.77,0.0,False,0,False,No Recovery Baseline,369,0,812.77
+2851a8be-2639-e214-45cc-aa931e1e5d91,P_Prioritization,334.41,0.0,False,3,True,Budget Exhausted,1479,0,334.41
+5513b74f-4ffc-1c54-5b0a-31ea9dc6d783,P_Prioritization,635.83,0.0,False,3,True,Budget Exhausted,1479,0,635.83
+17c95aaa-21bd-55eb-915a-a3c07737cfb5,P_Prioritization,128.79,0.0,False,3,True,Budget Exhausted,1479,0,128.79
+94ad345a-e323-9264-2390-0c1dd1291d13,P_Prioritization,289.78,289.78,True,1,False,Recovered,369,0,289.78
+a92f85fe-258f-cafc-c1cf-d878000c14a5,P_Prioritization,471.59,471.59,True,3,True,Recovered,1108,0,471.59
+eb22ec1d-4df6-ff4f-adf7-92ffe9c7c13a,P_Prioritization,147.69,0.0,False,0,False,No Recovery Baseline,369,0,147.69
+0ffa2366-4b4f-afaf-da3d-c78020a77d78,P_Prioritization,297.4,0.0,False,0,False,No Recovery Baseline,369,0,297.4
+8f5e248e-b40f-040e-0037-447f0d99c071,P_Prioritization,26.31,26.31,True,1,False,Recovered,369,0,26.31
+408669bb-4721-194b-c8a4-ae21d9f850e9,P_Prioritization,96.47,96.47,True,1,False,Recovered,369,0,96.47
+3c775558-b365-fb7c-c853-bc5542e17302,P_Prioritization,292.88,292.88,True,1,False,Recovered,369,0,292.88
+5a947a40-a32e-3ab5-8802-d74aeaef2ec2,P_Prioritization,695.24,695.24,True,3,True,Recovered,1108,0,695.24
+45c87f41-dbbd-3290-a6ed-caddeb04cd29,P_Prioritization,239.61,239.61,True,1,False,Recovered,369,0,239.61
+2f2bdc13-b216-5b5a-1c60-57fee5605cfb,P_Prioritization,217.29,0.0,False,0,False,No Recovery Baseline,369,0,217.29
+c1eecd7a-2428-185a-461d-e0171ee92d3b,P_Prioritization,851.32,0.0,False,3,True,Budget Exhausted,1479,0,851.32
+734eab10-85e9-054f-455c-f668a3cb9e18,P_Prioritization,344.87,344.87,True,1,False,Recovered,369,0,344.87
+2caf3d2f-f026-a418-3d3f-bbec697ae294,P_Prioritization,240.73,0.0,False,0,False,No Recovery Baseline,369,0,240.73
+81ee30e4-8a2b-466e-fc9d-c0d0c2d94cc9,P_Prioritization,28.07,28.07,True,1,False,Recovered,369,0,28.07
+699fdb02-bcdd-0b48-3cb3-c9fa191abb3d,P_Prioritization,257.59,257.59,True,1,False,Recovered,369,0,257.59
+772d416d-da05-d2fc-1c71-a82122f1c32b,P_Prioritization,299.31,0.0,False,3,True,Budget Exhausted,1479,0,299.31
+dcb913b4-7d3d-16ca-8592-a38fdb62a1f7,P_Prioritization,386.03,386.03,True,3,True,Recovered,1108,0,386.03
+df629d0c-bc76-37a0-6d98-a416bae27198,P_Prioritization,220.15,220.15,True,1,False,Recovered,369,0,220.15
+5bc07988-21f9-69e9-37cf-45f6f32ede3c,P_Prioritization,43.57,43.57,True,1,False,Recovered,369,0,43.57
+b177116d-f203-7633-ac5d-d02dccc67ffd,P_Prioritization,338.22,0.0,False,0,False,No Recovery Baseline,369,0,338.22
+cd4f2875-df2d-df20-05a4-3113101d759e,P_Prioritization,48.1,48.1,True,3,True,Recovered,1108,0,48.1
+913767ab-4dd8-5715-753f-f3e271fc5136,P_Prioritization,120.41,0.0,False,3,True,Budget Exhausted,1479,0,120.41
+fa5fafdb-5123-39fa-aa61-b32f08e1624e,P_Prioritization,227.99,0.0,False,3,True,Budget Exhausted,1479,0,227.99
+06617f95-eba1-8fa8-1f19-f85b4d330569,P_Prioritization,168.73,0.0,False,3,True,Budget Exhausted,1479,0,168.73
+81e58eee-f9c0-fd4d-8bd0-3267bd0e01ce,P_Prioritization,134.19,134.19,True,2,False,Recovered,738,0,134.19
+ec1b55dd-e829-56cf-ba81-d86090b3032d,P_Prioritization,167.83,0.0,False,0,False,No Recovery Baseline,369,0,167.83
+24c58b47-1609-34d1-9912-509096516ec2,P_Prioritization,827.73,827.73,True,3,True,Recovered,1108,0,827.73
+fd06a179-7980-3efa-4da0-8e483531518a,P_Prioritization,8.7,8.7,True,1,False,Recovered,369,0,8.7
+5b7d9d2d-22af-f503-b17a-ff6de0d96670,P_Prioritization,570.94,0.0,False,3,True,Budget Exhausted,1479,0,570.94
+21986e3c-d19f-cf31-1dd7-3f1f138ef8cc,P_Prioritization,158.25,158.25,True,3,True,Recovered,1108,0,158.25
+946a95a6-f2e4-01af-4702-1755f11cc0a4,P_Prioritization,50.74,50.74,True,1,False,Recovered,369,0,50.74
+daea544a-291a-4905-5a29-fe6b590bd0c6,P_Prioritization,229.29,0.0,False,0,False,No Recovery Baseline,369,0,229.29
+117e894e-91fa-f1c7-8141-bb373de814ac,P_Prioritization,62.06,0.0,False,3,True,Budget Exhausted,1479,0,62.06
+d6cd3155-08a8-ac7f-8621-38ad0f09105c,EV_Prioritization,110.25,110.25,True,1,False,Recovered,369,0,110.25
+e9aa144b-9dd4-3675-ef14-5064aab07015,EV_Prioritization,726.8,0.0,False,3,True,Budget Exhausted,1479,0,726.8
+0406ff44-7ce4-0679-a8c6-dbc07bb3447b,EV_Prioritization,369.72,0.0,False,3,True,Budget Exhausted,1479,0,369.72
+cb80f288-446f-64dd-5abc-a6e5d0b1e3eb,EV_Prioritization,44.15,0.0,False,0,False,No Recovery Baseline,369,0,44.15
+d867888b-7ff6-b824-152a-eaec2bdfcb41,EV_Prioritization,418.93,418.93,True,1,False,Recovered,369,0,418.93
+a879d8f8-9042-2eb7-8b04-0f53e63949d4,EV_Prioritization,588.66,0.0,False,3,True,Budget Exhausted,1479,0,588.66
+16591c89-21eb-faa9-1a2b-d69c450f69ee,EV_Prioritization,174.81,174.81,True,2,False,Recovered,738,0,174.81
+8e969227-72e7-6b51-6e54-ac6d2ff8e87e,EV_Prioritization,130.89,0.0,False,3,True,Budget Exhausted,1479,0,130.89
+c777a07f-6346-d4ef-69ef-74e34ab6821c,EV_Prioritization,153.84,0.0,False,3,True,Budget Exhausted,1479,0,153.84
+75366b9f-320f-72c0-9dde-01889803b22e,EV_Prioritization,314.88,314.88,True,1,False,Recovered,369,0,314.88
+d773f98d-550c-2fe9-654c-11d9f2e61828,EV_Prioritization,569.69,569.69,True,1,False,Recovered,369,0,569.69
+2d79a2d1-506e-50c7-7aa0-61e9336b00cb,EV_Prioritization,70.12,0.0,False,0,False,No Recovery Baseline,369,0,70.12
+33261887-9058-81df-ee9b-f3e11d27c09a,EV_Prioritization,582.2,582.2,True,1,False,Recovered,369,0,582.2
+768b4f7e-6421-5e66-5fc6-4cd0721e8b1f,EV_Prioritization,431.98,431.98,True,1,False,Recovered,369,0,431.98
+0840405a-ffd2-f491-dff3-89aa4c36a70c,EV_Prioritization,252.9,252.9,True,2,False,Recovered,738,0,252.9
+f3d04ffb-4470-9848-929e-cc924a11be44,EV_Prioritization,359.15,359.15,True,1,False,Recovered,369,0,359.15
+7ea5a387-363b-e5cb-d329-37246dfd171a,EV_Prioritization,31.22,0.0,False,0,False,No Recovery Baseline,369,0,31.22
+216e9fe5-93f3-7596-8c1c-8b0556771f36,EV_Prioritization,34.2,0.0,False,0,False,No Recovery Baseline,369,0,34.2
+fee5ce69-33cb-202e-6d84-414df54191ea,EV_Prioritization,885.04,885.04,True,1,False,Recovered,369,0,885.04
+9c3de1b0-022b-6683-9033-da6587cf63fd,EV_Prioritization,281.24,281.24,True,3,True,Recovered,1108,0,281.24
+d8d994b8-d90f-74e9-06dd-f6cab0c30a59,EV_Prioritization,689.82,689.82,True,3,True,Recovered,1108,0,689.82
+27c6cbb1-cedd-069d-f96c-9a0a3404c02a,EV_Prioritization,61.38,0.0,False,0,False,No Recovery Baseline,369,0,61.38
+55c34853-0783-e43c-e65f-ad87c57c7498,EV_Prioritization,405.74,405.74,True,1,False,Recovered,369,0,405.74
+7f0386fa-13ba-dc91-a0a5-fde6939f71a2,EV_Prioritization,483.36,0.0,False,3,True,Budget Exhausted,1479,0,483.36
+061efb95-68f8-2063-eeb1-9ad201a1fb0f,EV_Prioritization,420.15,420.15,True,1,False,Recovered,369,0,420.15
+69be173a-850e-f0ad-d872-f72ee5b4a1ae,EV_Prioritization,141.36,141.36,True,2,False,Recovered,738,0,141.36
+b46788bd-d38e-13e4-4de1-087bafa14a55,EV_Prioritization,187.19,0.0,False,3,True,Budget Exhausted,1479,0,187.19
+1f5df912-54e0-7431-cf13-3b65d450afa2,EV_Prioritization,403.74,403.74,True,1,False,Recovered,369,0,403.74
+1674eb65-0f9c-5300-7aa1-c5678cf9eea9,EV_Prioritization,30.3,0.0,False,0,False,No Recovery Baseline,369,0,30.3
+fe7c80e9-a179-1e93-3fc8-25ac869bc00f,EV_Prioritization,580.69,580.69,True,2,False,Recovered,738,0,580.69
+04ffeab2-cb7b-0b3a-8b2d-158acd5ae324,EV_Prioritization,229.51,229.51,True,3,True,Recovered,1108,0,229.51
+9d37efb6-eafb-3e90-54ec-84ce002ccb25,EV_Prioritization,475.17,475.17,True,1,False,Recovered,369,0,475.17
+13eb22c9-bece-d21a-54c7-743b2401342a,EV_Prioritization,749.36,749.36,True,1,False,Recovered,369,0,749.36
+702f31e5-62cc-c604-0c53-644b0053f649,EV_Prioritization,505.83,0.0,False,3,True,Budget Exhausted,1479,0,505.83
+2a9527f6-f817-0ebf-6b6e-64c5bb8aa843,EV_Prioritization,378.11,0.0,False,3,True,Budget Exhausted,1479,0,378.11
+1d91fe39-d801-4004-793b-ed1b14f9c394,EV_Prioritization,141.76,141.76,True,1,False,Recovered,369,0,141.76
+907276ea-44c0-7a9a-d64a-cb1f39eb038a,EV_Prioritization,475.23,475.23,True,2,False,Recovered,738,0,475.23
+3a3e46b0-96f8-4ff7-c1a7-2883f8802878,EV_Prioritization,502.7,0.0,False,3,True,Budget Exhausted,1479,0,502.7
+efb56207-ddec-c40b-afe3-af13891778e8,EV_Prioritization,31.81,0.0,False,0,False,No Recovery Baseline,369,0,31.81
+844e250b-e684-390c-923b-78208089b8c5,EV_Prioritization,222.91,0.0,False,3,True,Budget Exhausted,1479,0,222.91
+1cce08e9-6b6a-8061-c81c-8d3185c69fbf,EV_Prioritization,50.79,0.0,False,0,False,No Recovery Baseline,369,0,50.79
+0cb5ee5c-62f5-f7c2-0706-fec248fa4e98,EV_Prioritization,96.41,0.0,False,0,False,No Recovery Baseline,369,0,96.41
+30385dd7-4c7d-9313-a6c6-81b0e4729be5,EV_Prioritization,6.11,0.0,False,0,False,No Recovery Baseline,369,0,6.11
+6772fe9f-999b-c859-cf5e-0f0bcd67b5df,EV_Prioritization,459.91,459.91,True,1,False,Recovered,369,0,459.91
+1e26ed31-d9e9-2758-76b9-04364b46ef33,EV_Prioritization,87.86,0.0,False,0,False,No Recovery Baseline,369,0,87.86
+69c165ae-4c61-0ae8-87a3-7f1061b512ed,EV_Prioritization,110.24,110.24,True,1,False,Recovered,369,0,110.24
+3610901c-2196-b3b5-fc21-109bba27bc64,EV_Prioritization,141.4,141.4,True,2,False,Recovered,738,0,141.4
+349b5089-2733-5670-b3ad-a2ba797209c0,EV_Prioritization,368.73,368.73,True,1,False,Recovered,369,0,368.73
+19d9d0b5-a962-d996-6bbe-3b5a4d15f7d8,EV_Prioritization,282.96,0.0,False,3,True,Budget Exhausted,1479,0,282.96
+ad409244-cd35-66ef-5c37-07394a629c5e,EV_Prioritization,773.18,0.0,False,3,True,Budget Exhausted,1479,0,773.18
+1dabb10a-bd10-f87c-6d0e-0597500d92a7,EV_Prioritization,128.08,0.0,False,3,True,Budget Exhausted,1479,0,128.08
+bbaa574f-e0e3-c5ce-44af-ecb79f2ebefc,EV_Prioritization,623.96,0.0,False,3,True,Budget Exhausted,1479,0,623.96
+c7774fae-6137-58c3-9c7f-aca62e671784,EV_Prioritization,194.99,0.0,False,3,True,Budget Exhausted,1479,0,194.99
+a9e8f0d8-5883-09de-7b5f-be413fa2bde0,EV_Prioritization,322.3,322.3,True,2,False,Recovered,738,0,322.3
+a2379e6f-d473-4534-5aea-635257632e1e,EV_Prioritization,178.49,0.0,False,3,True,Budget Exhausted,1479,0,178.49
+4458b006-332c-ce0a-0e7d-a698ab95c72f,EV_Prioritization,143.39,143.39,True,1,False,Recovered,369,0,143.39
+c948384b-1174-0357-8546-74262f120b9e,EV_Prioritization,184.24,184.24,True,3,True,Recovered,1108,0,184.24
+9e47a339-c0ae-0b1a-f347-673637ec07a6,EV_Prioritization,757.49,0.0,False,3,True,Budget Exhausted,1479,0,757.49
+2d90e4ee-0de4-833e-12c0-620c1667c518,EV_Prioritization,328.7,0.0,False,3,True,Budget Exhausted,1479,0,328.7
+80b9ec30-ed94-898b-5b92-3c67129538df,EV_Prioritization,403.18,0.0,False,3,True,Budget Exhausted,1479,0,403.18
+12b99a50-8cb6-d1f0-a509-6396761579e7,EV_Prioritization,5.96,0.0,False,0,False,No Recovery Baseline,369,0,5.96
+a8cfe589-9dc8-9e1a-540e-7d01735d88f3,EV_Prioritization,15.21,0.0,False,0,False,No Recovery Baseline,369,0,15.21
+bbc99473-4363-589c-3249-5cff89e2df24,EV_Prioritization,795.95,795.95,True,1,False,Recovered,369,0,795.95
+c4ea4ece-67b6-e467-9432-d79794f6c67a,EV_Prioritization,154.35,0.0,False,3,True,Budget Exhausted,1479,0,154.35
+0a58f43c-5bda-0655-f06d-ca247bc6e121,EV_Prioritization,55.16,0.0,False,0,False,No Recovery Baseline,369,0,55.16
+7aa1219a-7a93-98bb-acdb-d5f27b44acd0,EV_Prioritization,603.08,603.08,True,1,False,Recovered,369,0,603.08
+c3a6b204-fc01-4a22-2ed0-b0b27da56b6e,EV_Prioritization,81.84,0.0,False,0,False,No Recovery Baseline,369,0,81.84
+b8875caf-1991-103f-d06e-ccbc3a8359b6,EV_Prioritization,384.26,384.26,True,3,True,Recovered,1108,0,384.26
+a1726883-d971-9e00-e4ad-5e9bfedd22d9,EV_Prioritization,56.99,0.0,False,0,False,No Recovery Baseline,369,0,56.99
+0c36ad4e-915d-9a63-dbc6-c9288fe84e20,EV_Prioritization,243.82,243.82,True,2,False,Recovered,738,0,243.82
+fab8328f-2cae-93a2-89d7-16efa62d7221,EV_Prioritization,634.74,0.0,False,3,True,Budget Exhausted,1479,0,634.74
+2bacf712-d6a9-19e8-86d8-95e5219b606d,EV_Prioritization,730.93,730.93,True,1,False,Recovered,369,0,730.93
+5b59f28e-a9de-5b26-08ff-eab0075072d6,EV_Prioritization,112.45,0.0,False,0,False,No Recovery Baseline,369,0,112.45
+b0d515ab-c891-d55d-94c1-76b90ac013d5,EV_Prioritization,154.88,0.0,False,3,True,Budget Exhausted,1479,0,154.88
+0a1bebd3-e60e-c813-402d-a0fa227dcecc,EV_Prioritization,197.02,197.02,True,1,False,Recovered,369,0,197.02
+7d76ab58-b271-115b-8af0-9ec34b726a7c,EV_Prioritization,80.16,0.0,False,0,False,No Recovery Baseline,369,0,80.16
+01ae7eb1-4d45-7ea5-e3ec-4f6afe503fdc,EV_Prioritization,87.42,0.0,False,0,False,No Recovery Baseline,369,0,87.42
+c7b611cd-1417-182a-61ad-018a93875413,EV_Prioritization,120.19,120.19,True,2,False,Recovered,738,0,120.19
+5d822e3a-6c6d-282b-69e0-8370abf7a5d0,EV_Prioritization,170.76,170.76,True,2,False,Recovered,738,0,170.76
+49a5baeb-d1f4-4c8d-d51b-1974de668dd0,EV_Prioritization,282.56,282.56,True,1,False,Recovered,369,0,282.56
+fe07832a-badc-4599-9f7f-ae0c7ba79d05,EV_Prioritization,349.29,0.0,False,3,True,Budget Exhausted,1479,0,349.29
+115c42cd-5147-6e86-2875-d40aeac7dc2e,EV_Prioritization,217.65,0.0,False,3,True,Budget Exhausted,1479,0,217.65
+f4672866-ed56-a2a0-2d54-ff2b10ee4f77,EV_Prioritization,338.33,0.0,False,3,True,Budget Exhausted,1479,0,338.33
+3ee79d31-feef-21f8-e0b6-2f900adbc4ff,EV_Prioritization,607.68,607.68,True,1,False,Recovered,369,0,607.68
+a6091ad0-b114-64aa-52f6-9081400564b8,EV_Prioritization,189.98,189.98,True,1,False,Recovered,369,0,189.98
+55cf37ba-e989-65f2-2bbf-1e35c4acb57d,EV_Prioritization,261.71,261.71,True,1,False,Recovered,369,0,261.71
+5c3552b3-9437-2280-bfd4-67e77491050c,EV_Prioritization,355.77,355.77,True,2,False,Recovered,738,0,355.77
+c4bd338e-17d7-1fc0-092c-d030ee757637,EV_Prioritization,210.78,210.78,True,1,False,Recovered,369,0,210.78
+cbf6aa23-a01e-31f5-7702-beba0623ffbf,EV_Prioritization,290.98,0.0,False,3,True,Budget Exhausted,1479,0,290.98
+ec1a86d3-5683-0783-d575-9337549c9eb9,EV_Prioritization,342.07,0.0,False,3,True,Budget Exhausted,1479,0,342.07
+10f35676-5a85-3cd8-cbb8-6be0e355e636,EV_Prioritization,11.37,0.0,False,0,False,No Recovery Baseline,369,0,11.37
+db9a0eb7-b48c-531b-4eeb-87ffc064f074,EV_Prioritization,70.52,0.0,False,0,False,No Recovery Baseline,369,0,70.52
+6338fb29-7599-2b0a-095b-81d6b97d7617,EV_Prioritization,19.51,0.0,False,0,False,No Recovery Baseline,369,0,19.51
+e3a1af97-7785-2ddb-5552-7a3c164a9b18,EV_Prioritization,812.77,812.77,True,1,False,Recovered,369,0,812.77
+2851a8be-2639-e214-45cc-aa931e1e5d91,EV_Prioritization,334.41,0.0,False,3,True,Budget Exhausted,1479,0,334.41
+5513b74f-4ffc-1c54-5b0a-31ea9dc6d783,EV_Prioritization,635.83,0.0,False,3,True,Budget Exhausted,1479,0,635.83
+17c95aaa-21bd-55eb-915a-a3c07737cfb5,EV_Prioritization,128.79,0.0,False,3,True,Budget Exhausted,1479,0,128.79
+94ad345a-e323-9264-2390-0c1dd1291d13,EV_Prioritization,289.78,289.78,True,1,False,Recovered,369,0,289.78
+a92f85fe-258f-cafc-c1cf-d878000c14a5,EV_Prioritization,471.59,471.59,True,3,True,Recovered,1108,0,471.59
+eb22ec1d-4df6-ff4f-adf7-92ffe9c7c13a,EV_Prioritization,147.69,0.0,False,3,True,Budget Exhausted,1479,0,147.69
+0ffa2366-4b4f-afaf-da3d-c78020a77d78,EV_Prioritization,297.4,0.0,False,3,True,Budget Exhausted,1479,0,297.4
+8f5e248e-b40f-040e-0037-447f0d99c071,EV_Prioritization,26.31,0.0,False,0,False,No Recovery Baseline,369,0,26.31
+408669bb-4721-194b-c8a4-ae21d9f850e9,EV_Prioritization,96.47,96.47,True,1,False,Recovered,369,0,96.47
+3c775558-b365-fb7c-c853-bc5542e17302,EV_Prioritization,292.88,292.88,True,1,False,Recovered,369,0,292.88
+5a947a40-a32e-3ab5-8802-d74aeaef2ec2,EV_Prioritization,695.24,695.24,True,3,True,Recovered,1108,0,695.24
+45c87f41-dbbd-3290-a6ed-caddeb04cd29,EV_Prioritization,239.61,239.61,True,1,False,Recovered,369,0,239.61
+2f2bdc13-b216-5b5a-1c60-57fee5605cfb,EV_Prioritization,217.29,217.29,True,2,False,Recovered,738,0,217.29
+c1eecd7a-2428-185a-461d-e0171ee92d3b,EV_Prioritization,851.32,0.0,False,3,True,Budget Exhausted,1479,0,851.32
+734eab10-85e9-054f-455c-f668a3cb9e18,EV_Prioritization,344.87,344.87,True,1,False,Recovered,369,0,344.87
+2caf3d2f-f026-a418-3d3f-bbec697ae294,EV_Prioritization,240.73,0.0,False,3,True,Budget Exhausted,1479,0,240.73
+81ee30e4-8a2b-466e-fc9d-c0d0c2d94cc9,EV_Prioritization,28.07,0.0,False,0,False,No Recovery Baseline,369,0,28.07
+699fdb02-bcdd-0b48-3cb3-c9fa191abb3d,EV_Prioritization,257.59,257.59,True,1,False,Recovered,369,0,257.59
+772d416d-da05-d2fc-1c71-a82122f1c32b,EV_Prioritization,299.31,0.0,False,3,True,Budget Exhausted,1479,0,299.31
+dcb913b4-7d3d-16ca-8592-a38fdb62a1f7,EV_Prioritization,386.03,386.03,True,3,True,Recovered,1108,0,386.03
+df629d0c-bc76-37a0-6d98-a416bae27198,EV_Prioritization,220.15,220.15,True,1,False,Recovered,369,0,220.15
+5bc07988-21f9-69e9-37cf-45f6f32ede3c,EV_Prioritization,43.57,0.0,False,0,False,No Recovery Baseline,369,0,43.57
+b177116d-f203-7633-ac5d-d02dccc67ffd,EV_Prioritization,338.22,0.0,False,3,True,Budget Exhausted,1479,0,338.22
+cd4f2875-df2d-df20-05a4-3113101d759e,EV_Prioritization,48.1,0.0,False,0,False,No Recovery Baseline,369,0,48.1
+913767ab-4dd8-5715-753f-f3e271fc5136,EV_Prioritization,120.41,0.0,False,0,False,No Recovery Baseline,369,0,120.41
+fa5fafdb-5123-39fa-aa61-b32f08e1624e,EV_Prioritization,227.99,0.0,False,3,True,Budget Exhausted,1479,0,227.99
+06617f95-eba1-8fa8-1f19-f85b4d330569,EV_Prioritization,168.73,0.0,False,3,True,Budget Exhausted,1479,0,168.73
+81e58eee-f9c0-fd4d-8bd0-3267bd0e01ce,EV_Prioritization,134.19,134.19,True,2,False,Recovered,738,0,134.19
+ec1b55dd-e829-56cf-ba81-d86090b3032d,EV_Prioritization,167.83,0.0,False,3,True,Budget Exhausted,1479,0,167.83
+24c58b47-1609-34d1-9912-509096516ec2,EV_Prioritization,827.73,827.73,True,3,True,Recovered,1108,0,827.73
+fd06a179-7980-3efa-4da0-8e483531518a,EV_Prioritization,8.7,0.0,False,0,False,No Recovery Baseline,369,0,8.7
+5b7d9d2d-22af-f503-b17a-ff6de0d96670,EV_Prioritization,570.94,0.0,False,3,True,Budget Exhausted,1479,0,570.94
+21986e3c-d19f-cf31-1dd7-3f1f138ef8cc,EV_Prioritization,158.25,158.25,True,3,True,Recovered,1108,0,158.25
+946a95a6-f2e4-01af-4702-1755f11cc0a4,EV_Prioritization,50.74,0.0,False,0,False,No Recovery Baseline,369,0,50.74
+daea544a-291a-4905-5a29-fe6b590bd0c6,EV_Prioritization,229.29,0.0,False,3,True,Budget Exhausted,1479,0,229.29
+117e894e-91fa-f1c7-8141-bb373de814ac,EV_Prioritization,62.06,0.0,False,0,False,No Recovery Baseline,369,0,62.06

@@ -1,0 +1,56 @@
+[
+  {
+    "segment": "0 Events (Merchant Fallback)",
+    "version": "v1.0 (Old)",
+    "count": 67,
+    "success_rate": 0.4925373134328358,
+    "brier_score": 0.28988620624472494,
+    "log_loss": 0.7811986223826372,
+    "roc_auc": 0.535650623885918
+  },
+  {
+    "segment": "0 Events (Merchant Fallback)",
+    "version": "v1.1 (New)",
+    "count": 67,
+    "success_rate": 0.4925373134328358,
+    "brier_score": 0.2521457502313653,
+    "log_loss": 0.6975303836343688,
+    "roc_auc": 0.5249554367201426
+  },
+  {
+    "segment": "1-2 Events (Merchant Fallback)",
+    "version": "v1.0 (Old)",
+    "count": 102,
+    "success_rate": 0.4803921568627451,
+    "brier_score": 0.28862538060882503,
+    "log_loss": 0.7791343826039625,
+    "roc_auc": 0.33808240277242974
+  },
+  {
+    "segment": "1-2 Events (Merchant Fallback)",
+    "version": "v1.1 (New)",
+    "count": 102,
+    "success_rate": 0.4803921568627451,
+    "brier_score": 0.2336741535817831,
+    "log_loss": 0.6600999431562048,
+    "roc_auc": 0.6445899114362726
+  },
+  {
+    "segment": "3+ Events (Customer Mode)",
+    "version": "v1.0 (Old)",
+    "count": 1006,
+    "success_rate": 0.34393638170974156,
+    "brier_score": 0.17306809885010846,
+    "log_loss": 0.5191799684934513,
+    "roc_auc": 0.7869635662988265
+  },
+  {
+    "segment": "3+ Events (Customer Mode)",
+    "version": "v1.1 (New)",
+    "count": 1006,
+    "success_rate": 0.34393638170974156,
+    "brier_score": 0.1735386629190345,
+    "log_loss": 0.5208795227903652,
+    "roc_auc": 0.7848835172534594
+  }
+]

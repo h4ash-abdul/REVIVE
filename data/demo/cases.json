@@ -1,0 +1,250 @@
+[
+  {
+    "scenario_key": "A",
+    "title": "Insufficient funds - High Confidence",
+    "mandate": {
+      "mandate_id": "00081ef9-ea4a-47f3-af67-08ef9fa26e79",
+      "customer_id": "0a052e4b-8e54-4129-b1b3-d256032c7492",
+      "merchant_id": "204f05d2-852a-4466-a486-72cd6e2eac8b",
+      "amount": 169.3,
+      "status": "active",
+      "created_at": "2025-01-30T00:00:00Z",
+      "expires_at": "2030-01-29T00:00:00Z"
+    },
+    "history": [
+      {
+        "attempt_id": "166110a5-1f7c-46e6-8ed5-0e0c06cfc6d8",
+        "mandate_id": "00081ef9-ea4a-47f3-af67-08ef9fa26e79",
+        "timestamp": "2025-03-04T00:00:00Z",
+        "amount": 169.3,
+        "status": "failed",
+        "network_return_code": "ERR_INSUFFICIENT_FUNDS"
+      }
+    ],
+    "customer_latent": {
+      "customer_id": "0a052e4b-8e54-4129-b1b3-d256032c7492",
+      "archetype": "irregular_gig",
+      "true_payday_offset": 14,
+      "base_liquidity_probability": 0.5579566058313374,
+      "technical_failure_propensity": 0.01,
+      "drift_level": "none",
+      "timing_noise_std_dev": 5.0
+    },
+    "merchant_latent": {
+      "merchant_id": "204f05d2-852a-4466-a486-72cd6e2eac8b",
+      "industry_risk_modifier": 0.03705185698367669,
+      "avg_mandate_amount": 156.23794780983013,
+      "technical_failure_propensity": 0.013140040402454096,
+      "historical_retry_schedule": [
+        1,
+        3
+      ]
+    }
+  },
+  {
+    "scenario_key": "E",
+    "title": "Policy Restricted (Too many attempts)",
+    "mandate": {
+      "mandate_id": "0012fd19-5587-4649-bec7-bb5273f06ee8",
+      "customer_id": "bbe54d97-f844-4c52-8ba0-4548f9a0d308",
+      "merchant_id": "229e34f3-1c89-4e87-a204-9f3e8b214e64",
+      "amount": 864.85,
+      "status": "active",
+      "created_at": "2025-01-07T00:00:00Z",
+      "expires_at": "2030-01-06T00:00:00Z"
+    },
+    "history": [
+      {
+        "attempt_id": "0d776b16-a3cd-41f3-ae25-c3549c332f17",
+        "mandate_id": "0012fd19-5587-4649-bec7-bb5273f06ee8",
+        "timestamp": "2025-02-06T00:00:00Z",
+        "amount": 864.85,
+        "status": "failed",
+        "network_return_code": "ERR_INSUFFICIENT_FUNDS"
+      },
+      {
+        "attempt_id": "8273368c-f7bd-4dab-bb49-5f4c6571064e",
+        "mandate_id": "0012fd19-5587-4649-bec7-bb5273f06ee8",
+        "timestamp": "2025-02-07T00:00:00Z",
+        "amount": 864.85,
+        "status": "failed",
+        "network_return_code": "CODE_116_BAL"
+      },
+      {
+        "attempt_id": "147740d1-f38c-4bb0-b924-2df2c1b442d2",
+        "mandate_id": "0012fd19-5587-4649-bec7-bb5273f06ee8",
+        "timestamp": "2025-02-08T00:00:00Z",
+        "amount": 864.85,
+        "status": "failed",
+        "network_return_code": "N51_FUNDS"
+      },
+      {
+        "attempt_id": "012d7c47-24df-45a5-b869-2e616467cedf",
+        "mandate_id": "0012fd19-5587-4649-bec7-bb5273f06ee8",
+        "timestamp": "2025-02-09T00:00:00Z",
+        "amount": 864.85,
+        "status": "failed",
+        "network_return_code": "ERR_INSUFFICIENT_FUNDS"
+      }
+    ],
+    "customer_latent": {
+      "customer_id": "bbe54d97-f844-4c52-8ba0-4548f9a0d308",
+      "archetype": "chronic_low_balance",
+      "true_payday_offset": 13,
+      "base_liquidity_probability": 0.30429438549524096,
+      "technical_failure_propensity": 0.01,
+      "drift_level": "none",
+      "timing_noise_std_dev": 1.0
+    },
+    "merchant_latent": {
+      "merchant_id": "229e34f3-1c89-4e87-a204-9f3e8b214e64",
+      "industry_risk_modifier": -0.006870260037501311,
+      "avg_mandate_amount": 474.948498125944,
+      "technical_failure_propensity": 0.018494646268142765,
+      "historical_retry_schedule": [
+        1,
+        2,
+        3
+      ]
+    }
+  },
+  {
+    "scenario_key": "B",
+    "title": "Technical Failure / Do Not Honor",
+    "mandate": {
+      "mandate_id": "172d30b3-c5ff-4e82-9081-b539e42bd767",
+      "customer_id": "fdeb3527-650c-462c-9c08-6557b410f790",
+      "merchant_id": "3280256d-9283-4ab4-bb1d-ec1101e32588",
+      "amount": 547.59,
+      "status": "active",
+      "created_at": "2025-01-30T00:00:00Z",
+      "expires_at": "2030-01-29T00:00:00Z"
+    },
+    "history": [
+      {
+        "attempt_id": "4beef55c-6dc9-4a99-8428-e294026b5c76",
+        "mandate_id": "172d30b3-c5ff-4e82-9081-b539e42bd767",
+        "timestamp": "2025-03-01T00:00:00Z",
+        "amount": 547.59,
+        "status": "failed",
+        "network_return_code": "ERR_CONNECTION_TIMEOUT"
+      }
+    ],
+    "customer_latent": {
+      "customer_id": "fdeb3527-650c-462c-9c08-6557b410f790",
+      "archetype": "technical_decline_prone",
+      "true_payday_offset": 20,
+      "base_liquidity_probability": 0.7259814506410933,
+      "technical_failure_propensity": 0.15,
+      "drift_level": "none",
+      "timing_noise_std_dev": 1.0
+    },
+    "merchant_latent": {
+      "merchant_id": "3280256d-9283-4ab4-bb1d-ec1101e32588",
+      "industry_risk_modifier": 0.012115925549309278,
+      "avg_mandate_amount": 285.86688636308355,
+      "technical_failure_propensity": 0.0028996437295671813,
+      "historical_retry_schedule": [
+        3
+      ]
+    }
+  },
+  {
+    "scenario_key": "D",
+    "title": "Unknown Failure",
+    "mandate": {
+      "mandate_id": "21772fb1-d2f0-47c7-b61d-b35f87341f04",
+      "customer_id": "47484650-48a0-4e39-93a4-8a3eab360bca",
+      "merchant_id": "3b893447-4083-4070-832a-ad674e85f4b1",
+      "amount": 855.09,
+      "status": "active",
+      "created_at": "2025-01-17T00:00:00Z",
+      "expires_at": "2030-01-16T00:00:00Z"
+    },
+    "history": [
+      {
+        "attempt_id": "465533c1-9b9e-4f22-b011-d5141693f8dc",
+        "mandate_id": "21772fb1-d2f0-47c7-b61d-b35f87341f04",
+        "timestamp": "2025-02-16T00:00:00Z",
+        "amount": 855.09,
+        "status": "failed",
+        "network_return_code": "N51_FUNDS"
+      },
+      {
+        "attempt_id": "3645b68e-df8d-4ea7-a1c2-c4da1702051b",
+        "mandate_id": "21772fb1-d2f0-47c7-b61d-b35f87341f04",
+        "timestamp": "2025-02-19T00:00:00Z",
+        "amount": 855.09,
+        "status": "failed",
+        "network_return_code": "E0099_UNKNOWN"
+      }
+    ],
+    "customer_latent": {
+      "customer_id": "47484650-48a0-4e39-93a4-8a3eab360bca",
+      "archetype": "technical_decline_prone",
+      "true_payday_offset": 14,
+      "base_liquidity_probability": 0.7590702402001226,
+      "technical_failure_propensity": 0.15,
+      "drift_level": "none",
+      "timing_noise_std_dev": 1.0
+    },
+    "merchant_latent": {
+      "merchant_id": "3b893447-4083-4070-832a-ad674e85f4b1",
+      "industry_risk_modifier": 0.01773179452727329,
+      "avg_mandate_amount": 452.3747174089655,
+      "technical_failure_propensity": 0.01269478340307623,
+      "historical_retry_schedule": [
+        3
+      ]
+    }
+  },
+  {
+    "scenario_key": "F",
+    "title": "Will Succeed on Retry",
+    "mandate": {
+      "mandate_id": "28c7994f-3553-425d-a7c6-73bef8e65e06",
+      "customer_id": "7ca3d000-469d-47c8-8078-3c95f66c1068",
+      "merchant_id": "c52f7f98-5dd8-43ea-97e2-3d3a2c0c9d52",
+      "amount": 376.56,
+      "status": "active",
+      "created_at": "2025-01-11T00:00:00Z",
+      "expires_at": "2030-01-10T00:00:00Z"
+    },
+    "history": [
+      {
+        "attempt_id": "7e02a497-e0c6-4593-a354-95014022fdaf",
+        "mandate_id": "28c7994f-3553-425d-a7c6-73bef8e65e06",
+        "timestamp": "2025-02-10T00:00:00Z",
+        "amount": 376.56,
+        "status": "failed",
+        "network_return_code": "ERR_INSUFFICIENT_FUNDS"
+      },
+      {
+        "attempt_id": "ceeb31d4-0207-4210-a239-4ec5a0507b35",
+        "mandate_id": "28c7994f-3553-425d-a7c6-73bef8e65e06",
+        "timestamp": "2025-02-13T00:00:00Z",
+        "amount": 376.56,
+        "status": "failed",
+        "network_return_code": "ERR_GATEWAY"
+      }
+    ],
+    "customer_latent": {
+      "customer_id": "7ca3d000-469d-47c8-8078-3c95f66c1068",
+      "archetype": "salary_cycle_regular",
+      "true_payday_offset": 25,
+      "base_liquidity_probability": 0.8880990840370833,
+      "technical_failure_propensity": 0.01,
+      "drift_level": "none",
+      "timing_noise_std_dev": 1.0
+    },
+    "merchant_latent": {
+      "merchant_id": "c52f7f98-5dd8-43ea-97e2-3d3a2c0c9d52",
+      "industry_risk_modifier": 0.009640903073197385,
+      "avg_mandate_amount": 198.53598272050505,
+      "technical_failure_propensity": 0.012321880138861433,
+      "historical_retry_schedule": [
+        3
+      ]
+    }
+  }
+]

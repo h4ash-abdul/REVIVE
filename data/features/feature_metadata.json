@@ -1,0 +1,9 @@
+{
+  "total_examples": 8106,
+  "train_size": 5674,
+  "validation_size": 1216,
+  "test_size": 1216,
+  "train_end_timestamp": "2025-10-28T00:00:00+00:00",
+  "validation_end_timestamp": "2025-11-27T00:00:00+00:00",
+  "feature_version": "v1.0"
+}

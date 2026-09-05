@@ -1,0 +1,43 @@
+mandate_id,strategy,initial_amount,recovered_amount,recovered_boolean,attempt_count,retry_budget_exhausted,stop_reason,policy_violation_count,execution_error_count
+1bf9d1f7-87b8-47bf-bac4-84f6c0aa6f37,ImmediateRetryStrategy,108.66,0.0,False,0,False,Mandate status is MandateStatus.EXPIRED,719,0
+4566b089-32d9-43fb-8b04-50af25c9f494,ImmediateRetryStrategy,404.67,0.0,False,0,True,Budget Exhausted,719,0
+d35728b6-d2c6-482b-b55c-4b56ea63c7e2,ImmediateRetryStrategy,614.69,0.0,False,0,True,Budget Exhausted,719,0
+bd4e749e-cf4a-4148-a83e-91fd234f163d,ImmediateRetryStrategy,280.92,0.0,False,0,True,Budget Exhausted,719,0
+8cc690e1-f98b-4b7f-a17b-9a63ebe6e84b,ImmediateRetryStrategy,145.57,0.0,False,0,True,Budget Exhausted,719,0
+41ec9f32-4158-4a57-9791-8f17eb64be90,ImmediateRetryStrategy,75.55,0.0,False,0,True,Budget Exhausted,719,0
+d14537ba-fe20-423d-803c-a2a8cc94f04a,ImmediateRetryStrategy,111.5,0.0,False,0,False,Mandate status is MandateStatus.REVOKED,719,0
+9a417a32-50b9-4be4-8b46-f1e9f8d45d18,ImmediateRetryStrategy,789.28,0.0,False,0,False,Mandate status is MandateStatus.REVOKED,719,0
+279d29b4-1700-44ca-8ee4-1b795b5b3864,ImmediateRetryStrategy,294.05,0.0,False,0,False,Mandate status is MandateStatus.EXPIRED,719,0
+9c8b24c6-75da-4bdb-9f74-ee3b60560f80,ImmediateRetryStrategy,120.53,0.0,False,0,True,Budget Exhausted,719,0
+69b8364a-02cf-486b-af17-6f2be72ba427,ImmediateRetryStrategy,241.92,241.92,True,1,False,Recovered,716,0
+fec134af-9187-4d63-af5b-edcbcac9f4a3,ImmediateRetryStrategy,402.67,0.0,False,0,False,Mandate status is MandateStatus.EXPIRED,719,0
+5fc96a7a-8371-4224-8f9c-451c9eb2c7fb,ImmediateRetryStrategy,68.6,0.0,False,0,True,Budget Exhausted,719,0
+bc53f76c-ec70-41c9-82b3-c4d139bf85f3,ImmediateRetryStrategy,640.45,0.0,False,0,True,Budget Exhausted,719,0
+1bf9d1f7-87b8-47bf-bac4-84f6c0aa6f37,FixedScheduleStrategy,108.66,0.0,False,0,False,Mandate status is MandateStatus.EXPIRED,3,0
+4566b089-32d9-43fb-8b04-50af25c9f494,FixedScheduleStrategy,404.67,0.0,False,0,True,Budget Exhausted,3,0
+d35728b6-d2c6-482b-b55c-4b56ea63c7e2,FixedScheduleStrategy,614.69,0.0,False,0,True,Budget Exhausted,3,0
+bd4e749e-cf4a-4148-a83e-91fd234f163d,FixedScheduleStrategy,280.92,0.0,False,0,True,Budget Exhausted,3,0
+8cc690e1-f98b-4b7f-a17b-9a63ebe6e84b,FixedScheduleStrategy,145.57,0.0,False,0,True,Budget Exhausted,3,0
+41ec9f32-4158-4a57-9791-8f17eb64be90,FixedScheduleStrategy,75.55,0.0,False,0,True,Budget Exhausted,3,0
+d14537ba-fe20-423d-803c-a2a8cc94f04a,FixedScheduleStrategy,111.5,0.0,False,0,False,Mandate status is MandateStatus.REVOKED,3,0
+9a417a32-50b9-4be4-8b46-f1e9f8d45d18,FixedScheduleStrategy,789.28,0.0,False,0,False,Mandate status is MandateStatus.REVOKED,3,0
+279d29b4-1700-44ca-8ee4-1b795b5b3864,FixedScheduleStrategy,294.05,0.0,False,0,False,Mandate status is MandateStatus.EXPIRED,3,0
+9c8b24c6-75da-4bdb-9f74-ee3b60560f80,FixedScheduleStrategy,120.53,0.0,False,0,True,Budget Exhausted,3,0
+69b8364a-02cf-486b-af17-6f2be72ba427,FixedScheduleStrategy,241.92,0.0,False,3,True,Budget Exhausted,6,0
+fec134af-9187-4d63-af5b-edcbcac9f4a3,FixedScheduleStrategy,402.67,0.0,False,0,False,Mandate status is MandateStatus.EXPIRED,3,0
+5fc96a7a-8371-4224-8f9c-451c9eb2c7fb,FixedScheduleStrategy,68.6,0.0,False,0,True,Budget Exhausted,3,0
+bc53f76c-ec70-41c9-82b3-c4d139bf85f3,FixedScheduleStrategy,640.45,0.0,False,0,True,Budget Exhausted,3,0
+1bf9d1f7-87b8-47bf-bac4-84f6c0aa6f37,SmartHistoricalHeuristicStrategy,108.66,0.0,False,0,False,Mandate status is MandateStatus.EXPIRED,30,0
+4566b089-32d9-43fb-8b04-50af25c9f494,SmartHistoricalHeuristicStrategy,404.67,0.0,False,0,True,Budget Exhausted,30,0
+d35728b6-d2c6-482b-b55c-4b56ea63c7e2,SmartHistoricalHeuristicStrategy,614.69,0.0,False,0,True,Budget Exhausted,30,0
+bd4e749e-cf4a-4148-a83e-91fd234f163d,SmartHistoricalHeuristicStrategy,280.92,0.0,False,0,True,Budget Exhausted,30,0
+8cc690e1-f98b-4b7f-a17b-9a63ebe6e84b,SmartHistoricalHeuristicStrategy,145.57,0.0,False,0,True,Budget Exhausted,30,0
+41ec9f32-4158-4a57-9791-8f17eb64be90,SmartHistoricalHeuristicStrategy,75.55,0.0,False,0,True,Budget Exhausted,30,0
+d14537ba-fe20-423d-803c-a2a8cc94f04a,SmartHistoricalHeuristicStrategy,111.5,0.0,False,0,False,Mandate status is MandateStatus.REVOKED,30,0
+9a417a32-50b9-4be4-8b46-f1e9f8d45d18,SmartHistoricalHeuristicStrategy,789.28,0.0,False,0,False,Mandate status is MandateStatus.REVOKED,30,0
+279d29b4-1700-44ca-8ee4-1b795b5b3864,SmartHistoricalHeuristicStrategy,294.05,0.0,False,0,False,Mandate status is MandateStatus.EXPIRED,30,0
+9c8b24c6-75da-4bdb-9f74-ee3b60560f80,SmartHistoricalHeuristicStrategy,120.53,0.0,False,0,True,Budget Exhausted,30,0
+69b8364a-02cf-486b-af17-6f2be72ba427,SmartHistoricalHeuristicStrategy,241.92,0.0,False,3,True,Budget Exhausted,114,0
+fec134af-9187-4d63-af5b-edcbcac9f4a3,SmartHistoricalHeuristicStrategy,402.67,0.0,False,0,False,Mandate status is MandateStatus.EXPIRED,30,0
+5fc96a7a-8371-4224-8f9c-451c9eb2c7fb,SmartHistoricalHeuristicStrategy,68.6,0.0,False,0,True,Budget Exhausted,30,0
+bc53f76c-ec70-41c9-82b3-c4d139bf85f3,SmartHistoricalHeuristicStrategy,640.45,0.0,False,0,True,Budget Exhausted,30,0

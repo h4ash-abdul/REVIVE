@@ -1,0 +1,54 @@
+{
+  "primary_comparison": {
+    "comparison": "MLExpectedValue vs SmartHeuristic",
+    "n_mandates": 417,
+    "observed": {
+      "recovered_revenue_SmartHeuristic": 49908.03,
+      "recovered_revenue_MLExpectedValue": 47526.23,
+      "revenue_difference": -2381.7999999999956,
+      "percentage_lift": -0.047723783126683135,
+      "recovery_rate_difference": 0.0
+    },
+    "bootstrap": {
+      "replicates": 1000,
+      "median_difference": -2444.8849999999948,
+      "p05_difference": -8876.411499999997,
+      "p95_difference": 3838.733000000001,
+      "p025_difference": -10108.293500000002,
+      "p975_difference": 5300.492249999992,
+      "prob_challenger_wins": 0.261
+    },
+    "recovery_paired_counts": {
+      "shared_recoveries": 121,
+      "shared_failures": 210,
+      "SmartHeuristic_only_recoveries": 43,
+      "MLExpectedValue_only_recoveries": 43
+    }
+  },
+  "ev_ablation": {
+    "comparison": "MLExpectedValue vs MLProbability",
+    "n_mandates": 417,
+    "observed": {
+      "recovered_revenue_MLProbability": 49331.880000000005,
+      "recovered_revenue_MLExpectedValue": 47526.23,
+      "revenue_difference": -1805.6500000000015,
+      "percentage_lift": -0.0366020917913528,
+      "recovery_rate_difference": 0.0071942446043165575
+    },
+    "bootstrap": {
+      "replicates": 1000,
+      "median_difference": -1726.8450000000012,
+      "p05_difference": -7327.146500000002,
+      "p95_difference": 4167.782499999996,
+      "p025_difference": -8759.730999999996,
+      "p975_difference": 5378.7415000000055,
+      "prob_challenger_wins": 0.305
+    },
+    "recovery_paired_counts": {
+      "shared_recoveries": 124,
+      "shared_failures": 216,
+      "MLProbability_only_recoveries": 37,
+      "MLExpectedValue_only_recoveries": 40
+    }
+  }
+}

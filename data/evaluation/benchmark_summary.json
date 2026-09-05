@@ -1,0 +1,136 @@
+{
+  "experiment": {
+    "experiment_id": "16073dc7-0d87-4fc0-9007-11ae548c480a",
+    "dataset_version": "sim-bench-v1",
+    "simulator_version": "v2.1",
+    "policy_version": "v1.0",
+    "strategy_versions": {
+      "ImmediateRetryStrategy": "v1.1",
+      "FixedScheduleStrategy": "v1.1",
+      "SmartHistoricalHeuristicStrategy": "v1.1"
+    },
+    "seed": 42,
+    "cohort_snapshot_id": "28652b05-aee7-4f39-b971-18e610451f2a",
+    "start_time": "2026-09-03T16:26:46.612394Z",
+    "end_time": null,
+    "configuration": {
+      "policy": {
+        "policy_version": "v1.0",
+        "max_retries_per_mandate": 3,
+        "min_hours_between_retries": 24,
+        "allowed_execution_windows_utc": [
+          "00:00-23:59"
+        ],
+        "stop_on_success": true,
+        "require_manual_approval_over_amount": 1000.0
+      },
+      "simulator": {
+        "simulator_version": "v2.1",
+        "seed": 42,
+        "scenario": "strong_temporal_signal",
+        "noise_level": "medium",
+        "customer_archetypes_distribution": {
+          "salary_cycle_regular": 0.4,
+          "irregular_gig": 0.2,
+          "chronic_low_balance": 0.15,
+          "thin_history": 0.15,
+          "technical_decline_prone": 0.1
+        },
+        "behavioral_drift_rate": 0.0,
+        "enable_technical_declines": true
+      }
+    }
+  },
+  "metrics": {
+    "ImmediateRetryStrategy": {
+      "BUSINESS": {
+        "total_revenue_at_risk": 4299.06,
+        "total_recovered_revenue": 241.92,
+        "recovery_rate": 0.05627276660479267,
+        "incremental_recovered_revenue_vs_Immediate": 0.0,
+        "lift_vs_Immediate": 0.0,
+        "incremental_recovered_revenue_vs_Smart": 241.92,
+        "lift_vs_Smart": 0
+      },
+      "EFFICIENCY": {
+        "total_payment_attempts": 1,
+        "average_attempts_per_recovered_mandate": 1.0,
+        "median_attempts_per_recovered_mandate": 1.0,
+        "average_attempts_per_mandate": 0.07142857142857142,
+        "retry_budget_exhaustion_rate": 0.5714285714285714
+      },
+      "SAFETY": {
+        "policy_violations": 10063,
+        "invalid_executions": 0,
+        "retry_after_success_attempts": 0,
+        "budget_violations": 0,
+        "duplicate_execution_attempts": 0
+      },
+      "RELIABILITY": {
+        "execution_failures": 0,
+        "simulator_errors": 0,
+        "incomplete_mandate_simulations": 0
+      }
+    },
+    "FixedScheduleStrategy": {
+      "BUSINESS": {
+        "total_revenue_at_risk": 4299.06,
+        "total_recovered_revenue": 0.0,
+        "recovery_rate": 0.0,
+        "incremental_recovered_revenue_vs_Immediate": -241.92,
+        "lift_vs_Immediate": -1.0,
+        "incremental_recovered_revenue_vs_Smart": 0.0,
+        "lift_vs_Smart": 0
+      },
+      "EFFICIENCY": {
+        "total_payment_attempts": 3,
+        "average_attempts_per_recovered_mandate": 0.0,
+        "median_attempts_per_recovered_mandate": 0.0,
+        "average_attempts_per_mandate": 0.21428571428571427,
+        "retry_budget_exhaustion_rate": 0.6428571428571429
+      },
+      "SAFETY": {
+        "policy_violations": 45,
+        "invalid_executions": 0,
+        "retry_after_success_attempts": 0,
+        "budget_violations": 0,
+        "duplicate_execution_attempts": 0
+      },
+      "RELIABILITY": {
+        "execution_failures": 0,
+        "simulator_errors": 0,
+        "incomplete_mandate_simulations": 0
+      }
+    },
+    "SmartHistoricalHeuristicStrategy": {
+      "BUSINESS": {
+        "total_revenue_at_risk": 4299.06,
+        "total_recovered_revenue": 0.0,
+        "recovery_rate": 0.0,
+        "incremental_recovered_revenue_vs_Immediate": -241.92,
+        "lift_vs_Immediate": -1.0,
+        "incremental_recovered_revenue_vs_Smart": 0.0,
+        "lift_vs_Smart": 0
+      },
+      "EFFICIENCY": {
+        "total_payment_attempts": 3,
+        "average_attempts_per_recovered_mandate": 0.0,
+        "median_attempts_per_recovered_mandate": 0.0,
+        "average_attempts_per_mandate": 0.21428571428571427,
+        "retry_budget_exhaustion_rate": 0.6428571428571429
+      },
+      "SAFETY": {
+        "policy_violations": 504,
+        "invalid_executions": 0,
+        "retry_after_success_attempts": 0,
+        "budget_violations": 0,
+        "duplicate_execution_attempts": 0
+      },
+      "RELIABILITY": {
+        "execution_failures": 0,
+        "simulator_errors": 0,
+        "incomplete_mandate_simulations": 0
+      }
+    }
+  }
+}

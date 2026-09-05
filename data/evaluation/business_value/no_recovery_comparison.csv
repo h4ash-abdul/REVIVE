@@ -1,0 +1,418 @@
+mandate_id,strategy,initial_amount,recovered_amount,recovered_boolean,attempt_count,retry_budget_exhausted,stop_reason,policy_violation_count,execution_error_count,amount_at_risk
+d6cd3155-08a8-ac7f-8621-38ad0f09105c,NoRecovery,110.25,0.0,False,0,False,No Recovery Baseline,369,0,110.25
+e9aa144b-9dd4-3675-ef14-5064aab07015,NoRecovery,726.8,0.0,False,0,False,No Recovery Baseline,369,0,726.8
+0406ff44-7ce4-0679-a8c6-dbc07bb3447b,NoRecovery,369.72,0.0,False,0,False,No Recovery Baseline,369,0,369.72
+cb80f288-446f-64dd-5abc-a6e5d0b1e3eb,NoRecovery,44.15,0.0,False,0,False,No Recovery Baseline,369,0,44.15
+4ccb2355-39d1-c7ff-b27e-1442fd7fe973,NoRecovery,130.03,0.0,False,0,False,No Recovery Baseline,369,0,130.03
+d867888b-7ff6-b824-152a-eaec2bdfcb41,NoRecovery,418.93,0.0,False,0,False,No Recovery Baseline,369,0,418.93
+47c68688-ecf3-2053-af36-b8cc13087974,NoRecovery,342.2,0.0,False,0,False,No Recovery Baseline,369,0,342.2
+a879d8f8-9042-2eb7-8b04-0f53e63949d4,NoRecovery,588.66,0.0,False,0,False,No Recovery Baseline,369,0,588.66
+3508507a-f622-d842-0402-2b3c508211a5,NoRecovery,778.73,0.0,False,0,False,No Recovery Baseline,369,0,778.73
+9d264599-c4dd-8df5-9aec-56a857311609,NoRecovery,143.11,0.0,False,0,False,Mandate status is MandateStatus.EXPIRED,372,0,143.11
+16591c89-21eb-faa9-1a2b-d69c450f69ee,NoRecovery,174.81,0.0,False,0,False,No Recovery Baseline,369,0,174.81
+8e969227-72e7-6b51-6e54-ac6d2ff8e87e,NoRecovery,130.89,0.0,False,0,False,No Recovery Baseline,369,0,130.89
+c777a07f-6346-d4ef-69ef-74e34ab6821c,NoRecovery,153.84,0.0,False,0,False,No Recovery Baseline,369,0,153.84
+8f3dc97f-e6b0-da0a-b98f-5dbe15aede0f,NoRecovery,563.96,0.0,False,0,False,Mandate status is MandateStatus.EXPIRED,372,0,563.96
+46a56fe8-6f46-f1b1-2ace-1aa9103246b3,NoRecovery,82.51,0.0,False,0,False,No Recovery Baseline,369,0,82.51
+c85cd714-7bf6-9552-4cbc-90446bcd5ce7,NoRecovery,552.31,0.0,False,0,False,No Recovery Baseline,369,0,552.31
+75366b9f-320f-72c0-9dde-01889803b22e,NoRecovery,314.88,0.0,False,0,False,No Recovery Baseline,369,0,314.88
+d773f98d-550c-2fe9-654c-11d9f2e61828,NoRecovery,569.69,0.0,False,0,False,No Recovery Baseline,369,0,569.69
+6e3cdd4f-55b1-45e4-70b2-7304545cd88d,NoRecovery,695.27,0.0,False,0,False,Mandate status is MandateStatus.EXPIRED,372,0,695.27
+2d79a2d1-506e-50c7-7aa0-61e9336b00cb,NoRecovery,70.12,0.0,False,0,False,No Recovery Baseline,369,0,70.12
+51b30182-f7fe-604f-65f3-0779f6ee5cdb,NoRecovery,110.3,0.0,False,0,False,No Recovery Baseline,369,0,110.3
+33261887-9058-81df-ee9b-f3e11d27c09a,NoRecovery,582.2,0.0,False,0,False,No Recovery Baseline,369,0,582.2
+40afbf3f-3df5-1967-4d86-70bda2224f96,NoRecovery,287.47,0.0,False,0,False,Mandate status is MandateStatus.REVOKED,372,0,287.47
+2a9528c3-5ae1-dbad-aa29-60fda85894df,NoRecovery,394.34,0.0,False,0,False,Mandate status is MandateStatus.EXPIRED,372,0,394.34
+1b1f2eb1-6e32-55a8-cbd5-cc86f73936e9,NoRecovery,250.74,0.0,False,0,False,No Recovery Baseline,369,0,250.74
+38d5101f-423c-ad9d-193e-478302b34254,NoRecovery,838.28,0.0,False,0,False,No Recovery Baseline,369,0,838.28
+768b4f7e-6421-5e66-5fc6-4cd0721e8b1f,NoRecovery,431.98,0.0,False,0,False,No Recovery Baseline,369,0,431.98
+4ba17233-1ac3-bf31-7b96-e2d10649bcf6,NoRecovery,49.76,0.0,False,0,False,No Recovery Baseline,369,0,49.76
+57d337d3-4fd8-0bbb-592c-11072444d301,NoRecovery,234.43,0.0,False,0,False,Mandate status is MandateStatus.EXPIRED,372,0,234.43
+0b705933-4cde-1b6b-1132-567c51a40d2a,NoRecovery,715.1,0.0,False,0,False,No Recovery Baseline,369,0,715.1
+05c8234b-1d76-3a66-b5f5-9cb0cf685878,NoRecovery,163.91,0.0,False,0,False,No Recovery Baseline,369,0,163.91
+a84554c3-a3f6-6c61-2fb7-0dab2f383b43,NoRecovery,586.4,0.0,False,0,False,No Recovery Baseline,369,0,586.4
+0123a348-638a-bdf6-6df7-2cd3979aa051,NoRecovery,41.53,0.0,False,0,False,No Recovery Baseline,369,0,41.53
+7d4ed26e-dcd5-bfae-abb3-16a743299780,NoRecovery,380.63,0.0,False,0,False,Mandate status is MandateStatus.REVOKED,372,0,380.63
+503b4078-a39c-9ec6-f746-4c02871854c1,NoRecovery,259.2,0.0,False,0,False,Mandate status is MandateStatus.EXPIRED,372,0,259.2
+8991b01a-a2b0-3c4b-7c96-6b552f8d8ded,NoRecovery,36.82,0.0,False,0,False,No Recovery Baseline,369,0,36.82
+8fc3d7d3-f6bd-80c7-624a-2a50d0b1fde0,NoRecovery,83.06,0.0,False,0,False,No Recovery Baseline,369,0,83.06
+8b0901ab-c66d-ceb3-4494-5e091d3ca5a4,NoRecovery,549.23,0.0,False,0,False,No Recovery Baseline,369,0,549.23
+0840405a-ffd2-f491-dff3-89aa4c36a70c,NoRecovery,252.9,0.0,False,0,False,No Recovery Baseline,369,0,252.9
+f3d04ffb-4470-9848-929e-cc924a11be44,NoRecovery,359.15,0.0,False,0,False,No Recovery Baseline,369,0,359.15
+600b4b35-6a0a-a7d5-a0b8-575544caa5a2,NoRecovery,751.14,0.0,False,0,False,No Recovery Baseline,369,0,751.14
+cb6ad0c7-a235-6dd4-1355-08d073b5bad5,NoRecovery,426.2,0.0,False,0,False,No Recovery Baseline,369,0,426.2
+94fb09f0-53c9-3ae7-7cf0-7bb3f343d9eb,NoRecovery,19.08,0.0,False,0,False,Mandate status is MandateStatus.EXPIRED,372,0,19.08
+cbb18c79-1036-708d-d9a0-90075bb47c18,NoRecovery,196.16,0.0,False,0,False,No Recovery Baseline,369,0,196.16
+f7d7465d-37c3-b3c9-65d0-b51788d00abd,NoRecovery,222.26,0.0,False,0,False,No Recovery Baseline,369,0,222.26
+7ea5a387-363b-e5cb-d329-37246dfd171a,NoRecovery,31.22,0.0,False,0,False,No Recovery Baseline,369,0,31.22
+216e9fe5-93f3-7596-8c1c-8b0556771f36,NoRecovery,34.2,0.0,False,0,False,No Recovery Baseline,369,0,34.2
+c9ce44bd-7c3f-1add-da38-5db590eeb067,NoRecovery,366.03,0.0,False,0,False,Mandate status is MandateStatus.EXPIRED,372,0,366.03
+28719b9b-db8f-0e32-edef-50031fce01e3,NoRecovery,491.8,0.0,False,0,False,No Recovery Baseline,369,0,491.8
+fee5ce69-33cb-202e-6d84-414df54191ea,NoRecovery,885.04,0.0,False,0,False,No Recovery Baseline,369,0,885.04
+a0279a18-6576-a410-0d41-ee472a5fda18,NoRecovery,73.71,0.0,False,0,False,No Recovery Baseline,369,0,73.71
+c156e501-b30e-96e8-b9da-5f8c4e35da80,NoRecovery,207.52,0.0,False,0,False,No Recovery Baseline,369,0,207.52
+36a2c52b-0047-3139-185d-f528b4258e19,NoRecovery,496.03,0.0,False,0,False,Mandate status is MandateStatus.REVOKED,372,0,496.03
+7a4a902f-21d6-3b0f-b1ac-040d6c1cc405,NoRecovery,372.71,0.0,False,0,False,No Recovery Baseline,369,0,372.71
+16de66c9-6210-def6-3a9c-43081221cddf,NoRecovery,159.78,0.0,False,0,False,No Recovery Baseline,369,0,159.78
+9c3de1b0-022b-6683-9033-da6587cf63fd,NoRecovery,281.24,0.0,False,0,False,No Recovery Baseline,369,0,281.24
+3f87dfc2-1591-52f2-a505-da9c46e75a2c,NoRecovery,100.8,0.0,False,0,False,Mandate status is MandateStatus.EXPIRED,372,0,100.8
+f0f7ad22-c76a-8e0f-48f0-91f09b8b38ae,NoRecovery,310.25,0.0,False,0,False,No Recovery Baseline,369,0,310.25
+d8d994b8-d90f-74e9-06dd-f6cab0c30a59,NoRecovery,689.82,0.0,False,0,False,No Recovery Baseline,369,0,689.82
+a56b61e0-4ba8-a4ca-6449-cb6fbf72ae52,NoRecovery,632.21,0.0,False,0,False,No Recovery Baseline,369,0,632.21
+a3595d1f-7fe4-a42e-3db7-88a61cdcc4c2,NoRecovery,169.89,0.0,False,0,False,Mandate status is MandateStatus.REVOKED,372,0,169.89
+15669e36-4708-203b-2716-10c19db54283,NoRecovery,392.2,0.0,False,0,False,No Recovery Baseline,369,0,392.2
+ebc1bb52-82e4-dd4a-143a-c1c54f560ed5,NoRecovery,902.62,0.0,False,0,False,Mandate status is MandateStatus.EXPIRED,372,0,902.62
+27c6cbb1-cedd-069d-f96c-9a0a3404c02a,NoRecovery,61.38,0.0,False,0,False,No Recovery Baseline,369,0,61.38
+55c34853-0783-e43c-e65f-ad87c57c7498,NoRecovery,405.74,0.0,False,0,False,No Recovery Baseline,369,0,405.74
+7f0386fa-13ba-dc91-a0a5-fde6939f71a2,NoRecovery,483.36,0.0,False,0,False,No Recovery Baseline,369,0,483.36
+0e3141ec-5c31-1464-82c2-99f07487d772,NoRecovery,193.78,0.0,False,0,False,Mandate status is MandateStatus.REVOKED,372,0,193.78
+ac5f12ef-8085-c147-1e91-0f365f705b25,NoRecovery,429.25,0.0,False,0,False,No Recovery Baseline,369,0,429.25
+f8cbab4c-9779-0e84-5e47-2e2276c3e642,NoRecovery,77.16,0.0,False,0,False,No Recovery Baseline,369,0,77.16
+c6a07656-c5c9-fb91-ff6e-f9ed7e4ce29f,NoRecovery,386.98,0.0,False,0,False,Mandate status is MandateStatus.EXPIRED,372,0,386.98
+061efb95-68f8-2063-eeb1-9ad201a1fb0f,NoRecovery,420.15,0.0,False,0,False,No Recovery Baseline,369,0,420.15
+bcf2fc3b-d958-74c2-6053-8c1ba84510a1,NoRecovery,31.13,0.0,False,0,False,No Recovery Baseline,369,0,31.13
+34879e41-1a9c-672a-4eb9-047dba2ac3d9,NoRecovery,577.11,0.0,False,0,False,No Recovery Baseline,369,0,577.11
+47a2a10b-b62e-db49-2472-96a4ff38b918,NoRecovery,64.38,0.0,False,0,False,No Recovery Baseline,369,0,64.38
+69be173a-850e-f0ad-d872-f72ee5b4a1ae,NoRecovery,141.36,0.0,False,0,False,No Recovery Baseline,369,0,141.36
+755d814b-5f5b-a255-e544-9887b36ab3ed,NoRecovery,73.38,0.0,False,0,False,No Recovery Baseline,369,0,73.38
+f18cccdc-131e-b723-3bcd-f203459ee674,NoRecovery,78.2,0.0,False,0,False,No Recovery Baseline,369,0,78.2
+c5285425-c7a9-f33c-22d8-39d333e4f986,NoRecovery,256.0,0.0,False,0,False,No Recovery Baseline,369,0,256.0
+b46788bd-d38e-13e4-4de1-087bafa14a55,NoRecovery,187.19,0.0,False,0,False,No Recovery Baseline,369,0,187.19
+38e7e019-fb89-86c8-c7ec-fe71d49347fc,NoRecovery,47.75,0.0,False,0,False,No Recovery Baseline,369,0,47.75
+329fc417-1081-3d45-ff45-f8a20594b24f,NoRecovery,124.49,0.0,False,0,False,No Recovery Baseline,369,0,124.49
+1f5df912-54e0-7431-cf13-3b65d450afa2,NoRecovery,403.74,0.0,False,0,False,No Recovery Baseline,369,0,403.74
+0cf697a5-7603-c36c-f139-4e3c0aee2557,NoRecovery,295.54,0.0,False,0,False,No Recovery Baseline,369,0,295.54
+9d3616a1-08de-c921-260c-b547e2280fe3,NoRecovery,210.15,0.0,False,0,False,Mandate status is MandateStatus.EXPIRED,372,0,210.15
+a5b40983-3eeb-c04a-9df2-372e9e825aae,NoRecovery,254.82,0.0,False,0,False,No Recovery Baseline,369,0,254.82
+1674eb65-0f9c-5300-7aa1-c5678cf9eea9,NoRecovery,30.3,0.0,False,0,False,No Recovery Baseline,369,0,30.3
+fe7c80e9-a179-1e93-3fc8-25ac869bc00f,NoRecovery,580.69,0.0,False,0,False,No Recovery Baseline,369,0,580.69
+04ffeab2-cb7b-0b3a-8b2d-158acd5ae324,NoRecovery,229.51,0.0,False,0,False,No Recovery Baseline,369,0,229.51
+b4157cea-0738-8ba4-9770-a3dbe9fa97e2,NoRecovery,309.51,0.0,False,0,False,No Recovery Baseline,369,0,309.51
+9a069295-3b8d-3447-0e61-065f171b1b80,NoRecovery,46.04,0.0,False,0,False,No Recovery Baseline,369,0,46.04
+9d37efb6-eafb-3e90-54ec-84ce002ccb25,NoRecovery,475.17,0.0,False,0,False,No Recovery Baseline,369,0,475.17
+cd6bb03b-eb35-37a0-2d6e-0291b7893986,NoRecovery,128.63,0.0,False,0,False,Mandate status is MandateStatus.EXPIRED,372,0,128.63
+96053035-6545-c030-a981-fa54f121e129,NoRecovery,816.78,0.0,False,0,False,No Recovery Baseline,369,0,816.78
+92a54d04-f2dd-e1f5-b3b6-d344f2e3c6f0,NoRecovery,286.65,0.0,False,0,False,Mandate status is MandateStatus.EXPIRED,372,0,286.65
+13eb22c9-bece-d21a-54c7-743b2401342a,NoRecovery,749.36,0.0,False,0,False,No Recovery Baseline,369,0,749.36
+b86d066b-1ba8-27c6-c97a-24ad41b455b8,NoRecovery,29.5,0.0,False,0,False,No Recovery Baseline,369,0,29.5
+702f31e5-62cc-c604-0c53-644b0053f649,NoRecovery,505.83,0.0,False,0,False,No Recovery Baseline,369,0,505.83
+2a9527f6-f817-0ebf-6b6e-64c5bb8aa843,NoRecovery,378.11,0.0,False,0,False,No Recovery Baseline,369,0,378.11
+8a45a905-badf-9397-ecf2-6429b8d77d2f,NoRecovery,272.49,0.0,False,0,False,Mandate status is MandateStatus.EXPIRED,372,0,272.49
+4c2272f3-4811-e562-a91c-f19243e8644b,NoRecovery,90.04,0.0,False,0,False,Mandate status is MandateStatus.REVOKED,372,0,90.04
+7daec949-d700-b461-8cb6-b0ba925f8199,NoRecovery,106.02,0.0,False,0,False,Mandate status is MandateStatus.EXPIRED,372,0,106.02
+fa207403-4ab4-27e3-a360-76812bbba89d,NoRecovery,584.95,0.0,False,0,False,No Recovery Baseline,369,0,584.95
+1d91fe39-d801-4004-793b-ed1b14f9c394,NoRecovery,141.76,0.0,False,0,False,No Recovery Baseline,369,0,141.76
+6334fa2a-8b4b-d7e7-a451-5ae01754bf08,NoRecovery,886.54,0.0,False,0,False,No Recovery Baseline,369,0,886.54
+61a66444-e2af-a629-5efb-336e2f546033,NoRecovery,68.17,0.0,False,0,False,No Recovery Baseline,369,0,68.17
+907276ea-44c0-7a9a-d64a-cb1f39eb038a,NoRecovery,475.23,0.0,False,0,False,No Recovery Baseline,369,0,475.23
+ab0b4cc5-15f0-ea19-18c1-80d2aadf3692,NoRecovery,141.16,0.0,False,0,False,No Recovery Baseline,369,0,141.16
+3a3e46b0-96f8-4ff7-c1a7-2883f8802878,NoRecovery,502.7,0.0,False,0,False,No Recovery Baseline,369,0,502.7
+6319629b-d73e-7bb9-0f9c-a17b8db8dadf,NoRecovery,355.71,0.0,False,0,False,No Recovery Baseline,369,0,355.71
+efb56207-ddec-c40b-afe3-af13891778e8,NoRecovery,31.81,0.0,False,0,False,No Recovery Baseline,369,0,31.81
+6511e61a-1436-65f5-4c81-926079ec533c,NoRecovery,247.39,0.0,False,0,False,No Recovery Baseline,369,0,247.39
+08e3f771-b6dc-bd05-da9b-ccc1e71c681a,NoRecovery,865.64,0.0,False,0,False,No Recovery Baseline,369,0,865.64
+844e250b-e684-390c-923b-78208089b8c5,NoRecovery,222.91,0.0,False,0,False,No Recovery Baseline,369,0,222.91
+d2938e6e-ff4d-0930-33b0-fb536f75ee8a,NoRecovery,409.21,0.0,False,0,False,Mandate status is MandateStatus.EXPIRED,372,0,409.21
+98550b1e-d588-1c1c-25db-5946a091e5b4,NoRecovery,398.4,0.0,False,0,False,Mandate status is MandateStatus.EXPIRED,372,0,398.4
+8d536c75-65b9-0e94-8e6d-e263635a775d,NoRecovery,410.03,0.0,False,0,False,Mandate status is MandateStatus.EXPIRED,372,0,410.03
+1cce08e9-6b6a-8061-c81c-8d3185c69fbf,NoRecovery,50.79,0.0,False,0,False,No Recovery Baseline,369,0,50.79
+ec4e8cbb-a2aa-378c-659e-0258814ff657,NoRecovery,193.36,0.0,False,0,False,No Recovery Baseline,369,0,193.36
+3defa7ba-07d2-fd4d-ae61-716a1fb621ae,NoRecovery,619.43,0.0,False,0,False,No Recovery Baseline,369,0,619.43
+0cb5ee5c-62f5-f7c2-0706-fec248fa4e98,NoRecovery,96.41,0.0,False,0,False,No Recovery Baseline,369,0,96.41
+34ec5264-ad7d-6f81-39a0-f145a5bab050,NoRecovery,24.7,0.0,False,0,False,No Recovery Baseline,369,0,24.7
+8fbba749-5fcd-859e-d6e1-8109d7e174e6,NoRecovery,849.55,0.0,False,0,False,No Recovery Baseline,369,0,849.55
+7b53359e-1bac-bd0d-af35-b30b4c68eb17,NoRecovery,686.23,0.0,False,0,False,No Recovery Baseline,369,0,686.23
+30385dd7-4c7d-9313-a6c6-81b0e4729be5,NoRecovery,6.11,0.0,False,0,False,No Recovery Baseline,369,0,6.11
+3d846fc9-c3f6-2136-846d-5a3b2661c426,NoRecovery,172.27,0.0,False,0,False,No Recovery Baseline,369,0,172.27
+6772fe9f-999b-c859-cf5e-0f0bcd67b5df,NoRecovery,459.91,0.0,False,0,False,No Recovery Baseline,369,0,459.91
+afb28b3d-38ec-cb4d-b69f-5eabb9ff2c29,NoRecovery,295.73,0.0,False,0,False,No Recovery Baseline,369,0,295.73
+38e59b27-16dc-5a6e-a789-077055ec024a,NoRecovery,837.15,0.0,False,0,False,No Recovery Baseline,369,0,837.15
+1e26ed31-d9e9-2758-76b9-04364b46ef33,NoRecovery,87.86,0.0,False,0,False,No Recovery Baseline,369,0,87.86
+a267d32f-ddcb-f4bc-0dbd-c5da787515b9,NoRecovery,37.61,0.0,False,0,False,Mandate status is MandateStatus.REVOKED,372,0,37.61
+69c165ae-4c61-0ae8-87a3-7f1061b512ed,NoRecovery,110.24,0.0,False,0,False,No Recovery Baseline,369,0,110.24
+503be788-2d44-5af8-fc94-76b1a18b5d15,NoRecovery,960.91,0.0,False,0,False,Mandate status is MandateStatus.EXPIRED,372,0,960.91
+3610901c-2196-b3b5-fc21-109bba27bc64,NoRecovery,141.4,0.0,False,0,False,No Recovery Baseline,369,0,141.4
+980b6853-0c70-31eb-9f85-c2dd88e44a48,NoRecovery,741.33,0.0,False,0,False,Mandate status is MandateStatus.EXPIRED,372,0,741.33
+349b5089-2733-5670-b3ad-a2ba797209c0,NoRecovery,368.73,0.0,False,0,False,No Recovery Baseline,369,0,368.73
+19d9d0b5-a962-d996-6bbe-3b5a4d15f7d8,NoRecovery,282.96,0.0,False,0,False,No Recovery Baseline,369,0,282.96
+16c8e3d7-abf0-263e-0343-8b6400b3700f,NoRecovery,60.4,0.0,False,0,False,No Recovery Baseline,369,0,60.4
+13365c0c-82ff-1f2e-c78f-07cf170fa87b,NoRecovery,20.96,0.0,False,0,False,No Recovery Baseline,369,0,20.96
+ad409244-cd35-66ef-5c37-07394a629c5e,NoRecovery,773.18,0.0,False,0,False,No Recovery Baseline,369,0,773.18
+1dabb10a-bd10-f87c-6d0e-0597500d92a7,NoRecovery,128.08,0.0,False,0,False,No Recovery Baseline,369,0,128.08
+bbaa574f-e0e3-c5ce-44af-ecb79f2ebefc,NoRecovery,623.96,0.0,False,0,False,No Recovery Baseline,369,0,623.96
+57bcad3a-d0a1-7fe8-5f64-2a5317cba85d,NoRecovery,183.64,0.0,False,0,False,Mandate status is MandateStatus.EXPIRED,372,0,183.64
+c7774fae-6137-58c3-9c7f-aca62e671784,NoRecovery,194.99,0.0,False,0,False,No Recovery Baseline,369,0,194.99
+1036ca81-0bc4-d7ba-70d0-ebcb6949ece5,NoRecovery,287.9,0.0,False,0,False,No Recovery Baseline,369,0,287.9
+032a09e0-5071-e5f0-a7ac-590c42f90f92,NoRecovery,87.32,0.0,False,0,False,No Recovery Baseline,369,0,87.32
+f4acc7e2-fa57-5cea-3957-134490a4a421,NoRecovery,414.08,0.0,False,0,False,No Recovery Baseline,369,0,414.08
+84e3b774-569a-def0-df86-5633ab7aeb66,NoRecovery,461.21,0.0,False,0,False,No Recovery Baseline,369,0,461.21
+a9e8f0d8-5883-09de-7b5f-be413fa2bde0,NoRecovery,322.3,0.0,False,0,False,No Recovery Baseline,369,0,322.3
+816ce054-282c-6470-ef32-f72aa4b5c723,NoRecovery,89.88,0.0,False,0,False,No Recovery Baseline,369,0,89.88
+7eef09ab-da14-3a47-7823-51d9d94df188,NoRecovery,530.44,0.0,False,0,False,No Recovery Baseline,369,0,530.44
+c05db774-132a-5e58-2a57-e880de9205ea,NoRecovery,197.64,0.0,False,0,False,No Recovery Baseline,369,0,197.64
+142e3df0-3c28-f5dc-d12d-aea8673d2920,NoRecovery,476.47,0.0,False,0,False,No Recovery Baseline,369,0,476.47
+92b26acd-cd1f-75a3-71b6-5ca175873920,NoRecovery,26.48,0.0,False,0,False,No Recovery Baseline,369,0,26.48
+a7939a2e-34f4-3404-8ff5-070182226c16,NoRecovery,589.0,0.0,False,0,False,No Recovery Baseline,369,0,589.0
+54fc286f-7457-7d47-d825-301039112943,NoRecovery,213.95,0.0,False,0,False,No Recovery Baseline,369,0,213.95
+99966612-9ea8-7552-c475-66bf8f660bbd,NoRecovery,29.02,0.0,False,0,False,No Recovery Baseline,369,0,29.02
+a2379e6f-d473-4534-5aea-635257632e1e,NoRecovery,178.49,0.0,False,0,False,No Recovery Baseline,369,0,178.49
+c1d48a10-1b96-8925-5682-d038b77f69b9,NoRecovery,262.13,0.0,False,0,False,No Recovery Baseline,369,0,262.13
+a21c0c06-ed37-6567-0be7-728e6a1aba9d,NoRecovery,722.67,0.0,False,0,False,No Recovery Baseline,369,0,722.67
+95ca788d-d6bc-a712-6ecc-a931ef705d01,NoRecovery,599.61,0.0,False,0,False,No Recovery Baseline,369,0,599.61
+65daced0-460a-6125-3f8c-93d4c32afc4a,NoRecovery,543.14,0.0,False,0,False,No Recovery Baseline,369,0,543.14
+f9a55cf2-a66c-0fa1-b5dc-8a9afb38cd91,NoRecovery,334.88,0.0,False,0,False,No Recovery Baseline,369,0,334.88
+6c21835d-d8e8-b97c-e0a2-59014932936e,NoRecovery,301.63,0.0,False,0,False,Mandate status is MandateStatus.EXPIRED,372,0,301.63
+4458b006-332c-ce0a-0e7d-a698ab95c72f,NoRecovery,143.39,0.0,False,0,False,No Recovery Baseline,369,0,143.39
+fbc8c77e-2933-0fc4-c918-a346c00c200c,NoRecovery,457.11,0.0,False,0,False,Mandate status is MandateStatus.EXPIRED,372,0,457.11
+257c54bc-4024-c424-aef2-ab2f495fa2fc,NoRecovery,723.98,0.0,False,0,False,Mandate status is MandateStatus.EXPIRED,372,0,723.98
+f740d87c-500a-174e-af65-e8ccf9cf8499,NoRecovery,852.77,0.0,False,0,False,No Recovery Baseline,369,0,852.77
+de6cf36b-9edd-2182-33fd-862d4057e470,NoRecovery,311.88,0.0,False,0,False,Mandate status is MandateStatus.REVOKED,372,0,311.88
+716ca1f2-dec0-0f3a-dc46-1b34c7eab19b,NoRecovery,33.77,0.0,False,0,False,No Recovery Baseline,369,0,33.77
+bc2e2b59-2c7d-d667-f664-c7202fddb26a,NoRecovery,444.6,0.0,False,0,False,Mandate status is MandateStatus.REVOKED,372,0,444.6
+b52a9e6b-c8b6-48e0-12a8-50c55bab7f4a,NoRecovery,63.36,0.0,False,0,False,Mandate status is MandateStatus.EXPIRED,372,0,63.36
+f4fd25b7-384f-6e3b-8680-4a8a515f352c,NoRecovery,234.96,0.0,False,0,False,Mandate status is MandateStatus.EXPIRED,372,0,234.96
+c948384b-1174-0357-8546-74262f120b9e,NoRecovery,184.24,0.0,False,0,False,No Recovery Baseline,369,0,184.24
+8b074d1a-6a7a-7841-28cc-812a8150e0c9,NoRecovery,402.99,0.0,False,0,False,Mandate status is MandateStatus.EXPIRED,372,0,402.99
+9e47a339-c0ae-0b1a-f347-673637ec07a6,NoRecovery,757.49,0.0,False,0,False,No Recovery Baseline,369,0,757.49
+4be318a8-0b39-dccf-7c9f-3bc37210045a,NoRecovery,569.97,0.0,False,0,False,No Recovery Baseline,369,0,569.97
+a127dc6b-ab9b-153d-35f5-c65410c2c2e5,NoRecovery,20.33,0.0,False,0,False,Mandate status is MandateStatus.EXPIRED,372,0,20.33
+0614ac41-275c-75dc-afa0-8cbebf343ca7,NoRecovery,84.94,0.0,False,0,False,No Recovery Baseline,369,0,84.94
+09b2eae6-54eb-4c91-b784-ae08758fc8fa,NoRecovery,206.24,0.0,False,0,False,No Recovery Baseline,369,0,206.24
+2d90e4ee-0de4-833e-12c0-620c1667c518,NoRecovery,328.7,0.0,False,0,False,No Recovery Baseline,369,0,328.7
+12087e20-8ede-9b46-407d-0affcb51a911,NoRecovery,25.15,0.0,False,0,False,No Recovery Baseline,369,0,25.15
+50ffde64-6eda-ba8c-6789-e7d0a155eb2c,NoRecovery,494.37,0.0,False,0,False,No Recovery Baseline,369,0,494.37
+1e494952-ac5d-4e57-63b6-64f40452f779,NoRecovery,59.57,0.0,False,0,False,Mandate status is MandateStatus.EXPIRED,372,0,59.57
+d926fe41-b36d-0121-0ba6-fe0995ea6825,NoRecovery,260.51,0.0,False,0,False,No Recovery Baseline,369,0,260.51
+80b9ec30-ed94-898b-5b92-3c67129538df,NoRecovery,403.18,0.0,False,0,False,No Recovery Baseline,369,0,403.18
+12b99a50-8cb6-d1f0-a509-6396761579e7,NoRecovery,5.96,0.0,False,0,False,No Recovery Baseline,369,0,5.96
+a8cfe589-9dc8-9e1a-540e-7d01735d88f3,NoRecovery,15.21,0.0,False,0,False,No Recovery Baseline,369,0,15.21
+5c074653-d711-73e4-46d4-7d416fa5d3b0,NoRecovery,635.25,0.0,False,0,False,Mandate status is MandateStatus.EXPIRED,372,0,635.25
+bbc99473-4363-589c-3249-5cff89e2df24,NoRecovery,795.95,0.0,False,0,False,No Recovery Baseline,369,0,795.95
+c4ea4ece-67b6-e467-9432-d79794f6c67a,NoRecovery,154.35,0.0,False,0,False,No Recovery Baseline,369,0,154.35
+647ac591-5da6-4a3a-260c-cfb4c6735380,NoRecovery,145.2,0.0,False,0,False,Mandate status is MandateStatus.EXPIRED,372,0,145.2
+af2537f5-9d31-762a-fb5a-bb36ce7968b7,NoRecovery,652.06,0.0,False,0,False,No Recovery Baseline,369,0,652.06
+0a58f43c-5bda-0655-f06d-ca247bc6e121,NoRecovery,55.16,0.0,False,0,False,No Recovery Baseline,369,0,55.16
+8494205c-34ef-2552-ab28-6d090af57e60,NoRecovery,13.8,0.0,False,0,False,No Recovery Baseline,369,0,13.8
+f7ebc69a-b428-0f0d-1a6c-f45952f6531f,NoRecovery,502.55,0.0,False,0,False,Mandate status is MandateStatus.REVOKED,372,0,502.55
+606cc2f5-2c81-6bf0-91f6-04068b5a8683,NoRecovery,62.54,0.0,False,0,False,No Recovery Baseline,369,0,62.54
+3ae0acdb-2a65-24af-709d-338b23936d45,NoRecovery,359.77,0.0,False,0,False,Mandate status is MandateStatus.EXPIRED,372,0,359.77
+d123f7c1-b7a1-267e-9a1e-00365cbaa496,NoRecovery,298.97,0.0,False,0,False,No Recovery Baseline,369,0,298.97
+7aa1219a-7a93-98bb-acdb-d5f27b44acd0,NoRecovery,603.08,0.0,False,0,False,No Recovery Baseline,369,0,603.08
+3e612d66-05bf-0618-6930-b0c4d5576899,NoRecovery,137.94,0.0,False,0,False,Mandate status is MandateStatus.EXPIRED,372,0,137.94
+ec257a75-421d-4dca-2a95-59080e503fd8,NoRecovery,654.34,0.0,False,0,False,No Recovery Baseline,369,0,654.34
+67cbfc39-f54f-1b92-8442-906f2e16f0b6,NoRecovery,276.32,0.0,False,0,False,No Recovery Baseline,369,0,276.32
+2aefcf3b-43b7-a0ef-82c4-1c54a8debd88,NoRecovery,64.38,0.0,False,0,False,No Recovery Baseline,369,0,64.38
+a8cdf44d-7b74-2440-17db-4c2f1e158e2f,NoRecovery,69.23,0.0,False,0,False,No Recovery Baseline,369,0,69.23
+8a0ea57a-9a7d-509d-e6e8-790b215d3b1f,NoRecovery,680.12,0.0,False,0,False,No Recovery Baseline,369,0,680.12
+412817eb-2246-29cd-6cec-df821903f9b3,NoRecovery,705.54,0.0,False,0,False,No Recovery Baseline,369,0,705.54
+e8fb5a96-3b85-f6e1-c40f-54057a25ed81,NoRecovery,254.64,0.0,False,0,False,Mandate status is MandateStatus.EXPIRED,372,0,254.64
+9929afeb-4884-2a14-1575-11addbeae9f8,NoRecovery,240.52,0.0,False,0,False,No Recovery Baseline,369,0,240.52
+41ff81d1-689d-1205-8b31-f4d8e073c1d0,NoRecovery,892.59,0.0,False,0,False,Mandate status is MandateStatus.EXPIRED,372,0,892.59
+8222cd7f-36e6-ba85-19ab-dc15296b67bf,NoRecovery,104.68,0.0,False,0,False,No Recovery Baseline,369,0,104.68
+cd04c001-56a3-dccc-c93c-9cc6668b28da,NoRecovery,25.72,0.0,False,0,False,Mandate status is MandateStatus.REVOKED,372,0,25.72
+82b34384-9979-cf26-c8b1-90e1089a9f4f,NoRecovery,444.24,0.0,False,0,False,No Recovery Baseline,369,0,444.24
+dcad8ec2-963a-4333-e582-95dc75f1c654,NoRecovery,73.5,0.0,False,0,False,No Recovery Baseline,369,0,73.5
+2ecaf629-44e2-2691-92de-d495e4f1e8e8,NoRecovery,21.99,0.0,False,0,False,Mandate status is MandateStatus.EXPIRED,372,0,21.99
+ee25356a-aee0-1ec9-bf04-18a9f2765513,NoRecovery,309.62,0.0,False,0,False,No Recovery Baseline,369,0,309.62
+bcb3636d-7fbe-6bb3-30ae-d12de8f10194,NoRecovery,271.65,0.0,False,0,False,No Recovery Baseline,369,0,271.65
+c3a6b204-fc01-4a22-2ed0-b0b27da56b6e,NoRecovery,81.84,0.0,False,0,False,No Recovery Baseline,369,0,81.84
+65db6e43-47bf-8db7-82d9-a774ea7f6c7d,NoRecovery,444.28,0.0,False,0,False,No Recovery Baseline,369,0,444.28
+6c5540f0-cc9c-f41c-8696-99010ddca788,NoRecovery,296.07,0.0,False,0,False,Mandate status is MandateStatus.EXPIRED,372,0,296.07
+750acc98-2cbf-b769-c6a1-a468afb3e3ad,NoRecovery,8.36,0.0,False,0,False,No Recovery Baseline,369,0,8.36
+61223189-35f3-de4a-ac92-04b40306a258,NoRecovery,335.65,0.0,False,0,False,No Recovery Baseline,369,0,335.65
+5c91f845-534f-c96d-19ca-9c1b94bcf47a,NoRecovery,303.87,0.0,False,0,False,No Recovery Baseline,369,0,303.87
+b8875caf-1991-103f-d06e-ccbc3a8359b6,NoRecovery,384.26,0.0,False,0,False,No Recovery Baseline,369,0,384.26
+a1726883-d971-9e00-e4ad-5e9bfedd22d9,NoRecovery,56.99,0.0,False,0,False,No Recovery Baseline,369,0,56.99
+403fd582-4ccf-0a4b-7c93-243ec90b9454,NoRecovery,32.35,0.0,False,0,False,No Recovery Baseline,369,0,32.35
+0c36ad4e-915d-9a63-dbc6-c9288fe84e20,NoRecovery,243.82,0.0,False,0,False,No Recovery Baseline,369,0,243.82
+8eb7c306-8f73-198e-5c3d-0d5f5c6801d6,NoRecovery,76.86,0.0,False,0,False,No Recovery Baseline,369,0,76.86
+581993cc-41f9-994a-cf5d-337fee8d5daa,NoRecovery,373.62,0.0,False,0,False,No Recovery Baseline,369,0,373.62
+a65d958e-936d-d1a8-93ac-b00e32eeeb38,NoRecovery,571.3,0.0,False,0,False,No Recovery Baseline,369,0,571.3
+fab8328f-2cae-93a2-89d7-16efa62d7221,NoRecovery,634.74,0.0,False,0,False,No Recovery Baseline,369,0,634.74
+141283fb-e3be-f3d6-726a-030dbc8cfa8f,NoRecovery,148.33,0.0,False,0,False,No Recovery Baseline,369,0,148.33
+a72bdddd-511e-eeb8-5040-5c433a6c7da6,NoRecovery,52.82,0.0,False,0,False,No Recovery Baseline,369,0,52.82
+2bacf712-d6a9-19e8-86d8-95e5219b606d,NoRecovery,730.93,0.0,False,0,False,No Recovery Baseline,369,0,730.93
+5b59f28e-a9de-5b26-08ff-eab0075072d6,NoRecovery,112.45,0.0,False,0,False,No Recovery Baseline,369,0,112.45
+dd3ee854-5340-64b0-ea4f-4a80dc412176,NoRecovery,705.33,0.0,False,0,False,No Recovery Baseline,369,0,705.33
+bfb8abb9-a18c-5492-74e0-079a98fb4727,NoRecovery,191.37,0.0,False,0,False,No Recovery Baseline,369,0,191.37
+6f5aad52-9061-498f-e096-521ea2c723d4,NoRecovery,317.82,0.0,False,0,False,No Recovery Baseline,369,0,317.82
+16ed0330-ce01-5413-3a25-16fe8a27b0b0,NoRecovery,33.7,0.0,False,0,False,No Recovery Baseline,369,0,33.7
+6986305a-5da3-f9cf-4ed0-730d711dc1dd,NoRecovery,152.05,0.0,False,0,False,No Recovery Baseline,369,0,152.05
+b011b125-0221-11e5-88fc-3da1781d5b6c,NoRecovery,191.71,0.0,False,0,False,Mandate status is MandateStatus.EXPIRED,372,0,191.71
+a55fa725-bcb3-c168-b706-2cfa29cc0789,NoRecovery,60.9,0.0,False,0,False,Mandate status is MandateStatus.EXPIRED,372,0,60.9
+b1a50a3d-cebd-3b2b-9cfb-bce7e8f2c584,NoRecovery,39.2,0.0,False,0,False,No Recovery Baseline,369,0,39.2
+a60147c3-48e0-9502-4598-f3c8af449605,NoRecovery,50.97,0.0,False,0,False,No Recovery Baseline,369,0,50.97
+7df37378-9f6c-cab4-b352-2c1845aa9503,NoRecovery,739.14,0.0,False,0,False,Mandate status is MandateStatus.EXPIRED,372,0,739.14
+26f341c8-04f7-18c8-5215-b5033012f819,NoRecovery,126.28,0.0,False,0,False,No Recovery Baseline,369,0,126.28
+8b0ea0b9-1246-4474-6475-c0eec6913069,NoRecovery,170.23,0.0,False,0,False,Mandate status is MandateStatus.EXPIRED,372,0,170.23
+b0d515ab-c891-d55d-94c1-76b90ac013d5,NoRecovery,154.88,0.0,False,0,False,No Recovery Baseline,369,0,154.88
+276732d3-a502-dc4b-5b03-34d80f4d6c40,NoRecovery,220.63,0.0,False,0,False,No Recovery Baseline,369,0,220.63
+1b7e0502-ca9d-8831-894e-7397b38a3db1,NoRecovery,51.05,0.0,False,0,False,No Recovery Baseline,369,0,51.05
+e44cbd41-ce36-e92a-58e9-d0aac1b6edd4,NoRecovery,108.67,0.0,False,0,False,Mandate status is MandateStatus.EXPIRED,372,0,108.67
+05776108-3166-2c94-bbb2-4366704fe1a8,NoRecovery,76.69,0.0,False,0,False,Mandate status is MandateStatus.EXPIRED,372,0,76.69
+0a1bebd3-e60e-c813-402d-a0fa227dcecc,NoRecovery,197.02,0.0,False,0,False,No Recovery Baseline,369,0,197.02
+8f1c3fa0-7000-0009-b4e5-70ba7c3cc2bc,NoRecovery,599.84,0.0,False,0,False,No Recovery Baseline,369,0,599.84
+7d76ab58-b271-115b-8af0-9ec34b726a7c,NoRecovery,80.16,0.0,False,0,False,No Recovery Baseline,369,0,80.16
+77e8b762-bb7e-b979-52dc-bffd59008d65,NoRecovery,169.19,0.0,False,0,False,No Recovery Baseline,369,0,169.19
+c6a28e4e-002f-2ca4-743e-85315dfb1922,NoRecovery,110.57,0.0,False,0,False,No Recovery Baseline,369,0,110.57
+2dbb45bd-2138-e2e6-f013-a170d5cf3b4c,NoRecovery,221.79,0.0,False,0,False,Mandate status is MandateStatus.EXPIRED,372,0,221.79
+ebc8f6b7-ee22-4f70-0359-9c6d1224cbd2,NoRecovery,693.76,0.0,False,0,False,No Recovery Baseline,369,0,693.76
+8ef4d74b-2dcc-4095-f28f-9444a0154d65,NoRecovery,230.25,0.0,False,0,False,No Recovery Baseline,369,0,230.25
+ff31950a-fdd0-84a1-8cd2-216f50adff63,NoRecovery,384.78,0.0,False,0,False,No Recovery Baseline,369,0,384.78
+698f546d-5f29-0290-d848-5a54531c8812,NoRecovery,524.36,0.0,False,0,False,No Recovery Baseline,369,0,524.36
+000cd21a-65a7-ba30-f5b7-0dd9728f5897,NoRecovery,382.6,0.0,False,0,False,No Recovery Baseline,369,0,382.6
+01ae7eb1-4d45-7ea5-e3ec-4f6afe503fdc,NoRecovery,87.42,0.0,False,0,False,No Recovery Baseline,369,0,87.42
+7b874b4a-cafb-c4fe-531f-04afb93c92d5,NoRecovery,422.07,0.0,False,0,False,No Recovery Baseline,369,0,422.07
+e6267164-d361-6b3a-7cff-ae922c435667,NoRecovery,107.44,0.0,False,0,False,No Recovery Baseline,369,0,107.44
+c7b611cd-1417-182a-61ad-018a93875413,NoRecovery,120.19,0.0,False,0,False,No Recovery Baseline,369,0,120.19
+b2a0f778-809d-6444-53ab-3cce264ae04f,NoRecovery,46.08,0.0,False,0,False,No Recovery Baseline,369,0,46.08
+ac735be0-0cee-ddc2-2737-f345388629ff,NoRecovery,499.17,0.0,False,0,False,Mandate status is MandateStatus.EXPIRED,372,0,499.17
+25e42403-64f2-502e-c94f-6ed34a2f3876,NoRecovery,138.96,0.0,False,0,False,No Recovery Baseline,369,0,138.96
+af4afcdd-52cb-1ae0-6e18-c9b3c6da85f1,NoRecovery,18.3,0.0,False,0,False,Mandate status is MandateStatus.REVOKED,372,0,18.3
+5d822e3a-6c6d-282b-69e0-8370abf7a5d0,NoRecovery,170.76,0.0,False,0,False,No Recovery Baseline,369,0,170.76
+49a5baeb-d1f4-4c8d-d51b-1974de668dd0,NoRecovery,282.56,0.0,False,0,False,No Recovery Baseline,369,0,282.56
+fe07832a-badc-4599-9f7f-ae0c7ba79d05,NoRecovery,349.29,0.0,False,0,False,No Recovery Baseline,369,0,349.29
+04b40ac9-2831-7f0d-be90-63fb64b5d9a5,NoRecovery,457.46,0.0,False,0,False,Mandate status is MandateStatus.EXPIRED,372,0,457.46
+ad9112c5-f5ea-4128-854d-c3bf61d85365,NoRecovery,209.01,0.0,False,0,False,No Recovery Baseline,369,0,209.01
+92a97acd-3d88-4938-6ad6-5b8c3a38b844,NoRecovery,308.49,0.0,False,0,False,No Recovery Baseline,369,0,308.49
+6e18b184-229f-e85b-e8d9-1a2086181db2,NoRecovery,441.63,0.0,False,0,False,Mandate status is MandateStatus.EXPIRED,372,0,441.63
+c521ff2e-f9cc-83ed-e8b4-5c6afee543b3,NoRecovery,399.76,0.0,False,0,False,No Recovery Baseline,369,0,399.76
+9099a283-eedb-0ce5-a7fe-cdcd2528b516,NoRecovery,256.92,0.0,False,0,False,Mandate status is MandateStatus.EXPIRED,372,0,256.92
+115c42cd-5147-6e86-2875-d40aeac7dc2e,NoRecovery,217.65,0.0,False,0,False,No Recovery Baseline,369,0,217.65
+4da838b7-6947-cbac-f610-f40d69fe890f,NoRecovery,671.95,0.0,False,0,False,No Recovery Baseline,369,0,671.95
+7800e27a-9ace-63cc-d89c-83f68098580d,NoRecovery,102.21,0.0,False,0,False,No Recovery Baseline,369,0,102.21
+2f191516-5fbb-cda5-a64a-1fe8b646e2b1,NoRecovery,42.29,0.0,False,0,False,No Recovery Baseline,369,0,42.29
+345e2eaf-c1fd-a581-33ec-e6b1fcfd8547,NoRecovery,95.15,0.0,False,0,False,No Recovery Baseline,369,0,95.15
+f4672866-ed56-a2a0-2d54-ff2b10ee4f77,NoRecovery,338.33,0.0,False,0,False,No Recovery Baseline,369,0,338.33
+9df79a27-ddfc-2a92-7074-feb3fc5217cc,NoRecovery,725.86,0.0,False,0,False,No Recovery Baseline,369,0,725.86
+b85f164b-6160-3399-d307-3198bc3eb402,NoRecovery,67.44,0.0,False,0,False,No Recovery Baseline,369,0,67.44
+e0b55615-d3b6-ef1b-74f7-6d09739cafa5,NoRecovery,41.5,0.0,False,0,False,No Recovery Baseline,369,0,41.5
+3ee79d31-feef-21f8-e0b6-2f900adbc4ff,NoRecovery,607.68,0.0,False,0,False,No Recovery Baseline,369,0,607.68
+a6091ad0-b114-64aa-52f6-9081400564b8,NoRecovery,189.98,0.0,False,0,False,No Recovery Baseline,369,0,189.98
+55cf37ba-e989-65f2-2bbf-1e35c4acb57d,NoRecovery,261.71,0.0,False,0,False,No Recovery Baseline,369,0,261.71
+49ed856e-723d-facd-f601-e005c4c4f69f,NoRecovery,192.32,0.0,False,0,False,Mandate status is MandateStatus.REVOKED,372,0,192.32
+3527bcee-d343-bf88-d1f3-79b18ebb8208,NoRecovery,374.17,0.0,False,0,False,No Recovery Baseline,369,0,374.17
+0e18ab96-25f4-1dd6-2f51-ac6e0c85f154,NoRecovery,408.11,0.0,False,0,False,No Recovery Baseline,369,0,408.11
+294d43ed-2da1-afda-fe65-6dcc6abdb05a,NoRecovery,66.54,0.0,False,0,False,No Recovery Baseline,369,0,66.54
+a9325ae1-9c70-60da-48cd-29c5ac0e1f71,NoRecovery,804.84,0.0,False,0,False,No Recovery Baseline,369,0,804.84
+5c3552b3-9437-2280-bfd4-67e77491050c,NoRecovery,355.77,0.0,False,0,False,No Recovery Baseline,369,0,355.77
+c4bd338e-17d7-1fc0-092c-d030ee757637,NoRecovery,210.78,0.0,False,0,False,No Recovery Baseline,369,0,210.78
+d90949aa-9bdd-3d7a-6d53-628b49851b79,NoRecovery,108.21,0.0,False,0,False,No Recovery Baseline,369,0,108.21
+7f13de67-9008-cdc9-9d42-1bae2134e15b,NoRecovery,83.65,0.0,False,0,False,Mandate status is MandateStatus.EXPIRED,372,0,83.65
+1e42d2b8-0067-9b62-318c-d979fab0a15d,NoRecovery,231.49,0.0,False,0,False,Mandate status is MandateStatus.EXPIRED,372,0,231.49
+cbf6aa23-a01e-31f5-7702-beba0623ffbf,NoRecovery,290.98,0.0,False,0,False,No Recovery Baseline,369,0,290.98
+31ab0158-2cf6-073b-d500-c14707743c94,NoRecovery,42.32,0.0,False,0,False,No Recovery Baseline,369,0,42.32
+ec1a86d3-5683-0783-d575-9337549c9eb9,NoRecovery,342.07,0.0,False,0,False,No Recovery Baseline,369,0,342.07
+22c0c475-a549-76d0-091a-5875cc18dd0e,NoRecovery,647.43,0.0,False,0,False,No Recovery Baseline,369,0,647.43
+75eb0e8f-a090-360d-27c7-655a7b434a72,NoRecovery,32.23,0.0,False,0,False,No Recovery Baseline,369,0,32.23
+10f35676-5a85-3cd8-cbb8-6be0e355e636,NoRecovery,11.37,0.0,False,0,False,No Recovery Baseline,369,0,11.37
+db9a0eb7-b48c-531b-4eeb-87ffc064f074,NoRecovery,70.52,0.0,False,0,False,No Recovery Baseline,369,0,70.52
+4580dac2-0818-c965-b5b8-135150830841,NoRecovery,325.22,0.0,False,0,False,No Recovery Baseline,369,0,325.22
+5fcc997d-1cbb-304b-2ccd-a2af4d64bb63,NoRecovery,25.04,0.0,False,0,False,Mandate status is MandateStatus.EXPIRED,372,0,25.04
+3487246c-21f9-c072-fe22-eba1ad3d581e,NoRecovery,520.29,0.0,False,0,False,No Recovery Baseline,369,0,520.29
+6338fb29-7599-2b0a-095b-81d6b97d7617,NoRecovery,19.51,0.0,False,0,False,No Recovery Baseline,369,0,19.51
+1da76d69-85b8-64d4-dd64-3387b6b38fbc,NoRecovery,477.81,0.0,False,0,False,Mandate status is MandateStatus.REVOKED,372,0,477.81
+df3334c6-9823-3b06-d91e-a7e6afe2a940,NoRecovery,297.93,0.0,False,0,False,No Recovery Baseline,369,0,297.93
+e3a1af97-7785-2ddb-5552-7a3c164a9b18,NoRecovery,812.77,0.0,False,0,False,No Recovery Baseline,369,0,812.77
+2851a8be-2639-e214-45cc-aa931e1e5d91,NoRecovery,334.41,0.0,False,0,False,No Recovery Baseline,369,0,334.41
+f5530567-03e7-dd21-1d4d-46d6460d113d,NoRecovery,543.71,0.0,False,0,False,No Recovery Baseline,369,0,543.71
+4fb67094-123c-f911-2bd8-ad4d3eacdb28,NoRecovery,129.77,0.0,False,0,False,Mandate status is MandateStatus.EXPIRED,372,0,129.77
+160beed4-0dc5-d42e-6233-960a1b1e06c3,NoRecovery,87.26,0.0,False,0,False,No Recovery Baseline,369,0,87.26
+b465c027-2dd1-d45b-6454-a82a6d2cdbf9,NoRecovery,294.13,0.0,False,0,False,Mandate status is MandateStatus.EXPIRED,372,0,294.13
+5513b74f-4ffc-1c54-5b0a-31ea9dc6d783,NoRecovery,635.83,0.0,False,0,False,No Recovery Baseline,369,0,635.83
+c226ab53-b680-873b-32b9-c542d143e0a2,NoRecovery,702.95,0.0,False,0,False,No Recovery Baseline,369,0,702.95
+17c95aaa-21bd-55eb-915a-a3c07737cfb5,NoRecovery,128.79,0.0,False,0,False,No Recovery Baseline,369,0,128.79
+ead1d758-b319-f18d-2ef0-3a1b645f273c,NoRecovery,277.83,0.0,False,0,False,Mandate status is MandateStatus.EXPIRED,372,0,277.83
+4d579d00-cadc-c10f-1228-130ba64272a2,NoRecovery,217.74,0.0,False,0,False,No Recovery Baseline,369,0,217.74
+972d5d57-669b-e896-7602-72ba8862036f,NoRecovery,130.14,0.0,False,0,False,No Recovery Baseline,369,0,130.14
+3e628981-9ef1-a74f-3d13-452669d75427,NoRecovery,98.26,0.0,False,0,False,No Recovery Baseline,369,0,98.26
+7b7ce7cc-f950-f7fa-28b5-8db58c466308,NoRecovery,320.41,0.0,False,0,False,Mandate status is MandateStatus.REVOKED,372,0,320.41
+94ad345a-e323-9264-2390-0c1dd1291d13,NoRecovery,289.78,0.0,False,0,False,No Recovery Baseline,369,0,289.78
+a92f85fe-258f-cafc-c1cf-d878000c14a5,NoRecovery,471.59,0.0,False,0,False,No Recovery Baseline,369,0,471.59
+7279101c-93f3-503d-9d96-232d63d5e750,NoRecovery,325.07,0.0,False,0,False,No Recovery Baseline,369,0,325.07
+e09ef2a3-ae77-e249-34a6-3e7632173525,NoRecovery,195.05,0.0,False,0,False,Mandate status is MandateStatus.EXPIRED,372,0,195.05
+cb5a4d77-91fd-a27f-4cbb-7460510c8c48,NoRecovery,84.63,0.0,False,0,False,No Recovery Baseline,369,0,84.63
+eb22ec1d-4df6-ff4f-adf7-92ffe9c7c13a,NoRecovery,147.69,0.0,False,0,False,No Recovery Baseline,369,0,147.69
+0ffa2366-4b4f-afaf-da3d-c78020a77d78,NoRecovery,297.4,0.0,False,0,False,No Recovery Baseline,369,0,297.4
+f7c8435f-8c83-bc68-e6ac-e59a5e85643c,NoRecovery,292.63,0.0,False,0,False,No Recovery Baseline,369,0,292.63
+8f5e248e-b40f-040e-0037-447f0d99c071,NoRecovery,26.31,0.0,False,0,False,No Recovery Baseline,369,0,26.31
+2c649adf-a998-c8e1-3612-41be8b8ce7be,NoRecovery,218.02,0.0,False,0,False,No Recovery Baseline,369,0,218.02
+8e301bcc-302f-a247-239a-046d79912c51,NoRecovery,30.88,0.0,False,0,False,No Recovery Baseline,369,0,30.88
+2320de16-15ac-80e4-22c2-3308fd7ee75c,NoRecovery,661.92,0.0,False,0,False,Mandate status is MandateStatus.EXPIRED,372,0,661.92
+6c936f69-8269-041a-7453-30442e07336d,NoRecovery,524.01,0.0,False,0,False,Mandate status is MandateStatus.REVOKED,372,0,524.01
+ab310bfe-f5dd-7f92-a9ea-a9ffbddf2416,NoRecovery,323.64,0.0,False,0,False,Mandate status is MandateStatus.EXPIRED,372,0,323.64
+92ef63c1-781f-9d3f-e7f3-39dc833de3ad,NoRecovery,310.19,0.0,False,0,False,No Recovery Baseline,369,0,310.19
+4dd7962b-bfda-55c9-98fe-b4f3ec40d95a,NoRecovery,143.01,0.0,False,0,False,Mandate status is MandateStatus.EXPIRED,372,0,143.01
+13ad3ead-816e-bf32-2077-5ce4151f62f9,NoRecovery,646.12,0.0,False,0,False,No Recovery Baseline,369,0,646.12
+408669bb-4721-194b-c8a4-ae21d9f850e9,NoRecovery,96.47,0.0,False,0,False,No Recovery Baseline,369,0,96.47
+4674a0eb-47ed-c6dd-9da4-ec0f21ee0f6c,NoRecovery,610.06,0.0,False,0,False,No Recovery Baseline,369,0,610.06
+bdce4d4d-03a2-cee9-41c7-d9b3db9c9b7c,NoRecovery,504.13,0.0,False,0,False,Mandate status is MandateStatus.EXPIRED,372,0,504.13
+3c775558-b365-fb7c-c853-bc5542e17302,NoRecovery,292.88,0.0,False,0,False,No Recovery Baseline,369,0,292.88
+8702f4ad-cca3-a4c4-2e49-82cf7c239ebc,NoRecovery,871.91,0.0,False,0,False,No Recovery Baseline,369,0,871.91
+fbec1ed8-57c4-e2c3-0878-9ef0dcacfa54,NoRecovery,212.31,0.0,False,0,False,No Recovery Baseline,369,0,212.31
+987593c3-2523-52f6-f7a3-f6a6159b558b,NoRecovery,428.42,0.0,False,0,False,Mandate status is MandateStatus.EXPIRED,372,0,428.42
+5a947a40-a32e-3ab5-8802-d74aeaef2ec2,NoRecovery,695.24,0.0,False,0,False,No Recovery Baseline,369,0,695.24
+45c87f41-dbbd-3290-a6ed-caddeb04cd29,NoRecovery,239.61,0.0,False,0,False,No Recovery Baseline,369,0,239.61
+a5dd2836-e65f-a9fa-c38c-2eafa8097a77,NoRecovery,532.48,0.0,False,0,False,No Recovery Baseline,369,0,532.48
+2f4cfefb-f798-28a2-cd9e-84ec90e9e294,NoRecovery,320.86,0.0,False,0,False,Mandate status is MandateStatus.EXPIRED,372,0,320.86
+2f2bdc13-b216-5b5a-1c60-57fee5605cfb,NoRecovery,217.29,0.0,False,0,False,No Recovery Baseline,369,0,217.29
+c4f4b844-46c1-12a5-fec8-8839ec35c3de,NoRecovery,734.22,0.0,False,0,False,Mandate status is MandateStatus.REVOKED,372,0,734.22
+c2ad0d97-75aa-ecb0-d757-ad381498d0dd,NoRecovery,131.67,0.0,False,0,False,No Recovery Baseline,369,0,131.67
+f7073712-88b0-4b77-7feb-4cf34ec77371,NoRecovery,407.36,0.0,False,0,False,Mandate status is MandateStatus.REVOKED,372,0,407.36
+f7716700-7305-cd23-cfd0-b040d5916d49,NoRecovery,150.81,0.0,False,0,False,No Recovery Baseline,369,0,150.81
+85eb2b3f-aad5-3fb8-a762-b59cce9e5929,NoRecovery,104.64,0.0,False,0,False,Mandate status is MandateStatus.EXPIRED,372,0,104.64
+03ad702e-216a-ebcf-a616-dde4b388300a,NoRecovery,325.07,0.0,False,0,False,No Recovery Baseline,369,0,325.07
+d5d9a385-2bb2-4cbc-9c79-4cdb74c88361,NoRecovery,941.22,0.0,False,0,False,No Recovery Baseline,369,0,941.22
+d145bd7f-d15b-5a37-105f-86aa974e8f83,NoRecovery,77.37,0.0,False,0,False,Mandate status is MandateStatus.EXPIRED,372,0,77.37
+8bbf1b30-9372-92e6-af20-6a9df9d18507,NoRecovery,452.3,0.0,False,0,False,No Recovery Baseline,369,0,452.3
+c1eecd7a-2428-185a-461d-e0171ee92d3b,NoRecovery,851.32,0.0,False,0,False,No Recovery Baseline,369,0,851.32
+97feb937-a6d9-77a1-b4ec-fe8d16d1f5ca,NoRecovery,72.43,0.0,False,0,False,Mandate status is MandateStatus.EXPIRED,372,0,72.43
+734eab10-85e9-054f-455c-f668a3cb9e18,NoRecovery,344.87,0.0,False,0,False,No Recovery Baseline,369,0,344.87
+2caf3d2f-f026-a418-3d3f-bbec697ae294,NoRecovery,240.73,0.0,False,0,False,No Recovery Baseline,369,0,240.73
+81ee30e4-8a2b-466e-fc9d-c0d0c2d94cc9,NoRecovery,28.07,0.0,False,0,False,No Recovery Baseline,369,0,28.07
+74017bb3-c227-0738-e3dc-419dce1e8d1f,NoRecovery,657.59,0.0,False,0,False,Mandate status is MandateStatus.EXPIRED,372,0,657.59
+2875ad5d-2d06-f862-8990-779cecc3b699,NoRecovery,318.03,0.0,False,0,False,Mandate status is MandateStatus.REVOKED,372,0,318.03
+699fdb02-bcdd-0b48-3cb3-c9fa191abb3d,NoRecovery,257.59,0.0,False,0,False,No Recovery Baseline,369,0,257.59
+47d5ac92-0f45-55da-9194-1591b134b58f,NoRecovery,20.55,0.0,False,0,False,No Recovery Baseline,369,0,20.55
+772d416d-da05-d2fc-1c71-a82122f1c32b,NoRecovery,299.31,0.0,False,0,False,No Recovery Baseline,369,0,299.31
+e7d3f770-9c8d-1ade-f3e8-16b5a353ea98,NoRecovery,662.13,0.0,False,0,False,No Recovery Baseline,369,0,662.13
+dcb913b4-7d3d-16ca-8592-a38fdb62a1f7,NoRecovery,386.03,0.0,False,0,False,No Recovery Baseline,369,0,386.03
+df629d0c-bc76-37a0-6d98-a416bae27198,NoRecovery,220.15,0.0,False,0,False,No Recovery Baseline,369,0,220.15
+6af31899-014c-c3a1-e5f3-d46692de0df8,NoRecovery,74.87,0.0,False,0,False,No Recovery Baseline,369,0,74.87
+fdc419b2-0a41-4919-0b52-46f3faed5777,NoRecovery,130.57,0.0,False,0,False,No Recovery Baseline,369,0,130.57
+81145252-c4c3-6368-bbc5-1a50787cb0d3,NoRecovery,205.47,0.0,False,0,False,No Recovery Baseline,369,0,205.47
+7ecb002e-73d3-328c-1916-79d3d24025ea,NoRecovery,586.69,0.0,False,0,False,No Recovery Baseline,369,0,586.69
+c0c9c3ed-8ef9-0060-1545-7c643d922952,NoRecovery,264.7,0.0,False,0,False,No Recovery Baseline,369,0,264.7
+5bc07988-21f9-69e9-37cf-45f6f32ede3c,NoRecovery,43.57,0.0,False,0,False,No Recovery Baseline,369,0,43.57
+5d2e7b90-acb6-0e81-e8f6-0796f200a32c,NoRecovery,53.14,0.0,False,0,False,Mandate status is MandateStatus.REVOKED,372,0,53.14
+8f8dd995-1127-4cb2-b472-99b68f0ce422,NoRecovery,318.05,0.0,False,0,False,No Recovery Baseline,369,0,318.05
+e6426f0b-8869-372a-d34c-0a09ada59cb2,NoRecovery,691.99,0.0,False,0,False,No Recovery Baseline,369,0,691.99
+b177116d-f203-7633-ac5d-d02dccc67ffd,NoRecovery,338.22,0.0,False,0,False,No Recovery Baseline,369,0,338.22
+e214d458-f0dd-3de0-fa63-bde0cf0d3f06,NoRecovery,290.08,0.0,False,0,False,No Recovery Baseline,369,0,290.08
+cd4f2875-df2d-df20-05a4-3113101d759e,NoRecovery,48.1,0.0,False,0,False,No Recovery Baseline,369,0,48.1
+8c68720e-d787-463d-87b8-f95cb265a6c2,NoRecovery,252.29,0.0,False,0,False,No Recovery Baseline,369,0,252.29
+913767ab-4dd8-5715-753f-f3e271fc5136,NoRecovery,120.41,0.0,False,0,False,No Recovery Baseline,369,0,120.41
+3a0e618f-428f-d941-ca0d-72ce2bf6f6c4,NoRecovery,624.17,0.0,False,0,False,No Recovery Baseline,369,0,624.17
+f4ca6e70-74b7-99ec-48cd-42c05a66219e,NoRecovery,506.58,0.0,False,0,False,Mandate status is MandateStatus.EXPIRED,372,0,506.58
+fa5fafdb-5123-39fa-aa61-b32f08e1624e,NoRecovery,227.99,0.0,False,0,False,No Recovery Baseline,369,0,227.99
+06617f95-eba1-8fa8-1f19-f85b4d330569,NoRecovery,168.73,0.0,False,0,False,No Recovery Baseline,369,0,168.73
+c4bd9b59-7fd9-c96f-ee5a-88566791659c,NoRecovery,505.18,0.0,False,0,False,No Recovery Baseline,369,0,505.18
+81e58eee-f9c0-fd4d-8bd0-3267bd0e01ce,NoRecovery,134.19,0.0,False,0,False,No Recovery Baseline,369,0,134.19
+ccb1063d-25a7-4338-aab9-278d92dfcf99,NoRecovery,83.35,0.0,False,0,False,No Recovery Baseline,369,0,83.35
+ec1b55dd-e829-56cf-ba81-d86090b3032d,NoRecovery,167.83,0.0,False,0,False,No Recovery Baseline,369,0,167.83
+c4605896-ef87-bf0d-c802-2f8e38de6b6e,NoRecovery,87.5,0.0,False,0,False,No Recovery Baseline,369,0,87.5
+15661feb-05c5-bf8d-321a-6c3f47263c24,NoRecovery,38.98,0.0,False,0,False,No Recovery Baseline,369,0,38.98
+3737cc38-166c-dd33-8f9f-dc15dfd23d15,NoRecovery,133.38,0.0,False,0,False,No Recovery Baseline,369,0,133.38
+24c58b47-1609-34d1-9912-509096516ec2,NoRecovery,827.73,0.0,False,0,False,No Recovery Baseline,369,0,827.73
+fd06a179-7980-3efa-4da0-8e483531518a,NoRecovery,8.7,0.0,False,0,False,No Recovery Baseline,369,0,8.7
+7b011fdd-94c0-b9e0-5c9c-4570bedd62a7,NoRecovery,423.81,0.0,False,0,False,No Recovery Baseline,369,0,423.81
+5b7d9d2d-22af-f503-b17a-ff6de0d96670,NoRecovery,570.94,0.0,False,0,False,No Recovery Baseline,369,0,570.94
+5c75352c-45cd-b96b-0d8a-16f329ce9bfa,NoRecovery,366.72,0.0,False,0,False,Mandate status is MandateStatus.EXPIRED,372,0,366.72
+21986e3c-d19f-cf31-1dd7-3f1f138ef8cc,NoRecovery,158.25,0.0,False,0,False,No Recovery Baseline,369,0,158.25
+592448ee-7ac1-b4f9-0472-f9f6ec6494e0,NoRecovery,290.39,0.0,False,0,False,No Recovery Baseline,369,0,290.39
+08651a6e-1b99-eb83-3244-0f070ae263e0,NoRecovery,316.76,0.0,False,0,False,No Recovery Baseline,369,0,316.76
+3334cd07-e6b3-6561-966d-273534952c00,NoRecovery,467.99,0.0,False,0,False,Mandate status is MandateStatus.EXPIRED,372,0,467.99
+946a95a6-f2e4-01af-4702-1755f11cc0a4,NoRecovery,50.74,0.0,False,0,False,No Recovery Baseline,369,0,50.74
+daea544a-291a-4905-5a29-fe6b590bd0c6,NoRecovery,229.29,0.0,False,0,False,No Recovery Baseline,369,0,229.29
+117e894e-91fa-f1c7-8141-bb373de814ac,NoRecovery,62.06,0.0,False,0,False,No Recovery Baseline,369,0,62.06
+011bb348-8981-1f35-c107-50bce6d33572,NoRecovery,576.53,0.0,False,0,False,Mandate status is MandateStatus.EXPIRED,372,0,576.53

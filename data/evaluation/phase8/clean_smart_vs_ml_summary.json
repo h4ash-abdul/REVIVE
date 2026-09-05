@@ -1,0 +1,49 @@
+{
+  "smart_revenue": 50192.12000000001,
+  "ml_revenue": 50192.12000000001,
+  "diff": 0.0,
+  "lift": 0.0,
+  "shared_recoveries": 165,
+  "shared_failures": 252,
+  "smart_only_recoveries": 0,
+  "ml_only_recoveries": 0,
+  "bootstrap": {
+    "comparison": "MLProbability vs SmartHeuristic",
+    "n_mandates": 417,
+    "observed": {
+      "recovered_revenue_SmartHeuristic": 50192.12000000001,
+      "recovered_revenue_MLProbability": 50192.12000000001,
+      "revenue_difference": 0.0,
+      "percentage_lift": 0.0,
+      "recovery_rate_difference": 0.0
+    },
+    "bootstrap": {
+      "replicates": 1000,
+      "median_difference": 0.0,
+      "p05_difference": 0.0,
+      "p95_difference": 0.0,
+      "p025_difference": 0.0,
+      "p975_difference": 0.0,
+      "prob_challenger_wins": 0.0
+    },
+    "recovery_paired_counts": {
+      "shared_recoveries": 165,
+      "shared_failures": 252,
+      "SmartHeuristic_only_recoveries": 0,
+      "MLProbability_only_recoveries": 0
+    }
+  },
+  "provenance": {
+    "benchmark_name": "Phase 8.2 Clean Benchmark",
+    "benchmark_version": "v2.1",
+    "base_seed": 42,
+    "rng_method": "SHA-256 stable seed derivation (uuid4 patched)",
+    "cohort_identifier": "sim_v2.1_seed42_60d_1000c",
+    "candidate_universe_version": "30-day-grid",
+    "policy_version": "v1.0",
+    "model_version": "v1.1",
+    "feature_version": "v1.0",
+    "execution_timestamp": "2026-09-04T15:14:51.173410+00:00",
+    "python_version": "3.12.10"
+  }
+}

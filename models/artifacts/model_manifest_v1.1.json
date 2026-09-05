@@ -1,0 +1,43 @@
+{
+  "model_version": "v1.1",
+  "model_type": "LogisticRegression",
+  "feature_version": "v1.0",
+  "dataset_version": "auto",
+  "training_window": {
+    "start": "2025-01-31 00:00:00+00:00",
+    "end": "2025-10-28 00:00:00+00:00"
+  },
+  "validation_window": {
+    "start": "2025-10-28 00:00:00+00:00",
+    "end": "2025-11-27 00:00:00+00:00"
+  },
+  "test_window": {
+    "start": "2025-11-27 00:00:00+00:00",
+    "end": "latest"
+  },
+  "parameters": {
+    "random_state": 42,
+    "max_iter": 1000,
+    "class_weight": "balanced"
+  },
+  "seed": 42,
+  "metrics": {
+    "validation": {
+      "roc_auc": 0.7697016692984434,
+      "pr_auc": 0.5738168155934158,
+      "log_loss": 0.5847507570938362,
+      "brier_score": 0.1991077581585795
+    },
+    "test": {
+      "roc_auc": 0.7706902375858574,
+      "pr_auc": 0.6249380000804634,
+      "log_loss": 0.5430378977298238,
+      "brier_score": 0.18324121176799318,
+      "ece": 0.032930855549418714
+    }
+  },
+  "artifact_path": "models/artifacts/model_calibrated_v1.1.pkl",
+  "preprocessing_path": null,
+  "training_timestamp": "2026-09-03T17:05:37.779038+00:00",
+  "calibration_method": "sigmoid"
+}

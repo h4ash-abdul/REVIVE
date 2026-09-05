@@ -1,0 +1,59 @@
+{
+  "no_recovery_revenue": 0.0,
+  "no_recovery_rate": 0.0,
+  "p_based_revenue": 18400.37,
+  "ev_based_revenue": 21422.739999999998,
+  "ev_vs_p_diff": 3022.369999999999,
+  "bootstrap_ev_vs_p": {
+    "comparison": "EV_Prioritization vs P_Prioritization",
+    "n_mandates": 130,
+    "observed": {
+      "recovered_revenue_P_Prioritization": 18400.37,
+      "recovered_revenue_EV_Prioritization": 21422.739999999998,
+      "revenue_difference": 3022.369999999999,
+      "percentage_lift": 0.16425593615780548,
+      "recovery_rate_difference": -0.07692307692307693
+    },
+    "bootstrap": {
+      "replicates": 1000,
+      "median_difference": 2918.715,
+      "p05_difference": 826.4745000000039,
+      "p95_difference": 5413.348499999997,
+      "p025_difference": 423.31574999999987,
+      "p975_difference": 5965.593500000001,
+      "prob_challenger_wins": 0.992
+    },
+    "recovery_paired_counts": {
+      "shared_recoveries": 48,
+      "shared_failures": 52,
+      "P_Prioritization_only_recoveries": 20,
+      "EV_Prioritization_only_recoveries": 10
+    }
+  },
+  "bootstrap_smart_vs_no": {
+    "comparison": "SmartHeuristic vs NoRecovery",
+    "n_mandates": 417,
+    "observed": {
+      "recovered_revenue_NoRecovery": 0.0,
+      "recovered_revenue_SmartHeuristic": 50192.12000000001,
+      "revenue_difference": 50192.12000000001,
+      "percentage_lift": 0.0,
+      "recovery_rate_difference": 0.39568345323741005
+    },
+    "bootstrap": {
+      "replicates": 1000,
+      "median_difference": 50129.92,
+      "p05_difference": 43137.821,
+      "p95_difference": 57238.91549999999,
+      "p025_difference": 41909.19375,
+      "p975_difference": 58791.9735,
+      "prob_challenger_wins": 1.0
+    },
+    "recovery_paired_counts": {
+      "shared_recoveries": 0,
+      "shared_failures": 252,
+      "NoRecovery_only_recoveries": 0,
+      "SmartHeuristic_only_recoveries": 165
+    }
+  }
+}

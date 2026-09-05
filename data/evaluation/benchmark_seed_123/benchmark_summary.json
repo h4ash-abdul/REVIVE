@@ -1,0 +1,136 @@
+{
+  "experiment": {
+    "experiment_id": "3e18c9f7-9dc3-4601-a195-1bee1d599d28",
+    "dataset_version": "sim-bench-v1",
+    "simulator_version": "v2.1",
+    "policy_version": "v1.0",
+    "strategy_versions": {
+      "ImmediateRetryStrategy": "v1.1",
+      "FixedScheduleStrategy": "v1.1",
+      "SmartHistoricalHeuristicStrategy": "v1.1"
+    },
+    "seed": 123,
+    "cohort_snapshot_id": "312f05e0-30ad-4ea0-9f91-c0ff3d3bab56",
+    "start_time": "2026-09-03T16:28:55.940382Z",
+    "end_time": null,
+    "configuration": {
+      "policy": {
+        "policy_version": "v1.0",
+        "max_retries_per_mandate": 3,
+        "min_hours_between_retries": 24,
+        "allowed_execution_windows_utc": [
+          "00:00-23:59"
+        ],
+        "stop_on_success": true,
+        "require_manual_approval_over_amount": 1000.0
+      },
+      "simulator": {
+        "simulator_version": "v2.1",
+        "seed": 123,
+        "scenario": "strong_temporal_signal",
+        "noise_level": "medium",
+        "customer_archetypes_distribution": {
+          "salary_cycle_regular": 0.4,
+          "irregular_gig": 0.2,
+          "chronic_low_balance": 0.15,
+          "thin_history": 0.15,
+          "technical_decline_prone": 0.1
+        },
+        "behavioral_drift_rate": 0.0,
+        "enable_technical_declines": true
+      }
+    }
+  },
+  "metrics": {
+    "ImmediateRetryStrategy": {
+      "BUSINESS": {
+        "total_revenue_at_risk": 44049.270000000004,
+        "total_recovered_revenue": 3019.24,
+        "recovery_rate": 0.06854233906714004,
+        "incremental_recovered_revenue_vs_Immediate": 0.0,
+        "lift_vs_Immediate": 0.0,
+        "incremental_recovered_revenue_vs_Smart": -235.8100000000004,
+        "lift_vs_Smart": -0.07244435569346108
+      },
+      "EFFICIENCY": {
+        "total_payment_attempts": 25,
+        "average_attempts_per_recovered_mandate": 1.0909090909090908,
+        "median_attempts_per_recovered_mandate": 1.0,
+        "average_attempts_per_mandate": 0.15337423312883436,
+        "retry_budget_exhaustion_rate": 0.7791411042944786
+      },
+      "SAFETY": {
+        "policy_violations": 127224,
+        "invalid_executions": 0,
+        "retry_after_success_attempts": 0,
+        "budget_violations": 0,
+        "duplicate_execution_attempts": 0
+      },
+      "RELIABILITY": {
+        "execution_failures": 0,
+        "simulator_errors": 0,
+        "incomplete_mandate_simulations": 0
+      }
+    },
+    "FixedScheduleStrategy": {
+      "BUSINESS": {
+        "total_revenue_at_risk": 44049.270000000004,
+        "total_recovered_revenue": 2312.75,
+        "recovery_rate": 0.05250370777994731,
+        "incremental_recovered_revenue_vs_Immediate": -706.4899999999998,
+        "lift_vs_Immediate": -0.23399597249638981,
+        "incremental_recovered_revenue_vs_Smart": -942.3000000000002,
+        "lift_vs_Smart": -0.28948864072748504
+      },
+      "EFFICIENCY": {
+        "total_payment_attempts": 24,
+        "average_attempts_per_recovered_mandate": 1.0,
+        "median_attempts_per_recovered_mandate": 1.0,
+        "average_attempts_per_mandate": 0.147239263803681,
+        "retry_budget_exhaustion_rate": 0.7975460122699386
+      },
+      "SAFETY": {
+        "policy_violations": 500,
+        "invalid_executions": 0,
+        "retry_after_success_attempts": 0,
+        "budget_violations": 0,
+        "duplicate_execution_attempts": 0
+      },
+      "RELIABILITY": {
+        "execution_failures": 0,
+        "simulator_errors": 0,
+        "incomplete_mandate_simulations": 0
+      }
+    },
+    "SmartHistoricalHeuristicStrategy": {
+      "BUSINESS": {
+        "total_revenue_at_risk": 44049.270000000004,
+        "total_recovered_revenue": 3255.05,
+        "recovery_rate": 0.07389566274310562,
+        "incremental_recovered_revenue_vs_Immediate": 235.8100000000004,
+        "lift_vs_Immediate": 0.07810243637471692,
+        "incremental_recovered_revenue_vs_Smart": 0.0,
+        "lift_vs_Smart": 0.0
+      },
+      "EFFICIENCY": {
+        "total_payment_attempts": 26,
+        "average_attempts_per_recovered_mandate": 1.1666666666666667,
+        "median_attempts_per_recovered_mandate": 1.0,
+        "average_attempts_per_mandate": 0.15950920245398773,
+        "retry_budget_exhaustion_rate": 0.7730061349693251
+      },
+      "SAFETY": {
+        "policy_violations": 5270,
+        "invalid_executions": 0,
+        "retry_after_success_attempts": 0,
+        "budget_violations": 0,
+        "duplicate_execution_attempts": 0
+      },
+      "RELIABILITY": {
+        "execution_failures": 0,
+        "simulator_errors": 0,
+        "incomplete_mandate_simulations": 0
+      }
+    }
+  }
+}
