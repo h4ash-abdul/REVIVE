@@ -4,7 +4,6 @@ import { useNavigate, useParams, useSearchParams } from 'react-router-dom'
 import { Search, Inbox } from 'lucide-react'
 import api from '../api/client'
 import { DemoCase } from '../types'
-import { Badge } from '../components/ui'
 import CaseDetail from './CaseDetail'
 
 export default function Workspace() {
@@ -26,73 +25,111 @@ export default function Workspace() {
 
   const filtered = cases.filter(c => {
     const matchSearch = c.title.toLowerCase().includes(search.toLowerCase()) || c.failure_code.toLowerCase().includes(search.toLowerCase());
-    if (filterParams === 'active') return matchSearch && c.initial_probability > 0;
-    if (filterParams === 'recovered') return false; 
+    if (filterParams === 'high') return matchSearch && c.initial_probability > 0.7;
+    if (filterParams === 'moderate') return matchSearch && c.initial_probability >= 0.4 && c.initial_probability <= 0.7;
+    if (filterParams === 'low') return matchSearch && c.initial_probability < 0.4 && c.initial_probability > 0;
+    if (filterParams === 'blocked') return matchSearch && c.initial_probability === 0;
+    if (filterParams === 'at-risk' || filterParams === 'active') return matchSearch && c.initial_probability > 0;
     return matchSearch;
   });
 
+  const FilterChip = ({ label, value }: { label: string, value: string }) => {
+    const active = filterParams === value || (filterParams === 'at-risk' && value === 'active')
+    return (
+      <div 
+        onClick={() => navigate(`/queue?filter=${value}`)}
+        className={`px-3 py-1.5 rounded cursor-pointer text-[9px] font-bold tracking-widest uppercase transition-colors border ${
+          active ? 'bg-gray-800 text-white border-gray-600' : 'bg-transparent text-gray-500 border-transparent hover:text-gray-300'
+        }`}
+      >
+        {label}
+      </div>
+    )
+  }
+
+  const getConfStyle = (prob: number) => {
+    if (prob === 0) return 'text-gray-500 bg-gray-500/10 border-gray-500/20'
+    if (prob > 0.7) return 'text-emerald-400 bg-emerald-400/10 border-emerald-400/20'
+    if (prob >= 0.4) return 'text-amber-400 bg-amber-400/10 border-amber-400/20'
+    return 'text-rose-400 bg-rose-400/10 border-rose-400/20'
+  }
+
+  const getConfLabel = (prob: number) => {
+    if (prob === 0) return 'BLOCKED'
+    if (prob > 0.7) return 'HIGH'
+    if (prob >= 0.4) return 'MODERATE'
+    return 'LOW'
+  }
+
   return (
-    <div className="flex flex-col xl:flex-row h-[calc(100vh-100px)] overflow-hidden gap-6 -m-4 p-4">
+    <div className="flex flex-col xl:flex-row h-[calc(100vh-120px)] overflow-hidden gap-4 -m-4 p-4">
       <motion.div 
         initial={{ opacity: 0, x: -20 }} 
         animate={{ opacity: 1, x: 0 }} 
-        className={`w-full xl:w-5/12 flex flex-col bg-white border border-gray-200 rounded-lg shadow-sm overflow-hidden ${id ? 'hidden xl:flex' : 'flex'}`}
+        className={`w-full xl:w-[45%] flex flex-col bg-[#121316] border border-[#222328] rounded shadow-lg overflow-hidden ${id ? 'hidden xl:flex' : 'flex'}`}
       >
-        <div className="flex items-center gap-3 px-4 py-3 border-b border-gray-200 bg-gray-50/50">
-          <Search className="w-4 h-4 text-gray-400" />
-          <input 
-            type="text" 
-            placeholder="Search queue by case or failure code..." 
-            className="border-none outline-none bg-transparent text-[13px] text-gray-900 w-full placeholder:text-gray-400 font-medium"
-            value={search}
-            onChange={e => setSearch(e.target.value)}
-          />
+        <div className="flex flex-col border-b border-[#222328] bg-[#16171a]">
+          <div className="flex items-center gap-3 px-4 py-3 border-b border-[#222328]">
+            <Search className="w-4 h-4 text-gray-500" />
+            <input 
+              type="text" 
+              placeholder="SEARCH QUEUE BY CASE OR CODE..." 
+              className="border-none outline-none bg-transparent text-[11px] font-mono text-gray-100 w-full placeholder:text-gray-600 tracking-wider"
+              value={search}
+              onChange={e => setSearch(e.target.value)}
+            />
+          </div>
+          <div className="flex items-center gap-1 p-2 overflow-x-auto scrollbar-hide">
+            <FilterChip label="ALL" value="all" />
+            <div className="w-px h-3 bg-[#222328] mx-1" />
+            <FilterChip label="HIGH CONF" value="high" />
+            <FilterChip label="MODERATE" value="moderate" />
+            <FilterChip label="LOW" value="low" />
+            <FilterChip label="BLOCKED" value="blocked" />
+          </div>
         </div>
 
-        <div className="flex-1 overflow-y-auto bg-white">
+        <div className="flex-1 overflow-y-auto bg-[#0a0a0b]">
           {loading ? (
-            <div className="p-10 text-center text-gray-400 text-[13px] font-medium">Loading queue...</div>
+            <div className="p-10 text-center text-gray-600 font-mono text-[11px]">LOADING_DATA...</div>
           ) : (
             <table className="w-full text-left border-collapse">
-              <thead className="bg-gray-50/80 text-[10px] uppercase tracking-wider text-gray-500 font-bold sticky top-0 z-10 border-b border-gray-200">
+              <thead className="bg-[#121316] text-[9px] uppercase tracking-widest text-gray-500 font-bold sticky top-0 z-10 border-b border-[#222328]">
                 <tr>
-                  <th className="px-4 py-2.5 font-bold">Case</th>
-                  <th className="px-3 py-2.5 font-bold text-right">Amount</th>
-                  <th className="px-3 py-2.5 font-bold">Failure</th>
-                  <th className="px-3 py-2.5 font-bold text-center">Prob</th>
-                  <th className="px-4 py-2.5 font-bold">Status</th>
+                  <th className="px-4 py-3 font-bold">MANDATE ID</th>
+                  <th className="px-3 py-3 font-bold text-right">AMOUNT</th>
+                  <th className="px-3 py-3 font-bold">FAILURE CODE</th>
+                  <th className="px-4 py-3 font-bold text-right">CONFIDENCE</th>
                 </tr>
               </thead>
-              <tbody className="divide-y divide-gray-100">
+              <tbody className="divide-y divide-[#1e1f24]">
                 {filtered.map((c) => {
                   const isSelected = c.scenario_key === id;
                   return (
                     <tr 
                       key={c.scenario_key}
                       onClick={() => navigate(`/queue/${c.scenario_key}`)}
-                      className={`group cursor-pointer transition-colors ${isSelected ? 'bg-blue-50/60' : 'hover:bg-gray-50'}`}
+                      className={`group cursor-pointer transition-colors ${isSelected ? 'bg-[#1a1b1f]' : 'hover:bg-[#121316]'}`}
                     >
                       <td className="px-4 py-3 align-top">
-                        <div className={`text-[13px] font-bold ${isSelected ? 'text-blue-700' : 'text-gray-900'}`}>{c.title}</div>
-                        <div className="text-[11px] text-gray-400 mt-0.5 font-medium">Action: Tomorrow 09:00</div>
+                        <div className={`text-[12px] font-mono font-bold ${isSelected ? 'text-white' : 'text-gray-300'}`}>{c.title}</div>
+                        <div className="text-[9px] text-gray-500 mt-1 font-bold tracking-widest uppercase">ACTION: TOMORROW 09:00</div>
                       </td>
                       <td className="px-3 py-3 align-top text-right">
-                        <div className={`text-[13px] font-bold ${isSelected ? 'text-blue-700' : 'text-gray-900'}`}>₹{c.amount.toLocaleString(undefined, {minimumFractionDigits: 0})}</div>
+                        <div className={`text-[12px] font-mono font-bold ${isSelected ? 'text-white' : 'text-gray-300'}`}>₹{c.amount.toLocaleString(undefined, {minimumFractionDigits: 0})}</div>
                       </td>
                       <td className="px-3 py-3 align-top">
-                        <div className="text-[11px] font-mono text-red-600 bg-red-50 border border-red-100 rounded px-1.5 py-0.5 inline-block truncate max-w-[120px]">{c.failure_code}</div>
+                        <div className="text-[10px] font-mono text-gray-400 bg-[#16171a] border border-[#222328] rounded px-1.5 py-0.5 inline-block truncate max-w-[120px]">{c.failure_code}</div>
                       </td>
-                      <td className="px-3 py-3 align-top text-center">
-                        {c.initial_probability > 0 ? (
-                          <span className="text-[12px] font-bold text-blue-600 bg-blue-50 px-1.5 py-0.5 rounded">
-                            {(c.initial_probability * 100).toFixed(0)}%
+                      <td className="px-4 py-3 align-top text-right">
+                        <div className="flex flex-col items-end gap-1">
+                          <span className={`text-[9px] font-bold tracking-widest uppercase px-1.5 py-0.5 rounded border ${getConfStyle(c.initial_probability)}`}>
+                            {getConfLabel(c.initial_probability)}
                           </span>
-                        ) : (
-                          <span className="text-[12px] text-gray-400 font-medium">-</span>
-                        )}
-                      </td>
-                      <td className="px-4 py-3 align-top">
-                        <Badge variant="low" className={`text-[10px] font-bold tracking-wider ${isSelected ? 'bg-blue-100 text-blue-700 border-blue-200' : ''}`}>READY</Badge>
+                          {c.initial_probability > 0 && (
+                            <span className="text-[11px] font-mono text-gray-400">{(c.initial_probability * 100).toFixed(0)}%</span>
+                          )}
+                        </div>
                       </td>
                     </tr>
                   )
@@ -103,18 +140,16 @@ export default function Workspace() {
         </div>
       </motion.div>
 
-      <div className={`w-full xl:w-7/12 flex-col bg-[#f4f5f7] rounded-lg overflow-y-auto ${!id ? 'hidden xl:flex' : 'flex'}`}>
+      <div className={`w-full xl:w-[55%] flex-col overflow-y-auto ${!id ? 'hidden xl:flex' : 'flex'}`}>
         <AnimatePresence mode="wait">
           {id ? (
             <motion.div key={id} initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -10 }} className="h-full flex justify-center w-full">
               <CaseDetail />
             </motion.div>
           ) : (
-            <motion.div key="empty" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="flex flex-col items-center justify-center h-full text-gray-400 gap-4 bg-white border border-gray-200 shadow-sm rounded-lg m-1">
-              <div className="w-16 h-16 rounded-full bg-gray-50 border border-gray-200 flex items-center justify-center shadow-sm">
-                <Inbox className="w-6 h-6 text-gray-400" />
-              </div>
-              <div className="text-[14px] font-semibold text-gray-500">Select a case from the queue to investigate</div>
+            <motion.div key="empty" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="flex flex-col items-center justify-center h-full text-gray-600 gap-4 bg-[#121316] border border-[#222328] shadow-sm rounded m-1">
+              <Inbox className="w-8 h-8 text-[#222328]" />
+              <div className="text-[10px] font-bold tracking-widest uppercase">SELECT A MANDATE TO INVESTIGATE</div>
             </motion.div>
           )}
         </AnimatePresence>

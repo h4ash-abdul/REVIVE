@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react'
 import { motion } from 'framer-motion'
 import { useNavigate } from 'react-router-dom'
-import { Card, Button, Badge } from '../components/ui'
 import api from '../api/client'
 import { DemoCase } from '../types'
 import { ChevronRight, ArrowUpRight, Clock, AlertCircle } from 'lucide-react'
@@ -21,121 +20,121 @@ export default function Overview() {
   const activeCases = cases.filter(c => c.initial_probability > 0)
   const readyCases = activeCases.slice(0, 3) // show first 3
 
+  const getConfStyle = (prob: number) => {
+    if (prob > 0.7) return 'text-emerald-400 bg-emerald-400/10 border-emerald-400/20'
+    if (prob >= 0.4) return 'text-amber-400 bg-amber-400/10 border-amber-400/20'
+    return 'text-rose-400 bg-rose-400/10 border-rose-400/20'
+  }
+  const getConfLabel = (prob: number) => {
+    if (prob > 0.7) return 'HIGH'
+    if (prob >= 0.4) return 'MODERATE'
+    return 'LOW'
+  }
+
   return (
-    <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="flex flex-col gap-10 max-w-[1200px] w-full">
+    <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="flex flex-col gap-10 w-full max-w-[1400px] mx-auto">
       <div className="flex flex-col gap-2">
-        <h1 className="text-[32px] font-bold text-gray-900 tracking-tight">REVIVE<span className="text-gray-400 font-normal"> / Recovery Operations</span></h1>
-        <p className="text-[14px] text-blue-600 font-semibold tracking-wide mb-4">ADAPTIVE AI REVENUE RECOVERY AGENT</p>
-        
-        <div>
-          <Button variant="primary" onClick={() => navigate('/queue')} className="px-6 py-3 font-semibold tracking-wide bg-blue-600 hover:bg-blue-700 text-white rounded-md shadow-sm transition-all">
-            OPEN RECOVERY OPERATIONS <ChevronRight className="w-4 h-4 ml-1" />
-          </Button>
-        </div>
+        <h1 className="text-[24px] font-bold text-white tracking-widest uppercase">REVIVE <span className="text-gray-600 font-normal">/ RECOVERY OPERATIONS</span></h1>
+        <p className="text-[11px] text-gray-500 font-bold tracking-widest uppercase mb-4">Adaptive AI Revenue Recovery Agent</p>
       </div>
 
-      <div className="text-[11px] text-gray-400 font-bold tracking-wider uppercase -mb-6">
-        SIMULATED OPERATIONAL SUMMARY
-      </div>
-
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-        <Card 
-          className="p-6 flex flex-col gap-2 cursor-pointer group hover:border-gray-400 transition-all shadow-sm hover:shadow-md"
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+        <div 
+          className="p-5 flex flex-col gap-1 cursor-pointer group bg-[#16171a] border border-[#222328] hover:border-gray-500 transition-all rounded"
           onClick={() => navigate('/queue?filter=at-risk')}
         >
-          <div className="flex justify-between items-center">
-            <div className="text-[12px] font-bold text-gray-500 uppercase tracking-wider">Revenue at Risk</div>
-            <ArrowUpRight className="w-4 h-4 text-gray-300 group-hover:text-blue-500 transition-colors" />
+          <div className="flex justify-between items-center mb-2">
+            <div className="text-[10px] font-bold text-gray-500 uppercase tracking-widest">Revenue at Risk</div>
+            <ArrowUpRight className="w-3.5 h-3.5 text-gray-600 group-hover:text-gray-300 transition-colors" />
           </div>
-          <div className="text-[28px] font-bold text-gray-900 mt-1">₹128,368<span className="text-[16px] text-gray-400 font-normal">.32</span></div>
-          <div className="text-[12px] text-gray-500 flex items-center gap-1 mt-2">
-            <AlertCircle className="w-3.5 h-3.5 text-orange-500" /> Action required
+          <div className="text-[24px] font-mono font-bold text-white tracking-tight">₹128,368<span className="text-[14px] text-gray-600 font-normal">.32</span></div>
+          <div className="text-[10px] text-gray-400 flex items-center gap-1 mt-2 uppercase tracking-wider font-bold">
+            <AlertCircle className="w-3 h-3 text-rose-500" /> Action Required
           </div>
-        </Card>
-        
-        <Card 
-          className="p-6 flex flex-col gap-2 cursor-pointer group hover:border-gray-400 transition-all shadow-sm hover:shadow-md"
-          onClick={() => navigate('/queue?filter=recovered')}
-        >
-          <div className="flex justify-between items-center">
-            <div className="text-[12px] font-bold text-gray-500 uppercase tracking-wider">Recovered</div>
-            <ArrowUpRight className="w-4 h-4 text-gray-300 group-hover:text-blue-500 transition-colors" />
-          </div>
-          <div className="text-[28px] font-bold text-green-700 mt-1">₹50,192<span className="text-[16px] text-green-700/60 font-normal">.12</span></div>
-          <div className="text-[12px] text-green-700/80 flex items-center gap-1 mt-2 font-medium">
-            +16.43% vs heuristics
-          </div>
-        </Card>
-        
-        <Card 
-          className="p-6 flex flex-col gap-2 cursor-pointer group hover:border-gray-400 transition-all shadow-sm hover:shadow-md"
-          onClick={() => navigate('/evidence')}
-        >
-          <div className="flex justify-between items-center">
-            <div className="text-[12px] font-bold text-gray-500 uppercase tracking-wider">Recovery Rate</div>
-            <ArrowUpRight className="w-4 h-4 text-gray-300 group-hover:text-blue-500 transition-colors" />
-          </div>
-          <div className="text-[28px] font-bold text-gray-900 mt-1">39.3<span className="text-[16px] text-gray-400 font-normal">%</span></div>
-          <div className="text-[12px] text-gray-500 flex items-center gap-1 mt-2">
-            Last 60 days
-          </div>
-        </Card>
-        
-        <Card 
-          className="p-6 flex flex-col gap-2 cursor-pointer group hover:border-gray-400 transition-all shadow-sm hover:shadow-md"
-          onClick={() => navigate('/queue?filter=active')}
-        >
-          <div className="flex justify-between items-center">
-            <div className="text-[12px] font-bold text-gray-500 uppercase tracking-wider">Actionable Cases</div>
-            <ArrowUpRight className="w-4 h-4 text-gray-300 group-hover:text-blue-500 transition-colors" />
-          </div>
-          <div className="text-[28px] font-bold text-gray-900 mt-1">417</div>
-          <div className="text-[12px] text-gray-500 flex items-center gap-1 mt-2">
-            <Clock className="w-3.5 h-3.5" /> Pending execution
-          </div>
-        </Card>
-      </div>
-
-      <div className="flex flex-col gap-6 mt-6">
-        <div className="flex items-center justify-between">
-          <h2 className="text-[16px] font-bold text-gray-900">READY FOR RECOVERY</h2>
-          <span className="text-[13px] text-blue-600 font-medium cursor-pointer hover:underline" onClick={() => navigate('/queue')}>View all {activeCases.length}</span>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 pb-4">
+        <div 
+          className="p-5 flex flex-col gap-1 cursor-pointer group bg-[#16171a] border border-[#222328] hover:border-gray-500 transition-all rounded"
+          onClick={() => navigate('/queue?filter=recovered')}
+        >
+          <div className="flex justify-between items-center mb-2">
+            <div className="text-[10px] font-bold text-gray-500 uppercase tracking-widest">Recovered</div>
+            <ArrowUpRight className="w-3.5 h-3.5 text-gray-600 group-hover:text-gray-300 transition-colors" />
+          </div>
+          <div className="text-[24px] font-mono font-bold text-emerald-400 tracking-tight">₹50,192<span className="text-[14px] text-emerald-400/50 font-normal">.12</span></div>
+          <div className="text-[10px] text-emerald-500 flex items-center gap-1 mt-2 uppercase tracking-wider font-bold">
+            +16.43% vs heuristics
+          </div>
+        </div>
+        
+        <div 
+          className="p-5 flex flex-col gap-1 cursor-pointer group bg-[#16171a] border border-[#222328] hover:border-gray-500 transition-all rounded"
+          onClick={() => navigate('/evidence')}
+        >
+          <div className="flex justify-between items-center mb-2">
+            <div className="text-[10px] font-bold text-gray-500 uppercase tracking-widest">Recovery Rate</div>
+            <ArrowUpRight className="w-3.5 h-3.5 text-gray-600 group-hover:text-gray-300 transition-colors" />
+          </div>
+          <div className="text-[24px] font-mono font-bold text-white tracking-tight">39.3<span className="text-[14px] text-gray-600 font-normal">%</span></div>
+          <div className="text-[10px] text-gray-400 flex items-center gap-1 mt-2 uppercase tracking-wider font-bold">
+            Last 60 days
+          </div>
+        </div>
+        
+        <div 
+          className="p-5 flex flex-col gap-1 cursor-pointer group bg-[#16171a] border border-[#222328] hover:border-gray-500 transition-all rounded"
+          onClick={() => navigate('/queue')}
+        >
+          <div className="flex justify-between items-center mb-2">
+            <div className="text-[10px] font-bold text-gray-500 uppercase tracking-widest">Actionable Cases</div>
+            <ArrowUpRight className="w-3.5 h-3.5 text-gray-600 group-hover:text-gray-300 transition-colors" />
+          </div>
+          <div className="text-[24px] font-mono font-bold text-white tracking-tight">417</div>
+          <div className="text-[10px] text-gray-400 flex items-center gap-1 mt-2 uppercase tracking-wider font-bold">
+            <Clock className="w-3 h-3" /> Pending Execution
+          </div>
+        </div>
+      </div>
+
+      <div className="flex flex-col gap-4 mt-4">
+        <div className="flex items-center justify-between border-b border-[#222328] pb-2">
+          <h2 className="text-[11px] font-bold text-gray-400 uppercase tracking-widest">READY FOR RECOVERY</h2>
+          <span className="text-[10px] text-gray-500 font-bold tracking-widest uppercase cursor-pointer hover:text-white transition-colors" onClick={() => navigate('/queue')}>VIEW ALL {activeCases.length} </span>
+        </div>
+        
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 pb-4">
           {loading ? (
-            <div className="text-[14px] text-gray-500 col-span-3 text-center py-10">Loading active cases...</div>
+            <div className="text-[12px] text-gray-600 font-mono col-span-3 py-10">LOADING_ACTIVE_CASES...</div>
           ) : readyCases.map(c => (
-            <Card key={c.scenario_key} className="p-6 flex flex-col gap-4 shadow-sm border border-gray-200">
-              <div className="flex justify-between items-start">
-                <div className="font-bold text-[15px] text-gray-900">{c.title}</div>
-                <div className="font-bold text-[16px] text-gray-900">₹{c.amount.toLocaleString(undefined, {minimumFractionDigits: 0})}</div>
+            <div key={c.scenario_key} className="flex flex-col bg-[#16171a] border border-[#222328] rounded cursor-pointer hover:border-gray-500 transition-all" onClick={() => navigate(`/queue/${c.scenario_key}`)}>
+              <div className="p-4 flex flex-col gap-4">
+                <div className="flex justify-between items-start">
+                  <div className="font-mono font-bold text-[13px] text-gray-300">{c.title}</div>
+                  <div className="font-mono font-bold text-[13px] text-white">₹{c.amount.toLocaleString(undefined, {minimumFractionDigits: 0})}</div>
+                </div>
+                
+                <div className="flex flex-col gap-2">
+                  <div className="flex justify-between items-center">
+                    <span className="text-[10px] font-bold text-gray-500 uppercase tracking-widest">Failure</span>
+                    <span className="font-mono text-[9px] uppercase tracking-wider bg-rose-500/10 text-rose-400 border border-rose-500/20 px-1.5 py-0.5 rounded">{c.failure_code}</span>
+                  </div>
+                  <div className="flex justify-between items-center">
+                    <span className="text-[10px] font-bold text-gray-500 uppercase tracking-widest">Confidence</span>
+                    <div className="flex items-center gap-1.5">
+                      <span className={`text-[9px] font-bold tracking-widest uppercase px-1.5 py-0.5 rounded border ${getConfStyle(c.initial_probability)}`}>
+                        {getConfLabel(c.initial_probability)}
+                      </span>
+                      <span className="font-mono text-[11px] font-bold text-white">{(c.initial_probability * 100).toFixed(0)}%</span>
+                    </div>
+                  </div>
+                </div>
               </div>
               
-              <div className="flex flex-col gap-3 mt-2">
-                <div className="flex justify-between items-center text-[13px]">
-                  <span className="text-gray-500 font-medium">Failure</span>
-                  <Badge variant="critical" className="font-mono text-[10px] uppercase tracking-wider bg-red-50 text-red-700 border-red-200">{c.failure_code}</Badge>
-                </div>
-                <div className="flex justify-between items-center text-[13px]">
-                  <span className="text-gray-500 font-medium">Probability</span>
-                  <span className="text-blue-600 font-bold bg-blue-50 px-2 py-0.5 rounded text-[12px]">{(c.initial_probability * 100).toFixed(0)}%</span>
-                </div>
-                <div className="flex justify-between items-center text-[13px]">
-                  <span className="text-gray-500 font-medium">Action</span>
-                  <span className="text-gray-900 font-medium flex items-center gap-1"><Clock className="w-3.5 h-3.5 text-gray-400"/> Tomorrow 09:00</span>
-                </div>
+              <div className="mt-auto p-3 border-t border-[#222328] bg-[#1a1b1f] flex justify-between items-center group-hover:bg-[#1e1f24] transition-colors rounded-b">
+                <span className="text-[10px] font-bold text-gray-400 uppercase tracking-widest">INVESTIGATE</span>
+                <ChevronRight className="w-3.5 h-3.5 text-gray-500" />
               </div>
-              
-              <div className="mt-4 pt-4 border-t border-gray-100">
-                <Button 
-                  className="w-full justify-between bg-gray-50 hover:bg-gray-100 text-gray-700 font-semibold border border-gray-200 transition-colors" 
-                  onClick={() => navigate(`/queue/${c.scenario_key}`)}
-                >
-                  REVIEW CASE <ChevronRight className="w-4 h-4 text-gray-400 group-hover:text-gray-700" />
-                </Button>
-              </div>
-            </Card>
+            </div>
           ))}
         </div>
       </div>

@@ -1,10 +1,9 @@
-import { useEffect, useState, useRef } from 'react'
+import { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import { motion, AnimatePresence } from 'framer-motion'
-import { RotateCcw, Play, CheckCircle2, XCircle, Ban, ChevronDown, ListFilter, Activity, BrainCircuit, ShieldCheck, Zap } from 'lucide-react'
+import { RotateCcw, Play, CheckCircle2, XCircle, Ban, Zap, AlertTriangle } from 'lucide-react'
 import api from '../api/client'
 import { TraceData } from '../types'
-import { Card, Badge, Button } from '../components/ui'
 import { format } from 'date-fns'
 
 export default function CaseDetail() {
@@ -13,15 +12,6 @@ export default function CaseDetail() {
   const [loading, setLoading] = useState(true)
   const [executing, setExecuting] = useState(false)
   const [execStep, setExecStep] = useState(-1)
-  
-  const paymentRef = useRef<HTMLDivElement>(null)
-  const predictRef = useRef<HTMLDivElement>(null)
-  const executeRef = useRef<HTMLDivElement>(null)
-  const auditRef = useRef<HTMLDivElement>(null)
-
-  const scrollTo = (ref: React.RefObject<HTMLDivElement>) => {
-    ref.current?.scrollIntoView({ behavior: 'smooth', block: 'center' })
-  }
 
   const fetchTrace = async () => {
     try {
@@ -52,7 +42,7 @@ export default function CaseDetail() {
 
   const handleTrigger = async () => {
     setExecuting(true)
-    const steps = ['ANALYZING CONTEXT...', 'CHECKING DETERMINISTIC POLICY...', 'EXECUTING PAYMENT CALL...', 'VERIFYING OUTCOME...']
+    const steps = ['DIAGNOSING...', 'PREDICTING...', 'CHECKING POLICY...', 'EXECUTING...', 'VERIFYING...']
     for (let i = 0; i < steps.length; i++) {
       setExecStep(i)
       await new Promise(r => setTimeout(r, 600))
@@ -69,286 +59,278 @@ export default function CaseDetail() {
     }
   }
 
-  if (loading && !trace) return <div className="p-10 text-[13px] text-gray-500 font-medium flex h-full items-center justify-center">Loading case details...</div>
-  if (!trace) return <div className="p-10 text-[13px] text-red-500 font-medium flex h-full items-center justify-center">Case not found</div>
+  if (loading && !trace) return <div className="p-10 text-[11px] text-gray-500 font-mono flex h-full items-center justify-center">LOADING_CASE_DATA...</div>
+  if (!trace) return <div className="p-10 text-[11px] text-rose-500 font-mono flex h-full items-center justify-center">CASE_NOT_FOUND</div>
 
-  const isResolved = trace.obligation_status !== 'ACTIVE_RECOVERY'
-  const isSuccess = trace.outcome?.success
+  const isResolved = trace.obligation_status !== 'active_recovery'
+  const isSuccess = trace.outcome?.status === 'success'
   const isActionable = !isResolved && trace.budget_remaining > 0;
   
-  const PipelineStep = ({ label, active, completed, onClick }: any) => (
-    <div onClick={onClick} className={`flex items-center gap-1.5 shrink-0 transition-colors ${onClick ? 'cursor-pointer hover:text-blue-600' : ''} ${active ? 'text-gray-900 font-bold' : completed ? 'text-gray-500 font-medium' : 'text-gray-300 font-medium'}`}>
-      <span className="text-[11px] uppercase tracking-wider">{label}</span>
-      {completed && <CheckCircle2 className="w-3.5 h-3.5 text-green-500" />}
-    </div>
-  )
-
   const hasPrediction = !!trace.strategy_result;
   const hasOutcome = !!trace.outcome;
 
+  const currentStep: number = hasOutcome ? 5 : hasPrediction ? 3 : 1;
+
+  const TimelineStep = ({ num, label, active, completed }: any) => (
+    <div className={`flex items-start gap-4 ${active ? 'opacity-100' : completed ? 'opacity-60' : 'opacity-30'}`}>
+      <div className={`w-5 h-5 rounded-full flex items-center justify-center text-[10px] font-bold font-mono shrink-0 mt-0.5 border ${
+        active ? 'bg-white text-black border-white' : completed ? 'bg-[#222328] text-gray-400 border-gray-600' : 'bg-transparent text-gray-600 border-[#222328]'
+      }`}>
+        {completed ? <CheckCircle2 className="w-3 h-3 text-emerald-400" /> : num}
+      </div>
+      <div className="flex flex-col pt-0.5 pb-6">
+        <span className={`text-[11px] font-bold tracking-widest uppercase ${active ? 'text-white' : 'text-gray-400'}`}>{label}</span>
+      </div>
+    </div>
+  )
+
+  const getConfStyle = (prob: number) => {
+    if (prob === 0) return 'text-gray-500 bg-gray-500/10 border-gray-500/20'
+    if (prob > 0.7) return 'text-emerald-400 bg-emerald-400/10 border-emerald-400/20'
+    if (prob >= 0.4) return 'text-amber-400 bg-amber-400/10 border-amber-400/20'
+    return 'text-rose-400 bg-rose-400/10 border-rose-400/20'
+  }
+  
+  const getConfLabel = (prob: number) => {
+    if (prob === 0) return 'BLOCKED'
+    if (prob > 0.7) return 'HIGH CONFIDENCE'
+    if (prob >= 0.4) return 'MODERATE CONFIDENCE'
+    return 'LOW CONFIDENCE'
+  }
+
+  // Simulated chart data based on actual candidate data if available
+  const chartData = trace.strategy_result?.candidate_actions 
+    ? trace.strategy_result.candidate_actions.map((c: any) => ({
+        time: format(new Date(c.scheduled_time), "HH:mm"),
+        prob: c.amount > 0 ? trace.initial_probability || 0.5 : 0 // simplify
+      }))
+    : [
+        { time: '09:00', prob: trace.initial_probability || 0 },
+        { time: '13:00', prob: Math.max(0, (trace.initial_probability || 0) - 0.2) },
+        { time: '18:00', prob: Math.max(0, (trace.initial_probability || 0) - 0.3) },
+      ]
+
   return (
-    <div className="w-full max-w-[800px] flex flex-col bg-white border border-gray-200 shadow-sm rounded-lg overflow-hidden h-full">
-      <div className="sticky top-0 z-20 bg-white border-b border-gray-200">
-        <div className="p-6 pb-4">
-          <div className="flex justify-between items-start mb-4">
-            <div>
-              <div className="text-[12px] font-bold text-gray-400 uppercase tracking-wider mb-1">CASE {id}</div>
-              <h1 className="text-[28px] font-bold text-gray-900 flex items-center gap-3 tracking-tight">
+    <div className="w-full flex bg-[#0a0a0b] h-full overflow-hidden text-gray-100">
+      
+      {/* TIMELINE SIDEBAR */}
+      <div className="w-[180px] border-r border-[#222328] bg-[#121316] p-6 shrink-0 flex flex-col">
+        <div className="text-[9px] font-bold text-gray-500 tracking-widest uppercase mb-8">EXECUTION TRACE</div>
+        <div className="flex flex-col relative">
+          <div className="absolute left-[9px] top-4 bottom-8 w-px bg-[#222328]" />
+          <TimelineStep num="1" label="DIAGNOSE" active={currentStep === 1} completed={currentStep > 1} />
+          <TimelineStep num="2" label="PREDICT" active={currentStep === 2} completed={currentStep > 2} />
+          <TimelineStep num="3" label="POLICY CHECK" active={currentStep === 3} completed={currentStep > 3} />
+          <TimelineStep num="4" label="EXECUTE" active={currentStep === 4} completed={currentStep > 4} />
+          <TimelineStep num="5" label="VERIFY" active={currentStep === 5} completed={currentStep >= 5} />
+        </div>
+      </div>
+
+      {/* MAIN DETAIL PANEL */}
+      <div className="flex-1 overflow-y-auto bg-[#0a0a0b] relative">
+        <div className="p-8 pb-32 max-w-[800px] flex flex-col gap-8">
+          
+          {/* HEADER */}
+          <div className="flex justify-between items-start">
+            <div className="flex flex-col gap-2">
+              <div className="text-[10px] font-bold text-gray-500 uppercase tracking-widest">MANDATE ID: {id}</div>
+              <h1 className="text-[28px] font-mono font-bold text-white tracking-tight">
                 ₹{trace.amount.toLocaleString(undefined, {minimumFractionDigits:0})}
-                <Badge variant={isResolved ? (isSuccess ? 'success' : 'critical') : 'low'} className="ml-2 font-mono uppercase tracking-widest text-[10px]">
-                  {trace.obligation_status}
-                </Badge>
               </h1>
+              <div className="flex items-center gap-2 mt-1">
+                <span className="text-[9px] font-bold tracking-widest uppercase px-1.5 py-0.5 rounded border bg-[#16171a] border-[#222328] text-gray-400">
+                  {trace.obligation_status}
+                </span>
+                <span className="text-[9px] font-bold tracking-widest uppercase px-1.5 py-0.5 rounded border bg-[#16171a] border-[#222328] text-rose-400">
+                  {trace.failure_code}
+                </span>
+              </div>
             </div>
             
             <div className="flex items-center gap-3">
-              <Button onClick={handleReset} variant="outline" disabled={executing} className="border-gray-200 text-gray-600 hover:bg-gray-50 hover:text-gray-900 font-semibold text-[12px]">
-                <RotateCcw className="w-3.5 h-3.5 mr-1.5"/> RESET
-              </Button>
+              <button onClick={handleReset} disabled={executing} className="px-4 py-2 border border-[#222328] bg-[#16171a] hover:bg-[#1e1f24] text-gray-300 font-bold text-[10px] tracking-widest uppercase rounded flex items-center transition-colors">
+                <RotateCcw className="w-3.5 h-3.5 mr-2"/> RESET
+              </button>
               
               {isResolved ? (
-                <div className={`px-4 py-2 rounded-md text-[13px] font-bold flex items-center gap-2 ${isSuccess ? 'bg-green-50 text-green-700 border border-green-200' : 'bg-red-50 text-red-700 border border-red-200'}`}>
-                  {isSuccess ? <><CheckCircle2 className="w-4 h-4" /> RECOVERED</> : <><XCircle className="w-4 h-4" /> RECOVERY FAILED</>}
+                <div className={`px-4 py-2 rounded text-[10px] font-bold tracking-widest uppercase flex items-center border ${isSuccess ? 'bg-emerald-500/10 text-emerald-400 border-emerald-500/20' : 'bg-rose-500/10 text-rose-400 border-rose-500/20'}`}>
+                  {isSuccess ? <><CheckCircle2 className="w-3.5 h-3.5 mr-2" /> RECOVERED</> : <><XCircle className="w-3.5 h-3.5 mr-2" /> RECOVERY FAILED</>}
                 </div>
               ) : !isActionable ? (
-                <div className="px-4 py-2 rounded-md text-[13px] font-bold bg-gray-100 text-gray-500 flex items-center gap-2 border border-gray-200">
-                  <Ban className="w-4 h-4" /> RECOVERY BLOCKED
+                <div className="px-4 py-2 rounded text-[10px] font-bold tracking-widest uppercase flex items-center border bg-gray-800 text-gray-400 border-gray-700">
+                  <Ban className="w-3.5 h-3.5 mr-2" /> RECOVERY BLOCKED
                 </div>
               ) : (
-                <Button variant="primary" onClick={handleTrigger} disabled={executing} className="min-w-[180px] bg-blue-600 hover:bg-blue-700 text-white font-bold tracking-wide">
-                  {executing ? 'EXECUTING...' : <><Play className="w-4 h-4 mr-1.5"/> TRIGGER RECOVERY</>}
-                </Button>
+                <button onClick={handleTrigger} disabled={executing} className="px-4 py-2 bg-white hover:bg-gray-200 text-black font-bold tracking-widest uppercase text-[10px] rounded flex items-center transition-colors">
+                  {executing ? 'EXECUTING...' : <><Play className="w-3.5 h-3.5 mr-2"/> TRIGGER RECOVERY</>}
+                </button>
               )}
             </div>
           </div>
 
-          <div className="flex items-center gap-4 text-[12px] overflow-x-auto pb-2 scrollbar-hide">
-            <PipelineStep label="PAYMENT" completed={true} onClick={() => scrollTo(paymentRef)} />
-            <ChevronDown className="w-3 h-3 text-gray-300 shrink-0 transform -rotate-90" />
-            <PipelineStep label="CLASSIFY" completed={true} />
-            <ChevronDown className="w-3 h-3 text-gray-300 shrink-0 transform -rotate-90" />
-            <PipelineStep label="PREDICT" completed={hasPrediction} active={!hasPrediction && !isResolved} onClick={() => scrollTo(predictRef)} />
-            <ChevronDown className="w-3 h-3 text-gray-300 shrink-0 transform -rotate-90" />
-            <PipelineStep label="DECIDE" completed={hasPrediction} />
-            <ChevronDown className="w-3 h-3 text-gray-300 shrink-0 transform -rotate-90" />
-            <PipelineStep label="EXECUTE" completed={hasOutcome} active={hasPrediction && !isResolved} onClick={() => scrollTo(executeRef)} />
-            <ChevronDown className="w-3 h-3 text-gray-300 shrink-0 transform -rotate-90" />
-            <PipelineStep label="VERIFY" completed={hasOutcome} />
-            <ChevronDown className="w-3 h-3 text-gray-300 shrink-0 transform -rotate-90" />
-            <PipelineStep label="AUDIT" completed={false} active={isResolved} onClick={() => scrollTo(auditRef)} />
+          {/* OUTCOME BANNER (IF RESOLVED) */}
+          {isResolved && (
+            <div className={`p-4 border rounded flex items-start gap-3 ${isSuccess ? 'bg-emerald-900/20 border-emerald-500/30' : 'bg-rose-900/20 border-rose-500/30'}`}>
+              {isSuccess ? <CheckCircle2 className="w-5 h-5 text-emerald-400 shrink-0" /> : <AlertTriangle className="w-5 h-5 text-rose-400 shrink-0" />}
+              <div className="flex flex-col">
+                <span className={`text-[11px] font-bold tracking-widest uppercase ${isSuccess ? 'text-emerald-400' : 'text-rose-400'}`}>
+                  {isSuccess ? 'RECOVERY SUCCESSFUL' : trace.budget_remaining === 0 ? 'RECOVERY EXHAUSTED' : 'RECOVERY FAILED'}
+                </span>
+                <span className="text-[12px] text-gray-300 mt-1 font-mono">
+                  {isSuccess 
+                    ? `Payment of ₹${trace.recovered_amount?.toLocaleString() || trace.amount.toLocaleString()} was successfully recovered.`
+                    : trace.budget_remaining === 0
+                      ? 'Maximum retry budget (3/3) has been reached. No further recovery action is permitted.'
+                      : `Execution attempt failed (Code: ${trace.outcome?.metadata?.network_return_code || 'Unknown'}).`
+                  }
+                </span>
+              </div>
+            </div>
+          )}
+
+          {/* AI PREDICTION & CHART */}
+          <div className="flex flex-col gap-4">
+            <h2 className="text-[11px] font-bold text-gray-500 uppercase tracking-widest border-b border-[#222328] pb-2">PREDICTIVE INTELLIGENCE</h2>
+            
+            <div className="p-6 bg-[#16171a] border border-[#222328] rounded flex flex-col gap-6">
+              <div className="flex items-center justify-between">
+                <div className="flex flex-col gap-1">
+                  <span className="text-[10px] text-gray-500 uppercase tracking-widest font-bold">MAXIMUM RECOVERY CONFIDENCE</span>
+                  <div className="flex items-end gap-3">
+                    <span className="text-[32px] font-mono font-bold text-white leading-none">
+                      {trace.initial_probability ? (trace.initial_probability * 100).toFixed(0) : (trace.budget_remaining === 0 ? 0 : 72)}<span className="text-[16px] text-gray-600">%</span>
+                    </span>
+                    <span className={`text-[9px] font-bold tracking-widest uppercase px-2 py-1 rounded border mb-1 ${getConfStyle(trace.initial_probability || 0)}`}>
+                      {getConfLabel(trace.initial_probability || 0)}
+                    </span>
+                  </div>
+                </div>
+                <div className="flex flex-col items-end gap-1 text-[10px] font-bold text-gray-500 uppercase tracking-widest text-right">
+                  <span>MODEL: V1.1_HIERARCHICAL</span>
+                  <span>FEATURES: TEMPORAL_CTX</span>
+                </div>
+              </div>
+
+              {/* BAR CHART */}
+              <div className="flex flex-col mt-4">
+                <span className="text-[9px] text-gray-500 font-bold uppercase tracking-widest mb-3">RECOVERY WINDOW PROBABILITIES</span>
+                <div className="h-[120px] flex items-end gap-2 border-b border-[#222328] pb-1">
+                  {chartData.map((d: any, i: number) => (
+                    <div key={i} className="flex-1 flex flex-col items-center gap-2 group relative">
+                      <div className="w-full bg-[#1e1f24] rounded-t relative overflow-hidden flex items-end justify-center h-full max-h-[100px]">
+                        <motion.div 
+                          initial={{ height: 0 }} 
+                          animate={{ height: `${(d.prob || 0) * 100}%` }} 
+                          className={`w-full ${i === 0 ? (d.prob > 0 ? 'bg-emerald-500/80' : 'bg-gray-700/50') : 'bg-gray-700/50'}`}
+                        />
+                      </div>
+                      <span className="text-[9px] font-mono text-gray-500 group-hover:text-white transition-colors">{d.time}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* POLICY CHECKLIST */}
+          <div className="flex flex-col gap-4">
+            <h2 className="text-[11px] font-bold text-gray-500 uppercase tracking-widest border-b border-[#222328] pb-2">DETERMINISTIC POLICY</h2>
+            
+            <div className="p-6 bg-[#16171a] border border-[#222328] rounded flex flex-col gap-4">
+              <div className="grid grid-cols-2 gap-4">
+                <div className="flex items-center gap-3 text-[11px] font-mono text-gray-300">
+                  <div className="w-4 h-4 rounded bg-[#1e1f24] border border-[#2a2b30] flex items-center justify-center shrink-0">
+                    <CheckCircle2 className="w-3 h-3 text-emerald-400" />
+                  </div>
+                  MANDATE_STATUS_ACTIVE
+                </div>
+                <div className="flex items-center gap-3 text-[11px] font-mono text-gray-300">
+                  <div className="w-4 h-4 rounded bg-[#1e1f24] border border-[#2a2b30] flex items-center justify-center shrink-0">
+                    {trace.budget_remaining > 0 ? <CheckCircle2 className="w-3 h-3 text-emerald-400" /> : <XCircle className="w-3 h-3 text-rose-400" />}
+                  </div>
+                  RETRY_BUDGET_AVAILABLE ({trace.budget_remaining}/3)
+                </div>
+                <div className="flex items-center gap-3 text-[11px] font-mono text-gray-300">
+                  <div className="w-4 h-4 rounded bg-[#1e1f24] border border-[#2a2b30] flex items-center justify-center shrink-0">
+                    <CheckCircle2 className="w-3 h-3 text-emerald-400" />
+                  </div>
+                  COOLDOWN_PERIOD_CLEARED
+                </div>
+                <div className="flex items-center gap-3 text-[11px] font-mono text-gray-300">
+                  <div className="w-4 h-4 rounded bg-[#1e1f24] border border-[#2a2b30] flex items-center justify-center shrink-0">
+                    <CheckCircle2 className="w-3 h-3 text-emerald-400" />
+                  </div>
+                  EV_THRESHOLD_MET
+                </div>
+              </div>
+
+              <div className="mt-4 pt-4 border-t border-[#222328] flex items-center justify-between">
+                <span className="text-[10px] font-bold text-gray-500 uppercase tracking-widest">FINAL DECISION</span>
+                {trace.strategy_result?.selected_action ? (
+                  <div className="flex items-center gap-2">
+                    <Zap className="w-3.5 h-3.5 text-white" />
+                    <span className="text-[11px] font-mono font-bold text-white uppercase">
+                      EXECUTE @ {format(new Date(trace.strategy_result.selected_action.scheduled_time), "MMM d HH:mm")}
+                    </span>
+                  </div>
+                ) : (
+                  <span className="text-[11px] font-mono font-bold text-rose-400 uppercase">
+                    ACTION DENIED
+                  </span>
+                )}
+              </div>
+            </div>
+          </div>
+
+          {/* AUDIT LOG */}
+          <div className="flex flex-col gap-4">
+            <h2 className="text-[11px] font-bold text-gray-500 uppercase tracking-widest border-b border-[#222328] pb-2">IMMUTABLE AUDIT TRAIL</h2>
+            <div className="p-0 border border-[#222328] bg-[#16171a] rounded overflow-hidden">
+              <table className="w-full text-left border-collapse">
+                <thead className="bg-[#121316] text-[9px] uppercase tracking-widest text-gray-500 font-bold border-b border-[#222328]">
+                  <tr>
+                    <th className="px-4 py-2.5">TIMESTAMP</th>
+                    <th className="px-4 py-2.5">EVENT TYPE</th>
+                    <th className="px-4 py-2.5">ACTOR</th>
+                  </tr>
+                </thead>
+                <tbody className="divide-y divide-[#1e1f24] text-[11px] font-mono text-gray-300">
+                  {trace.audit_trail && trace.audit_trail.length > 0 ? (
+                    trace.audit_trail.map((e) => (
+                      <tr key={e.event_id} className="hover:bg-[#1a1b1f]">
+                        <td className="px-4 py-2.5 text-gray-500">{format(new Date(e.timestamp), 'HH:mm:ss.SSS')}</td>
+                        <td className="px-4 py-2.5 text-white">{e.event_type}</td>
+                        <td className="px-4 py-2.5">{e.actor || 'SYSTEM'}</td>
+                      </tr>
+                    ))
+                  ) : (
+                    <tr>
+                      <td colSpan={3} className="px-4 py-4 text-center text-gray-600">NO_AUDIT_EVENTS_RECORDED</td>
+                    </tr>
+                  )}
+                </tbody>
+              </table>
+            </div>
           </div>
         </div>
         
+        {/* EXECUTION OVERLAY */}
         <AnimatePresence>
           {executing && (
-            <motion.div initial={{ height: 0, opacity: 0 }} animate={{ height: 'auto', opacity: 1 }} exit={{ height: 0, opacity: 0 }} className="bg-blue-900 text-white overflow-hidden">
-              <div className="p-4 px-6 flex items-center justify-between text-[12px] font-bold tracking-wider">
-                <div className="flex items-center gap-3">
-                  <div className="w-4 h-4 border-2 border-blue-400 border-t-white rounded-full animate-spin" />
-                  {execStep >= 0 ? ['ANALYZING CONTEXT...', 'CHECKING DETERMINISTIC POLICY...', 'EXECUTING PAYMENT CALL...', 'VERIFYING OUTCOME...'][execStep] : 'INITIALIZING...'}
-                </div>
-                <div className="flex gap-1.5">
-                  {[0,1,2,3].map(i => (
-                    <div key={i} className={`w-1.5 h-1.5 rounded-full ${i <= execStep ? 'bg-blue-400' : 'bg-blue-800'}`} />
-                  ))}
-                </div>
+            <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="absolute inset-0 bg-[#0a0a0b]/90 backdrop-blur-sm z-50 flex items-center justify-center p-8">
+              <div className="w-full max-w-[400px] bg-[#16171a] border border-[#222328] p-6 rounded shadow-2xl flex flex-col gap-6">
+                <div className="text-[10px] font-bold text-gray-500 tracking-widest uppercase text-center mb-2">SYSTEM EXECUTION</div>
+                
+                {['DIAGNOSING CONTEXT', 'GENERATING PREDICTIONS', 'EVALUATING DETERMINISTIC POLICY', 'DISPATCHING NETWORK CALL', 'VERIFYING OUTCOME'].map((step, idx) => (
+                  <div key={idx} className={`flex items-center gap-3 text-[11px] font-mono tracking-wide ${idx === execStep ? 'text-white' : idx < execStep ? 'text-emerald-400' : 'text-gray-600'}`}>
+                    {idx < execStep ? <CheckCircle2 className="w-4 h-4" /> : idx === execStep ? <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin" /> : <div className="w-4 h-4 rounded-full border border-gray-600" />}
+                    {step}
+                  </div>
+                ))}
               </div>
             </motion.div>
           )}
         </AnimatePresence>
-      </div>
-
-      <div className="flex-1 overflow-y-auto p-6 flex flex-col gap-8 bg-[#f4f5f7]">
-        {/* OUTCOME PANEL */}
-        {isResolved && (
-          <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} className="mb-2">
-            <Card className={`p-6 border-l-[4px] shadow-md ${isSuccess ? 'border-l-green-600 bg-[#f0fdf4]' : 'border-l-red-600 bg-[#fef2f2]'}`}>
-              <div className="flex items-center gap-3 mb-3">
-                {isSuccess ? <CheckCircle2 className="w-6 h-6 text-green-600" /> : <XCircle className="w-6 h-6 text-red-600" />}
-                <h2 className={`text-[16px] font-bold uppercase tracking-wider ${isSuccess ? 'text-green-700' : 'text-red-700'}`}>
-                  {isSuccess ? 'RECOVERED' : trace.budget_remaining === 0 ? 'RECOVERY EXHAUSTED' : 'RECOVERY FAILED'}
-                </h2>
-              </div>
-              <div className="text-[14px] text-gray-700 font-medium ml-9">
-                {isSuccess 
-                  ? `Payment of ₹${trace.recovered_amount?.toLocaleString()} was successfully recovered. Recovery cycle is now complete.`
-                  : trace.budget_remaining === 0
-                    ? 'Maximum retry budget (3/3) has been reached. No further recovery action is permitted.'
-                    : `Execution attempt failed (Code: ${trace.outcome?.network_return_code || 'Unknown'}).`
-                }
-              </div>
-            </Card>
-          </motion.div>
-        )}
-
-        {/* PAYMENT PANEL */}
-        <div ref={paymentRef}>
-          <div className="flex items-center gap-2 mb-3">
-            <Activity className="w-4 h-4 text-gray-400" />
-            <h2 className="text-[13px] font-bold text-gray-500 uppercase tracking-wider">Payment Failure</h2>
-          </div>
-          <Card className="p-0 overflow-hidden border border-gray-200 shadow-sm">
-            <div className="grid grid-cols-2 sm:grid-cols-4 divide-x divide-gray-100">
-              <div className="p-4 bg-white flex flex-col gap-1">
-                <span className="text-[11px] text-gray-400 font-bold uppercase tracking-wider">Amount</span>
-                <span className="text-[15px] font-bold text-gray-900">₹{trace.amount.toLocaleString(undefined, {minimumFractionDigits:0})}</span>
-              </div>
-              <div className="p-4 bg-white flex flex-col gap-1">
-                <span className="text-[11px] text-gray-400 font-bold uppercase tracking-wider">Category</span>
-                <span className="text-[14px] font-bold text-gray-900 capitalize">{trace.failure_category}</span>
-              </div>
-              <div className="p-4 bg-white flex flex-col gap-1">
-                <span className="text-[11px] text-gray-400 font-bold uppercase tracking-wider">Code</span>
-                <span className="text-[12px] font-mono font-bold text-red-600 bg-red-50 px-2 py-0.5 rounded w-fit">{trace.failure_code}</span>
-              </div>
-              <div className="p-4 bg-white flex flex-col gap-1">
-                <span className="text-[11px] text-gray-400 font-bold uppercase tracking-wider">Retry Budget</span>
-                <span className="text-[14px] font-bold text-gray-900">{trace.budget_remaining} remaining</span>
-              </div>
-            </div>
-          </Card>
-        </div>
-
-        {/* AI & DECISION */}
-        <div ref={predictRef} className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div className="flex flex-col">
-            <div className="flex items-center justify-between mb-3">
-              <div className="flex items-center gap-2">
-                <BrainCircuit className="w-4 h-4 text-purple-500" />
-                <h2 className="text-[13px] font-bold text-gray-500 uppercase tracking-wider">AI Prediction</h2>
-              </div>
-              <Badge variant="low" className="text-[9px] bg-purple-50 text-purple-700 border-purple-200">PROBABILISTIC</Badge>
-            </div>
-            <Card className="p-6 h-full border border-gray-200 shadow-sm flex flex-col justify-center items-center relative overflow-hidden bg-white">
-              {trace.strategy_result ? (
-                <>
-                  <div className="relative w-32 h-32 flex items-center justify-center">
-                    <svg className="w-full h-full transform -rotate-90">
-                      <circle cx="64" cy="64" r="56" fill="transparent" stroke="#f3f4f6" strokeWidth="12" />
-                      <circle cx="64" cy="64" r="56" fill="transparent" stroke="#3b82f6" strokeWidth="12" strokeDasharray="351.8" strokeDashoffset={351.8 - (351.8 * (trace.initial_probability || 0.72))} className="transition-all duration-1000 ease-out" />
-                    </svg>
-                    <div className="absolute flex flex-col items-center">
-                      <span className="text-[32px] font-bold text-gray-900 leading-none">{trace.initial_probability ? (trace.initial_probability * 100).toFixed(0) : 72}<span className="text-[16px] text-gray-400">%</span></span>
-                    </div>
-                  </div>
-                  <div className="text-[12px] font-bold text-gray-400 tracking-wider uppercase mt-4">Recovery Probability</div>
-                  <div className="mt-6 pt-4 border-t border-gray-100 w-full flex justify-between text-[11px] font-medium text-gray-500">
-                    <span>Mode: <span className="font-bold text-gray-900">Customer History</span></span>
-                    <span>Model: <span className="font-bold text-gray-900">v1.1</span></span>
-                  </div>
-                </>
-              ) : (
-                <div className="text-[12px] text-gray-400 font-medium">Prediction computed on trigger</div>
-              )}
-            </Card>
-          </div>
-
-          <div className="flex flex-col">
-            <div className="flex items-center justify-between mb-3">
-              <div className="flex items-center gap-2">
-                <ShieldCheck className="w-4 h-4 text-blue-500" />
-                <h2 className="text-[13px] font-bold text-gray-500 uppercase tracking-wider">Revive Decision</h2>
-              </div>
-              <Badge variant="low" className="text-[9px] bg-blue-50 text-blue-700 border-blue-200">DETERMINISTIC</Badge>
-            </div>
-            <Card className="p-6 h-full border border-gray-200 shadow-sm bg-white">
-              {trace.strategy_result ? (
-                <div className="flex flex-col h-full">
-                  <div className="text-[11px] font-bold text-gray-400 uppercase tracking-wider mb-2">Recommended Action</div>
-                  <div className="text-[18px] font-bold text-gray-900 flex items-center gap-2 mb-6">
-                    <Zap className="w-5 h-5 text-yellow-500" />
-                    Retry {trace.strategy_result?.selected_action ? format(new Date(trace.strategy_result.selected_action.scheduled_time), "MMM d HH:mm") : "Tomorrow 09:00"}
-                  </div>
-                  
-                  <div className="text-[11px] font-bold text-gray-400 uppercase tracking-wider mb-2">Policy Status</div>
-                  <div className="flex items-center gap-2 mb-6">
-                    <div className="px-2.5 py-1 bg-green-50 text-green-700 font-bold text-[11px] uppercase tracking-wider rounded border border-green-200 flex items-center gap-1.5">
-                      <CheckCircle2 className="w-3 h-3" /> ALLOWED
-                    </div>
-                  </div>
-                  
-                  <div className="mt-auto pt-4 border-t border-gray-100">
-                    <div className="text-[11px] font-bold text-gray-400 uppercase tracking-wider mb-1">Reasoning</div>
-                    <div className="text-[13px] text-gray-600 font-medium">Selected candidate ranked highest among policy-valid options. No cooldown or budget violations.</div>
-                  </div>
-                </div>
-              ) : (
-                <div className="flex h-full items-center justify-center text-[12px] text-gray-400 font-medium">Decision computed on trigger</div>
-              )}
-            </Card>
-          </div>
-        </div>
-
-        {/* CANDIDATES */}
-        {trace.strategy_result && (
-          <div className="flex flex-col">
-            <div className="flex items-center gap-2 mb-3">
-              <ListFilter className="w-4 h-4 text-gray-400" />
-              <h2 className="text-[13px] font-bold text-gray-500 uppercase tracking-wider">Recovery Candidates</h2>
-            </div>
-            <Card className="p-0 overflow-hidden border border-gray-200 shadow-sm bg-white">
-              <table className="w-full text-left border-collapse">
-                <thead className="bg-gray-50/80 text-[10px] uppercase tracking-wider text-gray-500 font-bold border-b border-gray-200">
-                  <tr>
-                    <th className="px-4 py-3">Schedule</th>
-                    <th className="px-4 py-3">Probability</th>
-                    <th className="px-4 py-3">Policy Status</th>
-                    <th className="px-4 py-3 text-right">Selection</th>
-                  </tr>
-                </thead>
-                <tbody className="divide-y divide-gray-100 text-[13px] font-medium text-gray-700">
-                  <tr className="hover:bg-gray-50">
-                    <td className="px-4 py-3 text-gray-900 font-bold">{trace.strategy_result?.selected_action ? format(new Date(trace.strategy_result.selected_action.scheduled_time), "MMM d HH:mm") : "Tomorrow 09:00"}</td>
-                    <td className="px-4 py-3 text-blue-600 font-bold">{trace.initial_probability ? (trace.initial_probability * 100).toFixed(0) : 72}%</td>
-                    <td className="px-4 py-3"><span className="flex items-center gap-1 text-green-600"><CheckCircle2 className="w-3.5 h-3.5"/> Valid</span></td>
-                    <td className="px-4 py-3 text-right"><Badge variant="low" className="bg-blue-100 text-blue-700 border-blue-200 text-[10px] font-bold">SELECTED</Badge></td>
-                  </tr>
-                  <tr className="hover:bg-gray-50">
-                    <td className="px-4 py-3">Tomorrow · 13:00</td>
-                    <td className="px-4 py-3 font-bold">51%</td>
-                    <td className="px-4 py-3"><span className="flex items-center gap-1 text-green-600"><CheckCircle2 className="w-3.5 h-3.5"/> Valid</span></td>
-                    <td className="px-4 py-3 text-right"></td>
-                  </tr>
-                  <tr className="hover:bg-gray-50">
-                    <td className="px-4 py-3">Tomorrow · 18:00</td>
-                    <td className="px-4 py-3 font-bold">44%</td>
-                    <td className="px-4 py-3"><span className="flex items-center gap-1 text-green-600"><CheckCircle2 className="w-3.5 h-3.5"/> Valid</span></td>
-                    <td className="px-4 py-3 text-right"></td>
-                  </tr>
-                </tbody>
-              </table>
-            </Card>
-          </div>
-        )}
-
-        {/* AUDIT TIMELINE */}
-        <div ref={auditRef} className="mb-10">
-          <div className="flex items-center justify-between mb-4">
-            <h2 className="text-[13px] font-bold text-gray-500 uppercase tracking-wider">Audit Trail</h2>
-            <Badge variant="low" className="text-[9px] font-bold tracking-wider">IMMUTABLE</Badge>
-          </div>
-          <Card className="p-6 border border-gray-200 shadow-sm bg-white">
-            <div className="flex flex-col gap-0 relative">
-              <div className="absolute left-[7px] top-2 bottom-2 w-[2px] bg-gray-100" />
-              {trace.audit_trail && trace.audit_trail.length > 0 ? (
-                trace.audit_trail.map((e, idx) => (
-                  <motion.div initial={{ opacity: 0, x: -10 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: idx * 0.1 }} key={e.event_id} className="flex gap-4 relative py-3">
-                    <div className="w-4 h-4 rounded-full bg-gray-200 border-4 border-white shrink-0 z-10 mt-1 shadow-sm" />
-                    <div className="flex flex-col">
-                      <div className="flex items-baseline gap-2">
-                        <span className="text-[13px] font-bold text-gray-900 tracking-wide">{e.event_type.replace(/_/g, ' ')}</span>
-                        <span className="text-[11px] text-gray-400 font-mono">{format(new Date(e.timestamp), 'HH:mm:ss')}</span>
-                      </div>
-                      <div className="text-[12px] text-gray-500 font-medium mt-0.5">Source: {e.actor}</div>
-                    </div>
-                  </motion.div>
-                ))
-              ) : (
-                <div className="text-[12px] text-gray-400 font-medium italic pl-6">No audit events recorded yet.</div>
-              )}
-            </div>
-          </Card>
-        </div>
       </div>
     </div>
   )
