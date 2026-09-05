@@ -16,6 +16,8 @@ export interface TraceData {
   failure_code: string;
   budget_remaining: number;
   obligation_status: string;
+  initial_probability?: number;
+  recovered_amount?: number;
   strategy_result?: any;
   execution_record?: any;
   outcome?: any;

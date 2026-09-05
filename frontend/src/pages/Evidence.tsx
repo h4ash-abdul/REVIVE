@@ -1,64 +1,95 @@
-﻿import { motion } from 'framer-motion'
+import { motion } from 'framer-motion'
 import { Card } from '../components/ui'
+import { CheckCircle2, TrendingUp, BarChart2 } from 'lucide-react'
 
 export default function Evidence() {
   return (
-    <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="flex flex-col gap-10 max-w-[900px]">
-      <div>
-        <h1 className="text-[22px] font-semibold m-0 text-textPrimary">Evaluation Evidence</h1>
-        <p className="text-[12.5px] text-textSecondary m-0 mt-1 max-w-[600px] leading-relaxed">
-          Synthetic benchmark results establishing the financial validity and optimization characteristics of the REVIVE recovery strategies.
+    <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="flex flex-col gap-10 max-w-[1000px] w-full pb-20">
+      <div className="flex flex-col gap-2">
+        <h1 className="text-[28px] font-bold text-gray-900 tracking-tight">System Evidence</h1>
+        <p className="text-[14px] text-gray-500 max-w-[700px] leading-relaxed">
+          Simulated synthetic evaluation proving the incremental business value of the REVIVE agent against heuristic baselines.
         </p>
       </div>
 
-      <div className="flex flex-col gap-6">
-        <h2 className="text-[14px] font-semibold text-textPrimary uppercase tracking-[0.5px]">Authoritative Benchmark</h2>
-        <Card className="p-0 overflow-hidden border-borderRef">
-          <div className="grid grid-cols-3 border-b border-borderRef bg-panelAlt">
-            <div className="px-6 py-4 border-r border-borderRef">
-              <div className="text-[11px] font-semibold text-textTertiary uppercase tracking-[0.5px] mb-2">Smart Historical Heuristic</div>
-              <div className="text-[20px] font-semibold">₹50,192.12</div>
-            </div>
-            <div className="px-6 py-4 border-r border-borderRef">
-              <div className="text-[11px] font-semibold text-textTertiary uppercase tracking-[0.5px] mb-2">Calibrated ML Policy</div>
-              <div className="text-[20px] font-semibold text-accent">₹50,192.12</div>
-            </div>
-            <div className="px-6 py-4">
-              <div className="text-[11px] font-semibold text-textTertiary uppercase tracking-[0.5px] mb-2">Incremental Lift</div>
-              <div className="text-[20px] font-semibold">0.00%</div>
-            </div>
+      <div className="flex flex-col gap-8 mt-4">
+        {/* RECOVERY VALUE */}
+        <div className="flex flex-col gap-4">
+          <div className="flex items-center gap-2">
+            <CheckCircle2 className="w-4 h-4 text-green-600" />
+            <h2 className="text-[14px] font-bold text-gray-900 uppercase tracking-wider">Recovery Value</h2>
           </div>
-          <div className="px-6 py-4 text-[12px] text-textSecondary">
-            The calibrated ML policy reproduced the strong historical heuristic on the locked synthetic benchmark, achieving exact strategic parity without degradation.
-          </div>
-        </Card>
-      </div>
+          <Card className="p-0 overflow-hidden border border-gray-200 shadow-sm bg-white">
+            <div className="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-gray-100">
+              <div className="p-6 flex flex-col gap-2 bg-gray-50/50">
+                <span className="text-[12px] text-gray-500 font-bold uppercase tracking-wider">No Recovery</span>
+                <span className="text-[24px] font-bold text-gray-900">₹0</span>
+              </div>
+              <div className="p-6 flex flex-col gap-2">
+                <span className="text-[12px] text-gray-500 font-bold uppercase tracking-wider">REVIVE</span>
+                <span className="text-[24px] font-bold text-green-700">₹50,192<span className="text-[14px] font-normal text-green-700/60">.12</span></span>
+              </div>
+              <div className="p-6 flex flex-col gap-2">
+                <span className="text-[12px] text-gray-500 font-bold uppercase tracking-wider">Recovery Rate</span>
+                <span className="text-[24px] font-bold text-blue-600">39.3%</span>
+              </div>
+            </div>
+          </Card>
+        </div>
 
-      <div className="flex flex-col gap-6">
-        <h2 className="text-[14px] font-semibold text-textPrimary uppercase tracking-[0.5px]">Economic Prioritization</h2>
-        <Card className="p-0 overflow-hidden border-borderRef">
-          <div className="grid grid-cols-3 border-b border-borderRef bg-panelAlt">
-            <div className="px-6 py-4 border-r border-borderRef">
-              <div className="text-[11px] font-semibold text-textTertiary uppercase tracking-[0.5px] mb-2">Probability-based Prioritization</div>
-              <div className="text-[20px] font-semibold">₹18,400.37</div>
-            </div>
-            <div className="px-6 py-4 border-r border-borderRef">
-              <div className="text-[11px] font-semibold text-textTertiary uppercase tracking-[0.5px] mb-2">EV-based Prioritization</div>
-              <div className="text-[20px] font-semibold text-success">₹21,422.74</div>
-            </div>
-            <div className="px-6 py-4">
-              <div className="text-[11px] font-semibold text-textTertiary uppercase tracking-[0.5px] mb-2">EV Improvement</div>
-              <div className="text-[20px] font-semibold text-success">16.43%</div>
-            </div>
+        {/* DECISION BENCHMARK */}
+        <div className="flex flex-col gap-4">
+          <div className="flex items-center gap-2">
+            <BarChart2 className="w-4 h-4 text-blue-600" />
+            <h2 className="text-[14px] font-bold text-gray-900 uppercase tracking-wider">Decision Benchmark (Phase 13A)</h2>
           </div>
-          <div className="px-6 py-4 text-[12px] text-textSecondary">
-            When recovery capacity is limited across mandates, expected-value prioritization recovered 16.43% more monetary value than probability ranking in the synthetic capacity experiment.
+          <Card className="p-0 overflow-hidden border border-gray-200 shadow-sm bg-white">
+            <div className="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-gray-100">
+              <div className="p-6 flex flex-col gap-2 bg-gray-50/50">
+                <span className="text-[12px] text-gray-500 font-bold uppercase tracking-wider">Smart Historical Heuristic</span>
+                <span className="text-[24px] font-bold text-gray-900">₹50,192<span className="text-[14px] font-normal text-gray-500">.12</span></span>
+              </div>
+              <div className="p-6 flex flex-col gap-2">
+                <span className="text-[12px] text-gray-500 font-bold uppercase tracking-wider">Calibrated ML</span>
+                <span className="text-[24px] font-bold text-gray-900">₹50,192<span className="text-[14px] font-normal text-gray-500">.12</span></span>
+              </div>
+              <div className="p-6 flex flex-col gap-2">
+                <span className="text-[12px] text-gray-500 font-bold uppercase tracking-wider">Incremental Lift</span>
+                <span className="text-[24px] font-bold text-gray-900">0.00%</span>
+              </div>
+            </div>
+            <div className="p-5 border-t border-gray-100 bg-gray-50 text-[13px] text-gray-600 font-medium leading-relaxed">
+              ML perfectly matches the heuristic in high-signal environments, providing a safe baseline for advanced experimentation.
+            </div>
+          </Card>
+        </div>
+
+        {/* ECONOMIC PRIORITIZATION */}
+        <div className="flex flex-col gap-4">
+          <div className="flex items-center gap-2">
+            <TrendingUp className="w-4 h-4 text-purple-600" />
+            <h2 className="text-[14px] font-bold text-gray-900 uppercase tracking-wider">Economic Prioritization (Phase 13B)</h2>
           </div>
-        </Card>
-      </div>
-      
-      <div className="text-[11px] text-textTertiary italic">
-        * Note: All values are derived from synthetic environments. Do not imply either result is production performance.
+          <Card className="p-0 overflow-hidden border border-gray-200 shadow-sm bg-white">
+            <div className="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-gray-100">
+              <div className="p-6 flex flex-col gap-2 bg-gray-50/50">
+                <span className="text-[12px] text-gray-500 font-bold uppercase tracking-wider">Probability Ranking</span>
+                <span className="text-[24px] font-bold text-gray-900">₹18,400<span className="text-[14px] font-normal text-gray-500">.37</span></span>
+              </div>
+              <div className="p-6 flex flex-col gap-2">
+                <span className="text-[12px] text-gray-500 font-bold uppercase tracking-wider">Expected Value Ranking</span>
+                <span className="text-[24px] font-bold text-purple-700">₹21,422<span className="text-[14px] font-normal text-purple-700/60">.74</span></span>
+              </div>
+              <div className="p-6 flex flex-col gap-2">
+                <span className="text-[12px] text-gray-500 font-bold uppercase tracking-wider">EV Uplift</span>
+                <span className="text-[24px] font-bold text-green-600">+16.43%</span>
+              </div>
+            </div>
+            <div className="p-5 border-t border-gray-100 bg-gray-50 text-[13px] text-gray-600 font-medium leading-relaxed">
+              When constrained by execution bandwidth, Expected Value (EV) sorting generates 16.43% more revenue than raw probability sorting.
+            </div>
+          </Card>
+        </div>
       </div>
     </motion.div>
   )

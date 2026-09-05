@@ -1,4 +1,4 @@
-import { motion } from 'framer-motion'
+﻿ex_content = """import { motion } from 'framer-motion'
 import { Card, Badge } from '../components/ui'
 import { AlertCircle, Ban, ShieldX } from 'lucide-react'
 
@@ -21,13 +21,13 @@ export default function Exceptions() {
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-4">
         {exceptions.map((ex, i) => (
           <Card key={i} className="flex flex-col h-full border border-gray-200 shadow-sm hover:shadow-md transition-shadow bg-white">
-            <div className={`p-5 border-b border-gray-100 flex items-center gap-3`}>
-              <div className={`p-2 rounded-md ${ex.bg} ${ex.color}`}>
+            <div className={p-5 border-b border-gray-100 flex items-center gap-3}>
+              <div className={p-2 rounded-md  }>
                 <ex.icon className="w-5 h-5" />
               </div>
               <div className="flex flex-col">
                 <h3 className="text-[13px] font-bold text-gray-900 uppercase tracking-wider">{ex.title}</h3>
-                <Badge variant="low" className={`mt-1 text-[9px] font-bold tracking-wider w-fit ${ex.bg} ${ex.color}`}>{ex.status}</Badge>
+                <Badge variant="low" className={mt-1 text-[9px] font-bold tracking-wider w-fit  }>{ex.status}</Badge>
               </div>
             </div>
             <div className="p-5 flex flex-col gap-4 flex-1">
@@ -50,3 +50,9 @@ export default function Exceptions() {
     </motion.div>
   )
 }
+"""
+
+ex_content = ex_content.replace("", "").replace("", "")
+
+with open('frontend/src/pages/Exceptions.tsx', 'w', encoding='utf-8') as f:
+    f.write(ex_content)

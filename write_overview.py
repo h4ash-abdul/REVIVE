@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+﻿overview = '''import { useEffect, useState } from 'react'
 import { motion } from 'framer-motion'
 import { useNavigate } from 'react-router-dom'
 import { Card, Button, Badge } from '../components/ui'
@@ -130,7 +130,7 @@ export default function Overview() {
               <div className="mt-4 pt-4 border-t border-gray-100">
                 <Button 
                   className="w-full justify-between bg-gray-50 hover:bg-gray-100 text-gray-700 font-semibold border border-gray-200 transition-colors" 
-                  onClick={() => navigate(`/queue/${c.scenario_key}`)}
+                  onClick={() => navigate(/queue/)}
                 >
                   REVIEW CASE <ChevronRight className="w-4 h-4 text-gray-400 group-hover:text-gray-700" />
                 </Button>
@@ -142,3 +142,6 @@ export default function Overview() {
     </motion.div>
   )
 }
+'''
+with open('frontend/src/pages/Overview.tsx', 'w', encoding='utf-8') as f:
+    f.write(overview)

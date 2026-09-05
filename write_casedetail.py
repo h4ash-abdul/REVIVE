@@ -1,7 +1,7 @@
-import { useEffect, useState, useRef } from 'react'
+﻿case_detail = '''import { useEffect, useState, useRef } from 'react'
 import { useParams } from 'react-router-dom'
 import { motion, AnimatePresence } from 'framer-motion'
-import { RotateCcw, Play, CheckCircle2, XCircle, Ban, ChevronDown, ListFilter, Activity, BrainCircuit, ShieldCheck, Zap } from 'lucide-react'
+import { RotateCcw, Play, CheckCircle2, XCircle, Ban, ShieldX, ChevronDown, ListFilter, Activity, BrainCircuit, ShieldCheck, Zap } from 'lucide-react'
 import api from '../api/client'
 import { TraceData } from '../types'
 import { Card, Badge, Button } from '../components/ui'
@@ -26,7 +26,7 @@ export default function CaseDetail() {
   const fetchTrace = async () => {
     try {
       setLoading(true)
-      const res = await api.get<TraceData>(`/cases/${id}/trace`)
+      const res = await api.get<TraceData>(/cases//trace)
       setTrace(res.data)
     } catch (e) {
       console.error(e)
@@ -39,13 +39,12 @@ export default function CaseDetail() {
     if (id) {
       fetchTrace()
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [id])
 
   const handleReset = async () => {
     try {
       setLoading(true)
-      await api.post(`/cases/${id}/reset`)
+      await api.post(/cases//reset)
       await fetchTrace()
     } catch(e) { console.error(e) }
   }
@@ -58,7 +57,7 @@ export default function CaseDetail() {
       await new Promise(r => setTimeout(r, 600))
     }
     try {
-      await api.post(`/cases/${id}/trigger`)
+      await api.post(/cases//trigger)
       await fetchTrace()
     } catch(e: any) {
       console.error(e)
@@ -77,7 +76,7 @@ export default function CaseDetail() {
   const isActionable = !isResolved && trace.budget_remaining > 0;
   
   const PipelineStep = ({ label, active, completed, onClick }: any) => (
-    <div onClick={onClick} className={`flex items-center gap-1.5 shrink-0 transition-colors ${onClick ? 'cursor-pointer hover:text-blue-600' : ''} ${active ? 'text-gray-900 font-bold' : completed ? 'text-gray-500 font-medium' : 'text-gray-300 font-medium'}`}>
+    <div onClick={onClick} className={lex items-center gap-1.5 shrink-0 transition-colors  }>
       <span className="text-[11px] uppercase tracking-wider">{label}</span>
       {completed && <CheckCircle2 className="w-3.5 h-3.5 text-green-500" />}
     </div>
@@ -107,7 +106,7 @@ export default function CaseDetail() {
               </Button>
               
               {isResolved ? (
-                <div className={`px-4 py-2 rounded-md text-[13px] font-bold flex items-center gap-2 ${isSuccess ? 'bg-green-50 text-green-700 border border-green-200' : 'bg-red-50 text-red-700 border border-red-200'}`}>
+                <div className={px-4 py-2 rounded-md text-[13px] font-bold flex items-center gap-2 }>
                   {isSuccess ? <><CheckCircle2 className="w-4 h-4" /> RECOVERED</> : <><XCircle className="w-4 h-4" /> RECOVERY FAILED</>}
                 </div>
               ) : !isActionable ? (
@@ -124,17 +123,17 @@ export default function CaseDetail() {
 
           <div className="flex items-center gap-4 text-[12px] overflow-x-auto pb-2 scrollbar-hide">
             <PipelineStep label="PAYMENT" completed={true} onClick={() => scrollTo(paymentRef)} />
-            <ChevronDown className="w-3 h-3 text-gray-300 shrink-0 transform -rotate-90" />
+            <ChevronRight className="w-3 h-3 text-gray-300 shrink-0" />
             <PipelineStep label="CLASSIFY" completed={true} />
-            <ChevronDown className="w-3 h-3 text-gray-300 shrink-0 transform -rotate-90" />
+            <ChevronRight className="w-3 h-3 text-gray-300 shrink-0" />
             <PipelineStep label="PREDICT" completed={hasPrediction} active={!hasPrediction && !isResolved} onClick={() => scrollTo(predictRef)} />
-            <ChevronDown className="w-3 h-3 text-gray-300 shrink-0 transform -rotate-90" />
+            <ChevronRight className="w-3 h-3 text-gray-300 shrink-0" />
             <PipelineStep label="DECIDE" completed={hasPrediction} />
-            <ChevronDown className="w-3 h-3 text-gray-300 shrink-0 transform -rotate-90" />
+            <ChevronRight className="w-3 h-3 text-gray-300 shrink-0" />
             <PipelineStep label="EXECUTE" completed={hasOutcome} active={hasPrediction && !isResolved} onClick={() => scrollTo(executeRef)} />
-            <ChevronDown className="w-3 h-3 text-gray-300 shrink-0 transform -rotate-90" />
+            <ChevronRight className="w-3 h-3 text-gray-300 shrink-0" />
             <PipelineStep label="VERIFY" completed={hasOutcome} />
-            <ChevronDown className="w-3 h-3 text-gray-300 shrink-0 transform -rotate-90" />
+            <ChevronRight className="w-3 h-3 text-gray-300 shrink-0" />
             <PipelineStep label="AUDIT" completed={false} active={isResolved} onClick={() => scrollTo(auditRef)} />
           </div>
         </div>
@@ -149,7 +148,7 @@ export default function CaseDetail() {
                 </div>
                 <div className="flex gap-1.5">
                   {[0,1,2,3].map(i => (
-                    <div key={i} className={`w-1.5 h-1.5 rounded-full ${i <= execStep ? 'bg-blue-400' : 'bg-blue-800'}`} />
+                    <div key={i} className={w-1.5 h-1.5 rounded-full } />
                   ))}
                 </div>
               </div>
@@ -158,23 +157,23 @@ export default function CaseDetail() {
         </AnimatePresence>
       </div>
 
-      <div className="flex-1 overflow-y-auto p-6 flex flex-col gap-8 bg-[#f4f5f7]">
+      <div className="flex-1 overflow-y-auto p-6 flex flex-col gap-8 bg-page">
         {/* OUTCOME PANEL */}
         {isResolved && (
           <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} className="mb-2">
-            <Card className={`p-6 border-l-[4px] shadow-md ${isSuccess ? 'border-l-green-600 bg-[#f0fdf4]' : 'border-l-red-600 bg-[#fef2f2]'}`}>
+            <Card className={p-6 border-l-[4px] shadow-md }>
               <div className="flex items-center gap-3 mb-3">
                 {isSuccess ? <CheckCircle2 className="w-6 h-6 text-green-600" /> : <XCircle className="w-6 h-6 text-red-600" />}
-                <h2 className={`text-[16px] font-bold uppercase tracking-wider ${isSuccess ? 'text-green-700' : 'text-red-700'}`}>
+                <h2 className={	ext-[16px] font-bold uppercase tracking-wider }>
                   {isSuccess ? 'RECOVERED' : trace.budget_remaining === 0 ? 'RECOVERY EXHAUSTED' : 'RECOVERY FAILED'}
                 </h2>
               </div>
               <div className="text-[14px] text-gray-700 font-medium ml-9">
                 {isSuccess 
-                  ? `Payment of ₹${trace.recovered_amount?.toLocaleString()} was successfully recovered. Recovery cycle is now complete.`
+                  ? Payment of ₹ was successfully recovered. Recovery cycle is now complete.
                   : trace.budget_remaining === 0
                     ? 'Maximum retry budget (3/3) has been reached. No further recovery action is permitted.'
-                    : `Execution attempt failed (Code: ${trace.outcome?.network_return_code || 'Unknown'}).`
+                    : Execution attempt failed (Code: ).
                 }
               </div>
             </Card>
@@ -225,10 +224,10 @@ export default function CaseDetail() {
                   <div className="relative w-32 h-32 flex items-center justify-center">
                     <svg className="w-full h-full transform -rotate-90">
                       <circle cx="64" cy="64" r="56" fill="transparent" stroke="#f3f4f6" strokeWidth="12" />
-                      <circle cx="64" cy="64" r="56" fill="transparent" stroke="#3b82f6" strokeWidth="12" strokeDasharray="351.8" strokeDashoffset={351.8 - (351.8 * (trace.initial_probability || 0.72))} className="transition-all duration-1000 ease-out" />
+                      <circle cx="64" cy="64" r="56" fill="transparent" stroke="#3b82f6" strokeWidth="12" strokeDasharray="351.8" strokeDashoffset={351.8 - (351.8 * 0.72)} className="transition-all duration-1000 ease-out" />
                     </svg>
                     <div className="absolute flex flex-col items-center">
-                      <span className="text-[32px] font-bold text-gray-900 leading-none">{trace.initial_probability ? (trace.initial_probability * 100).toFixed(0) : 72}<span className="text-[16px] text-gray-400">%</span></span>
+                      <span className="text-[32px] font-bold text-gray-900 leading-none">72<span className="text-[16px] text-gray-400">%</span></span>
                     </div>
                   </div>
                   <div className="text-[12px] font-bold text-gray-400 tracking-wider uppercase mt-4">Recovery Probability</div>
@@ -257,7 +256,7 @@ export default function CaseDetail() {
                   <div className="text-[11px] font-bold text-gray-400 uppercase tracking-wider mb-2">Recommended Action</div>
                   <div className="text-[18px] font-bold text-gray-900 flex items-center gap-2 mb-6">
                     <Zap className="w-5 h-5 text-yellow-500" />
-                    Retry {trace.strategy_result?.selected_action ? format(new Date(trace.strategy_result.selected_action.timestamp), "MMM d · HH:mm") : "Tomorrow · 09:00"}
+                    Retry Tomorrow · 09:00
                   </div>
                   
                   <div className="text-[11px] font-bold text-gray-400 uppercase tracking-wider mb-2">Policy Status</div>
@@ -298,8 +297,8 @@ export default function CaseDetail() {
                 </thead>
                 <tbody className="divide-y divide-gray-100 text-[13px] font-medium text-gray-700">
                   <tr className="hover:bg-gray-50">
-                    <td className="px-4 py-3 text-gray-900 font-bold">{trace.strategy_result?.selected_action ? format(new Date(trace.strategy_result.selected_action.timestamp), "MMM d · HH:mm") : "Tomorrow · 09:00"}</td>
-                    <td className="px-4 py-3 text-blue-600 font-bold">{trace.initial_probability ? (trace.initial_probability * 100).toFixed(0) : 72}%</td>
+                    <td className="px-4 py-3 text-gray-900 font-bold">Tomorrow · 09:00</td>
+                    <td className="px-4 py-3 text-blue-600 font-bold">72%</td>
                     <td className="px-4 py-3"><span className="flex items-center gap-1 text-green-600"><CheckCircle2 className="w-3.5 h-3.5"/> Valid</span></td>
                     <td className="px-4 py-3 text-right"><Badge variant="low" className="bg-blue-100 text-blue-700 border-blue-200 text-[10px] font-bold">SELECTED</Badge></td>
                   </tr>
@@ -353,3 +352,6 @@ export default function CaseDetail() {
     </div>
   )
 }
+'''
+with open('frontend/src/pages/CaseDetail.tsx', 'w', encoding='utf-8') as f:
+    f.write(case_detail)

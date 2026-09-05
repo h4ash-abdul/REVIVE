@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+﻿workspace = '''import { useEffect, useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { useNavigate, useParams, useSearchParams } from 'react-router-dom'
 import { Search, Inbox } from 'lucide-react'
@@ -122,3 +122,6 @@ export default function Workspace() {
     </div>
   )
 }
+'''
+with open('frontend/src/pages/Workspace.tsx', 'w', encoding='utf-8') as f:
+    f.write(workspace)

@@ -183,6 +183,7 @@ def get_trace(key: str):
     # Return as dict to inject obligation status
     res = trace_obj.model_dump()
     res["obligation_status"] = t["obligation"].status.value
+    res["initial_probability"] = DEMO_CASES[key].get("initial_probability", 0.0)
     return res
 
 @app.post("/cases/{key}/trigger")

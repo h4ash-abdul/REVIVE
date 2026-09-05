@@ -1,5 +1,7 @@
-import { NavLink, Outlet } from 'react-router-dom'
-import { LayoutDashboard, ListTodo, ShieldAlert, FileSearch, Network } from 'lucide-react'
+﻿import os
+
+app_layout = '''import { NavLink, Outlet } from 'react-router-dom'
+import { Activity, LayoutDashboard, ListTodo, ShieldAlert, FileSearch, Network } from 'lucide-react'
 import { cn } from '../../lib/utils'
 
 const NAV_ITEMS = [
@@ -61,3 +63,6 @@ export function AppLayout() {
     </div>
   )
 }
+'''
+with open('frontend/src/components/layout/AppLayout.tsx', 'w', encoding='utf-8') as f:
+    f.write(app_layout)

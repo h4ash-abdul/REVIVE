@@ -4,6 +4,7 @@ import Overview from './pages/Overview'
 import Workspace from './pages/Workspace'
 import Exceptions from './pages/Exceptions'
 import Evidence from './pages/Evidence'
+import Architecture from './pages/Architecture'
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route path="/case/:id" element={<Navigate to="/queue" replace />} />
         <Route path="/exceptions" element={<Exceptions />} />
         <Route path="/evidence" element={<Evidence />} />
+        <Route path="/architecture" element={<Architecture />} />
       </Route>
     </Routes>
   )
