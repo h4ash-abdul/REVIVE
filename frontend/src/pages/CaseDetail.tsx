@@ -79,7 +79,7 @@ export default function CaseDetail() {
 
   const isResolved = trace.obligation_status !== 'ACTIVE_RECOVERY'
   const isSuccess = trace.outcome?.success
-  const isActionable = !isResolved && trace.strategy_result && trace.strategy_result.selected_action;
+  const isActionable = !isResolved && trace.budget_remaining > 0;
   
   const PipelineStep = ({ label, active, completed, onClick }: { label: string, active?: boolean, completed?: boolean, onClick?: () => void }) => (
     <div 

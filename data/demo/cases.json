@@ -57,7 +57,7 @@
       {
         "attempt_id": "0d776b16-a3cd-41f3-ae25-c3549c332f17",
         "mandate_id": "0012fd19-5587-4649-bec7-bb5273f06ee8",
-        "timestamp": "2025-02-06T00:00:00Z",
+        "timestamp": "2026-09-01T05:56:21.902492+00:00",
         "amount": 864.85,
         "status": "failed",
         "network_return_code": "ERR_INSUFFICIENT_FUNDS"
@@ -65,7 +65,7 @@
       {
         "attempt_id": "8273368c-f7bd-4dab-bb49-5f4c6571064e",
         "mandate_id": "0012fd19-5587-4649-bec7-bb5273f06ee8",
-        "timestamp": "2025-02-07T00:00:00Z",
+        "timestamp": "2026-09-02T05:56:21.902492+00:00",
         "amount": 864.85,
         "status": "failed",
         "network_return_code": "CODE_116_BAL"
@@ -73,7 +73,7 @@
       {
         "attempt_id": "147740d1-f38c-4bb0-b924-2df2c1b442d2",
         "mandate_id": "0012fd19-5587-4649-bec7-bb5273f06ee8",
-        "timestamp": "2025-02-08T00:00:00Z",
+        "timestamp": "2026-09-03T05:56:21.902492+00:00",
         "amount": 864.85,
         "status": "failed",
         "network_return_code": "N51_FUNDS"
@@ -81,7 +81,7 @@
       {
         "attempt_id": "012d7c47-24df-45a5-b869-2e616467cedf",
         "mandate_id": "0012fd19-5587-4649-bec7-bb5273f06ee8",
-        "timestamp": "2025-02-09T00:00:00Z",
+        "timestamp": "2026-09-04T05:56:21.902492+00:00",
         "amount": 864.85,
         "status": "failed",
         "network_return_code": "ERR_INSUFFICIENT_FUNDS"

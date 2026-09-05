@@ -68,14 +68,23 @@ def init_case(c: dict) -> tuple:
     m_lat = MerchantLatentState(**c["merchant_latent"])
     
     # Initialize Trace
-    last_attempt = sorted(h, key=lambda x: x.timestamp)[-1]
+    sorted_h = sorted(h, key=lambda x: x.timestamp)
+    last_attempt = sorted_h[-1]
+    
+    # Identify the current obligation cycle (attempts within 30 days of the last attempt)
+    current_cycle_attempts = [x for x in sorted_h if (last_attempt.timestamp - x.timestamp).days <= 30]
+    
+    original_attempt = current_cycle_attempts[0]
+    retries = current_cycle_attempts[1:]
+    
     obligation = PaymentObligation(
         obligation_id=uuid4(),
         mandate_id=m.mandate_id,
-        due_time=last_attempt.timestamp,
+        due_time=original_attempt.timestamp,
         amount=m.amount,
         status=ObligationStatus.ACTIVE_RECOVERY,
-        original_attempt_id=last_attempt.attempt_id
+        original_attempt_id=original_attempt.attempt_id,
+        retry_attempt_ids=[r.attempt_id for r in retries]
     )
     
     trace = RecoveryTrace(
@@ -234,8 +243,15 @@ def trigger_recovery(key: str):
     # 5. Execution Requested
     logger.log(mandate.mandate_id, obligation.obligation_id, RecoveryEventType.EXECUTION_REQUESTED, "Revive", current_time, {"action_id": str(strat_res.selected_action.candidate_id)})
     
+    
+    # DEMO SPECIFIC: Use deterministic execution seed per-case for repeatable presentations.
+    # Prediction logic remains 100% real and probabilistic.
+    DEMO_SEEDS = {"A": 0, "B": 1, "C": 2, "D": 3, "E": 4, "F": 5, "G": 6}
+    local_engine = OutcomeEngine(random.Random(DEMO_SEEDS.get(key, 42)))
+    local_adapter = SimulatedExecutionAdapter(local_engine)
+    
     final_decision = strat_res.policy_decisions[0]
-    exec_record, sim_attempt = adapter.execute(strat_res.selected_action, final_decision, obligation, mandate, c_lat, m_lat, current_time)
+    exec_record, sim_attempt = local_adapter.execute(strat_res.selected_action, final_decision, obligation, mandate, c_lat, m_lat, current_time)
     
     trace.execution_record = exec_record
     logger.log(mandate.mandate_id, obligation.obligation_id, RecoveryEventType.EXECUTION_COMPLETED, "ExecutionAdapter", current_time, {"status": exec_record.status})
