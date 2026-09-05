@@ -110,7 +110,7 @@ export default function Overview() {
               <div className="p-4 flex flex-col gap-4">
                 <div className="flex justify-between items-start">
                   <div className="font-mono font-bold text-[13px] text-gray-300">{c.title}</div>
-                  <div className="font-mono font-bold text-[13px] text-white">₹{c.amount.toLocaleString(undefined, {minimumFractionDigits: 0})}</div>
+                  <div className="font-mono font-bold text-[13px] text-white">₹{c.amount.toLocaleString(undefined, {maximumFractionDigits: 0})}</div>
                 </div>
                 
                 <div className="flex flex-col gap-2">

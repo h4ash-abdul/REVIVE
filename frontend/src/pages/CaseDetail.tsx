@@ -63,7 +63,7 @@ export default function CaseDetail() {
   if (!trace) return <div className="p-10 text-[11px] text-rose-500 font-mono flex h-full items-center justify-center">CASE_NOT_FOUND</div>
 
   const isResolved = trace.obligation_status !== 'active_recovery'
-  const isSuccess = trace.outcome?.status === 'success'
+  const isSuccess = trace.outcome?.success
   const isActionable = !isResolved && trace.budget_remaining > 0;
   
   const hasPrediction = !!trace.strategy_result;
@@ -135,7 +135,7 @@ export default function CaseDetail() {
             <div className="flex flex-col gap-2">
               <div className="text-[10px] font-bold text-gray-500 uppercase tracking-widest">MANDATE ID: {id}</div>
               <h1 className="text-[28px] font-mono font-bold text-white tracking-tight">
-                ₹{trace.amount.toLocaleString(undefined, {minimumFractionDigits:0})}
+                ₹{trace.amount.toLocaleString(undefined, {minimumFractionDigits:0, maximumFractionDigits:0})}
               </h1>
               <div className="flex items-center gap-2 mt-1">
                 <span className="text-[9px] font-bold tracking-widest uppercase px-1.5 py-0.5 rounded border bg-[#16171a] border-[#222328] text-gray-400">
@@ -181,7 +181,7 @@ export default function CaseDetail() {
                     ? `Payment of ₹${trace.recovered_amount?.toLocaleString() || trace.amount.toLocaleString()} was successfully recovered.`
                     : trace.budget_remaining === 0
                       ? 'Maximum retry budget (3/3) has been reached. No further recovery action is permitted.'
-                      : `Execution attempt failed (Code: ${trace.outcome?.metadata?.network_return_code || 'Unknown'}).`
+                      : `Execution attempt failed (Code: ${trace.outcome?.network_return_code || 'Unknown'}).`
                   }
                 </span>
               </div>

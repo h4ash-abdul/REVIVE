@@ -116,7 +116,7 @@ export default function Workspace() {
                         <div className="text-[9px] text-gray-500 mt-1 font-bold tracking-widest uppercase">ACTION: TOMORROW 09:00</div>
                       </td>
                       <td className="px-3 py-3 align-top text-right">
-                        <div className={`text-[12px] font-mono font-bold ${isSelected ? 'text-white' : 'text-gray-300'}`}>₹{c.amount.toLocaleString(undefined, {minimumFractionDigits: 0})}</div>
+                        <div className={`text-[12px] font-mono font-bold ${isSelected ? 'text-white' : 'text-gray-300'}`}>₹{c.amount.toLocaleString(undefined, {maximumFractionDigits: 0})}</div>
                       </td>
                       <td className="px-3 py-3 align-top">
                         <div className="text-[10px] font-mono text-gray-400 bg-[#16171a] border border-[#222328] rounded px-1.5 py-0.5 inline-block truncate max-w-[120px]">{c.failure_code}</div>
