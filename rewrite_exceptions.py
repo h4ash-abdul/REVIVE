@@ -1,4 +1,8 @@
-import { useEffect, useState } from 'react'
+﻿import re
+with open('frontend/src/pages/Exceptions.tsx', 'r', encoding='utf-8') as f:
+    c = f.read()
+
+new_content = """import { useEffect, useState } from 'react'
 import { motion } from 'framer-motion'
 import { AlertCircle, ShieldX } from 'lucide-react'
 import api from '../api/client'
@@ -44,12 +48,12 @@ export default function Exceptions() {
           return (
             <div key={i} className="flex flex-col h-full bg-[#16171a] border border-[#222328] rounded overflow-hidden">
               <div className="p-5 border-b border-[#222328] flex items-center gap-4 bg-[#1e1f24]/30">
-                <div className={`p-2 rounded border ${isRejection ? 'bg-rose-500/10 border-rose-500/20 text-rose-400' : 'bg-gray-700/30 border-gray-600/30 text-gray-400'}`}>
+                <div className={p-2 rounded border }>
                   {isRejection ? <ShieldX className="w-5 h-5" /> : <AlertCircle className="w-5 h-5" />}
                 </div>
                 <div className="flex flex-col gap-1.5">
                   <h3 className="text-[11px] font-bold text-white uppercase tracking-widest leading-none">{event.event_type.replace(/_/g, ' ')}</h3>
-                  <span className={`text-[9px] font-bold tracking-widest uppercase px-1.5 py-0.5 rounded border w-fit leading-none ${isRejection ? 'bg-rose-500/10 border-rose-500/20 text-rose-400' : 'bg-gray-700/30 border-gray-600/30 text-gray-400'}`}>
+                  <span className={	ext-[9px] font-bold tracking-widest uppercase px-1.5 py-0.5 rounded border w-fit leading-none }>
                     {event.actor}
                   </span>
                 </div>
@@ -75,3 +79,7 @@ export default function Exceptions() {
     </motion.div>
   )
 }
+"""
+
+with open('frontend/src/pages/Exceptions.tsx', 'w', encoding='utf-8') as f:
+    f.write(new_content)

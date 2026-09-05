@@ -21,6 +21,7 @@ export interface TraceData {
   strategy_result?: any;
   execution_record?: any;
   outcome?: any;
+  last_attempt_outcome?: any;
   audit_trail: AuditEvent[];
 }
 

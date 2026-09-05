@@ -12,7 +12,6 @@ from src.domain.models import Mandate, PaymentAttempt, PaymentObligation, Obliga
 from src.domain.audit import RecoveryTrace, RecoveryEventType
 from src.audit.trail import AuditLogger
 from src.simulation.latent.models import CustomerLatentState, MerchantLatentState
-from src.simulation.outcome_engine.engine import OutcomeEngine
 from src.decision.generator import CandidateGenerator
 from src.features.builder import PointInTimeFeatureBuilder
 from src.models.hierarchical import HierarchicalPredictor
@@ -48,8 +47,6 @@ scorer = CandidateScoringService(feature_builder, predictor)
 generator = CandidateGenerator(days_ahead=30)
 policy_config = PolicyConfig(policy_version="1.0", max_retries_per_mandate=3, min_hours_between_retries=1, allowed_execution_windows_utc=["00:00-23:59"], stop_on_success=True)
 policy_engine = DeterministicPolicyEngine(policy_config)
-outcome_engine = OutcomeEngine(random.Random(42))
-adapter = SimulatedExecutionAdapter(outcome_engine)
 verifier = OutcomeVerifier()
 
 class DemoCaseResponse(BaseModel):
@@ -184,6 +181,7 @@ def get_trace(key: str):
     res = trace_obj.model_dump()
     res["obligation_status"] = t["obligation"].status.value
     res["initial_probability"] = DEMO_CASES[key].get("initial_probability", 0.0)
+    res["last_attempt_outcome"] = trace_obj.outcome.model_dump() if trace_obj.outcome else None
     return res
 
 @app.post("/cases/{key}/trigger")

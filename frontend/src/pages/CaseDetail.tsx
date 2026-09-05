@@ -169,12 +169,12 @@ export default function CaseDetail() {
           </div>
 
           {/* OUTCOME BANNER (IF RESOLVED) */}
-          {isResolved && (
+          {(isResolved || trace.last_attempt_outcome) && (
             <div className={`p-4 border rounded flex items-start gap-3 ${isSuccess ? 'bg-emerald-900/20 border-emerald-500/30' : 'bg-rose-900/20 border-rose-500/30'}`}>
               {isSuccess ? <CheckCircle2 className="w-5 h-5 text-emerald-400 shrink-0" /> : <AlertTriangle className="w-5 h-5 text-rose-400 shrink-0" />}
               <div className="flex flex-col">
                 <span className={`text-[11px] font-bold tracking-widest uppercase ${isSuccess ? 'text-emerald-400' : 'text-rose-400'}`}>
-                  {isSuccess ? 'RECOVERY SUCCESSFUL' : trace.budget_remaining === 0 ? 'RECOVERY EXHAUSTED' : 'RECOVERY FAILED'}
+                  {isSuccess ? 'RECOVERY SUCCESSFUL' : trace.budget_remaining === 0 ? 'RECOVERY EXHAUSTED' : isResolved ? 'RECOVERY FAILED' : 'RECOVERY FAILED — RETRY AVAILABLE'}
                 </span>
                 <span className="text-[12px] text-gray-300 mt-1 font-mono">
                   {isSuccess 
